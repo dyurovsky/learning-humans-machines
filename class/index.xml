@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Class details | Learning in Humans and Machines</title>
+    <link>/learning-humans-machines/class/</link>
+      <atom:link href="/learning-humans-machines/class/index.xml" rel="self" type="application/rss+xml" />
+    <description>Class details</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/learning-humans-machines/img/social-image.png</url>
+      <title>Class details</title>
+      <link>/learning-humans-machines/class/</link>
+    </image>
+    
+  </channel>
+</rss>

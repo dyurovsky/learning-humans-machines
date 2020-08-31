@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dan Yurovsky">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Slides Lecture videos R stuff Get data for example The effect of a gifted program on student test scores  Step 1: Determine if process of assigning treatment is rule-based Step 2: Determine if the design is fuzzy or sharp Step 3: Check for discontinuity in running variable around cutpoint Step 4: Check for discontinuity in outcome across running variable Step 5: Measure the size of the effect Step 6: Compare all the effects  Clearest and muddiest things   Slides Download the slides from today’s class.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/learning-humans-machines/class/11-class/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#d45026">
+  
+
+  
+  
+  
+  <script src="/learning-humans-machines/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRoboto:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/learning-humans-machines/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/learning-humans-machines/index.webmanifest">
+  <link rel="icon" type="image/png" href="/learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/learning-humans-machines/class/11-class/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dyurovsky">
+  <meta property="twitter:creator" content="@dyurovsky">
+  
+  <meta property="og:site_name" content="Learning in Humans and Machines">
+  <meta property="og:url" content="/learning-humans-machines/class/11-class/">
+  <meta property="og:title" content="Regression discontinuity I &amp; II | Learning in Humans and Machines">
+  <meta property="og:description" content="Slides Lecture videos R stuff Get data for example The effect of a gifted program on student test scores  Step 1: Determine if process of assigning treatment is rule-based Step 2: Determine if the design is fuzzy or sharp Step 3: Check for discontinuity in running variable around cutpoint Step 4: Check for discontinuity in outcome across running variable Step 5: Measure the size of the effect Step 6: Compare all the effects  Clearest and muddiest things   Slides Download the slides from today’s class."><meta property="og:image" content="/learning-humans-machines/img/social-image.png">
+  <meta property="twitter:image" content="/learning-humans-machines/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-04-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-04-09T12:26:44-04:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/learning-humans-machines/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/learning-humans-machines/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/learning-humans-machines/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/learning-humans-machines/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/learning-humans-machines/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/learning-humans-machines/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/learning-humans-machines/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/learning-humans-machines/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/learning-humans-machines/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="85426/85726: Learning in Humans and Machines" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/learning-humans-machines/img/mstile-144x144.png" />
+
+
+  <title>Regression discontinuity I &amp; II | Learning in Humans and Machines</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/learning-humans-machines/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://piazza.com/cmu/fall2020/85426" target="_blank" rel="noopener"><span>Piazza</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/learning-humans-machines/class/01-class/">Class sessions</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/learning-humans-machines/class/01-class/">1: Evaluation, causality, and the tidyverse</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/02-class/">2: Regression and inference</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/03-class/">3: Theories of change</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/04-class/">4: Measurement and DAGs</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/05-class/">5: DAGs and potential outcomes</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/06-class/">6: Threats to validity</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/07-class/">7: Randomization and matching</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/08-class/">8: Diff-in-diff I</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/09-class/">9: Diff-in-diff II</a>
+      </li>
+      
+      <li class="active">
+        <a href="/learning-humans-machines/class/11-class/">11: RDD I &amp; II</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/12-class/">12: IV I &amp; II</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/13-class/">13: Planning evaluations &#43; other evaluations</a>
+      </li>
+      
+      <li >
+        <a href="/learning-humans-machines/class/14-class/">14: Ethics and open science</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Regression discontinuity I &amp; II</h1>
+
+                    
+
+                    
+
+                    
+                    <div class="due-date p-2 mb-3 bg-secondary text-white">
+                        Materials from class on Wednesday, April 1, 2020
+                    </div>
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#slides">Slides</a></li>
+<li><a href="#lecture-videos">Lecture videos</a></li>
+<li><a href="#r-stuff">R stuff</a></li>
+<li><a href="#get-data-for-example">Get data for example</a></li>
+<li><a href="#the-effect-of-a-gifted-program-on-student-test-scores">The effect of a gifted program on student test scores</a>
+<ul>
+<li><a href="#step-1-determine-if-process-of-assigning-treatment-is-rule-based">Step 1: Determine if process of assigning treatment is rule-based</a></li>
+<li><a href="#step-2-determine-if-the-design-is-fuzzy-or-sharp">Step 2: Determine if the design is fuzzy or sharp</a></li>
+<li><a href="#step-3-check-for-discontinuity-in-running-variable-around-cutpoint">Step 3: Check for discontinuity in running variable around cutpoint</a></li>
+<li><a href="#step-4-check-for-discontinuity-in-outcome-across-running-variable">Step 4: Check for discontinuity in outcome across running variable</a></li>
+<li><a href="#step-5-measure-the-size-of-the-effect">Step 5: Measure the size of the effect</a></li>
+<li><a href="#step-6-compare-all-the-effects">Step 6: Compare all the effects</a></li>
+</ul></li>
+<li><a href="#clearest-and-muddiest-things">Clearest and muddiest things</a></li>
+</ul>
+</div>
+
+<div id="slides" class="section level2">
+<h2>Slides</h2>
+
+<p><a href="/slides/PMAP-8521_2020-04-01.pdf">Download the slides from today’s class</a>.</p>
+<figure class="slide-thumb">
+    <a href="/slides/PMAP-8521_2020-04-01.pdf"><img src="/slides/PMAP-8521_2020-04-01.png" alt="First slide" /></a>
+</figure>
+
+
+</div>
+<div id="lecture-videos" class="section level2">
+<h2>Lecture videos</h2>
+<p>Videos for each section of the lecture and the R demonstration are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE">available at this YouTube playlist</a>.</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.youtube.com/watch?v=-WzlMTDzFl4&amp;list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE&amp;index=2&amp;t=0s">Introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=WLDfTkK6Lkk&amp;list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE&amp;index=3&amp;t=0s">Arbitrary cutoffs &amp; causal inference</a></li>
+<li><a href="https://www.youtube.com/watch?v=YqVsb3f86dY&amp;list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE&amp;index=4&amp;t=0s">Drawing lines &amp; measuring gaps</a></li>
+<li><a href="https://www.youtube.com/watch?v=mnYxO1vCVqc&amp;list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE&amp;index=5&amp;t=0s">Main RDD concerns</a></li>
+<li><a href="https://www.youtube.com/watch?v=8vHQCj5ploM&amp;list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE&amp;index=6&amp;t=0s">RDD with R</a></li>
+</ol>
+<p>You can also watch the playlist (and skip around to different sections) here:</p>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLS6tnpTr39sH_SPq_VYDgvA01ZtCOUjgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="r-stuff" class="section level2">
+<h2>R stuff</h2>
+<p>Download all the R stuff you need to play along at home: <a href="/projects/week-11.zip"><i class="fas fa-file-archive"></i> <code>week-11.zip</code></a>. You can also <a href="https://rstudio.cloud/spaces/44864/project/1086609">open an RStudio.cloud project</a> with everything ready to go.</p>
+</div>
+<div id="get-data-for-example" class="section level2">
+<h2>Get data for example</h2>
+<p>Download this CSV file and put it in a folder named <code>data</code> in a new RStudio project:</p>
+<ul>
+<li><a href="/data/aig_program.csv"><i class="fas fa-table"></i> <code>aig_program.csv</code></a></li>
+</ul>
+</div>
+<div id="the-effect-of-a-gifted-program-on-student-test-scores" class="section level2">
+<h2>The effect of a gifted program on student test scores</h2>
+<p>In this hypothetical example, students take a test in 6th grade to determine if they can participate in an academically and intellectually gifted (AIG) program during middle school and high school. In the AIG program students regularly get pulled out of their classes for extra work and lessons. At the end of high school, students take a final test (with a maximum of 100 points) to measure how much they learned overall. Remember, this is a hypothetical example and tests like this don’t really exist, but just go with it.</p>
+<pre class="r"><code>library(tidyverse)  # For ggplot, %&gt;%, and gang
+library(broom)      # For converting models into tables
+library(rdrobust)   # For robust nonparametric regression discontinuity
+library(rddensity)  # For nonparametric regression discontinuity density tests
+library(wakefield)  # Generate fake data
+library(huxtable)   # For side-by-side regression tables
+
+# Fake program data
+set.seed(1234)
+aig_program &lt;- r_data_frame(
+  n = 1000,
+  id,
+  test_score = rbeta(shape1 = 7, shape2 = 2),
+  final_score = rbeta(shape1 = 5, shape2 = 3),
+  race,
+  sex
+) %&gt;% 
+  mutate(test_score = test_score * 100,
+         aig = test_score &gt;= 75) %&gt;% 
+  mutate(final_score = final_score * 40 + 10 * aig + test_score / 2)</code></pre>
+<div id="step-1-determine-if-process-of-assigning-treatment-is-rule-based" class="section level3">
+<h3>Step 1: Determine if process of assigning treatment is rule-based</h3>
+<p>In order to join the AIG program, students have to score 75 points or more on the AIG test in 6th grade. Students who score less than 75 are not eligible for the program. Since we have a clear 75-point rule, we can assume that the process of participating in the AIG program is rule-based.</p>
+</div>
+<div id="step-2-determine-if-the-design-is-fuzzy-or-sharp" class="section level3">
+<h3>Step 2: Determine if the design is fuzzy or sharp</h3>
+<p>Since we know that the program was applied based on a rule, we want to next figure out how strictly the rule was applied. The threshold was 75 points on the test—did people who scored 73 slip into the AIG program, or did people who scored 80 not show up to the program? The easiest way to do this is with a graph, and we can get exact numbers with a table.</p>
+<pre class="r"><code>ggplot(aig_program, aes(x = test_score, y = aig, color = aig)) +
+  # Make points small and semi-transparent since there are lots of them
+  geom_point(size = 0.5, alpha = 0.5, 
+             position = position_jitter(width = 0, height = 0.25, seed = 1234)) + 
+  # Add vertical line
+  geom_vline(xintercept = 75) + 
+  # Add labels
+  labs(x = &quot;AIG test score&quot;, y = &quot;Participated in AIG program&quot;) + 
+  # Turn off the color legend, since it&#39;s redundant
+  guides(color = FALSE)</code></pre>
+<p><img src="/class/11-class_files/figure-html/check-fuzzy-sharp-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>This looks pretty sharp—it doesn’t look like people who scored under 75 participated in the program. We can verify this with a table. There are no people where <code>test_score</code> is greater than 75 and <code>aig</code> is false, and no people where <code>test_score</code> is less than 75 and <code>aig</code> is true.</p>
+<pre class="r"><code>aig_program %&gt;% 
+  group_by(aig, test_score &gt;= 75) %&gt;% 
+  summarize(count = n())</code></pre>
+<pre><code>## # A tibble: 2 x 3
+## # Groups:   aig [2]
+##   aig   `test_score &gt;= 75` count
+##   &lt;lgl&gt; &lt;lgl&gt;              &lt;int&gt;
+## 1 FALSE FALSE                346
+## 2 TRUE  TRUE                 654</code></pre>
+<p>This is thus a sharp design.</p>
+</div>
+<div id="step-3-check-for-discontinuity-in-running-variable-around-cutpoint" class="section level3">
+<h3>Step 3: Check for discontinuity in running variable around cutpoint</h3>
+<p>Next we need to see if there was any manipulation in the rating or running variable—maybe lots of people bunched up around 75 because of how the test was graded (i.e. teachers wanted to get students into the program so they bumped people up from 70 to 76). We can do this a couple different ways. First, make a histogram of the running variable (test scores) and see if there are any big jumps around the threshold:</p>
+<pre class="r"><code>ggplot(aig_program, aes(x = test_score, fill = aig)) +
+  geom_histogram(binwidth = 2, color = &quot;white&quot;) + 
+  geom_vline(xintercept = 75) + 
+  labs(x = &quot;AIG test score&quot;, y = &quot;Count&quot;, fill = &quot;In program&quot;)</code></pre>
+<p><img src="/class/11-class_files/figure-html/check-running-discontinuity-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Here it looks like there might be a jump around the cutoff—there’s a visible difference between the height of the bars right before and right after the 75-point threshold. But is that difference statistically significant? To test that, we can do a McCrary density test (explained on pp. 185-86 of <a href="https://www.scunning.com/mixtape.html"><em>Causal Inference: The Mixtape</em></a>). This puts data into bins like a histogram, and then plots the averages and confidence intervals of those bins. If the confidence intervals of the density lines don’t overlap, then there’s likely something systematically wrong with how the test was scored (i.e. too many people getting 76 vs 74). If the confidence intervals overlap, there’s not any significant difference around the threshold and we’re fine.</p>
+<pre class="r"><code># The syntax for rdplotdensity is kinda wonky here. You have to specify rdd,
+# which calculates the binned density of your running variable (and you have to
+# give it the cutpoint as c = whatever), and then you have to specify x, which
+# is the variable that goes on the x axis. In this case (and all cases?) it&#39;s
+# the same variable, but this function makes you specify it twice for whatever
+# reason. The type argument tells the plot to show both points and
+# lines---without it, it&#39;ll only show lines
+#
+# Also, notice this aig_program$test_score syntax. This is one way for R to
+# access columns in data frames---it means &quot;use the test_score column in the
+# aig_program data frame&quot;. The general syntax for it is data_frame$column_name
+#
+# Finally, notice how I assigned the output of rdplotdensity to a variable named
+# test_density. In theory, this should make it show nothing---all the output
+# should go to that object. Because of a bug in rdplotdensity, though, it will
+# show a plot automatically even if assigning it to a variable. If we don&#39;t
+# assign it to a variable you&#39;ll see two identical plots when knitting, which is
+# annoying. So we save it as a variable to hide the ouput, but get the output
+# for a single plot anyway. Ugh.
+test_density &lt;- rdplotdensity(rdd = rddensity(aig_program$test_score, c = 75), 
+                              X = aig_program$test_score, 
+                              type = &quot;both&quot;)  # This adds both points and lines</code></pre>
+<p><img src="/class/11-class_files/figure-html/check-running-discontinuity-mcrary-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Based on this plot, there’s no significant difference in the distribution of test scores around the cutpoint. We’re good.</p>
+</div>
+<div id="step-4-check-for-discontinuity-in-outcome-across-running-variable" class="section level3">
+<h3>Step 4: Check for discontinuity in outcome across running variable</h3>
+<p>Now that we know this is a sharp design and that there’s no bunching of test scores around the 75-point threshold, we can finally see if there’s a discontinuity in final scores based on participation in the AIG program. Plot the running variable on the x-axis, the outcome variable on the y-axis, and color the points by whether they participated in the program.</p>
+<pre class="r"><code>ggplot(aig_program, aes(x = test_score, y = final_score, color = aig)) +
+  geom_point(size = 0.5, alpha = 0.5) + 
+  # Add a line based on a linear model for the people scoring less than 75
+  geom_smooth(data = filter(aig_program, test_score &lt; 75), method = &quot;lm&quot;) +
+  # Add a line based on a linear model for the people scoring 75 or more
+  geom_smooth(data = filter(aig_program, test_score &gt;= 75), method = &quot;lm&quot;) +
+  geom_vline(xintercept = 75) +
+  labs(x = &quot;AIG test score&quot;, y = &quot;Final score&quot;, color = &quot;In program&quot;)</code></pre>
+<p><img src="/class/11-class_files/figure-html/check-outcome-discontinuity-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Based on this graph, there’s a clear discontinuity! It looks like participation in the AIG program boosted final test scores.</p>
+</div>
+<div id="step-5-measure-the-size-of-the-effect" class="section level3">
+<h3>Step 5: Measure the size of the effect</h3>
+<p>There’s a discontinuity, but how big is it? And is it statistically significant?</p>
+<p>We can check the size two different ways: parametrically (i.e. using <code>lm()</code> with specific parameters and coefficients), and nonparametrically (i.e. not using <code>lm()</code> or any kind of straight line and instead drawing lines that fit the data more precisely). We’ll do it both ways.</p>
+<div id="parametric-estimation" class="section level4">
+<h4>Parametric estimation</h4>
+<p>First we’ll do it parametrically by using linear regression. Here we want to explain the variation in final scores based on the AIG test score and participation in the program:</p>
+<p><span class="math display">\[
+\text{Final score} = \beta_0 + \beta_1 \text{AIG test score} + \beta_2 \text{AIG program} + \epsilon
+\]</span></p>
+<p>To make it easier to interpret coefficients, we can center the test score column so that instead of showing the actual test score, it shows how many points above or below 75 the student scored.</p>
+<pre class="r"><code>aig_program_centered &lt;- aig_program %&gt;% 
+  mutate(test_score_centered = test_score - 75)
+
+model_simple &lt;- lm(final_score ~ test_score_centered + aig, 
+                   data = aig_program_centered)
+tidy(model_simple)</code></pre>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 100%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><col><col><tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">term</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">estimate</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">std.error</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">statistic</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">p.value</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">(Intercept)</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">63.1&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.466&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">135&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">test_score_centered</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.535</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.0278</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">19.2</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">2.09e-70</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">aigTRUE</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">8.47&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.743&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">11.4</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">2.27e-28</td>
+</tr>
+</table>
+
+<p>Here’s what these coefficients mean:</p>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span>: This is the intercept. Because we centered test scores, it shows the average final score at the 75-point threshold. People who scored 74.99 points on the AIG test score an average of 63 points on the final test.</li>
+<li><span class="math inline">\(\beta_1\)</span>: This is the coefficient for <code>test_score_centered</code>. For every point above 75 that people score on the AIG test, they score 0.53 points higher on the final test.</li>
+<li><span class="math inline">\(\beta_2\)</span>: This is the coefficient for AIG, and this is the one we care about the most. This is the shift in intercept when <code>aig</code> is true, or the difference between scores at the threshold. Being in the AIG program increases final scores by 8.47 points.</li>
+</ul>
+<p>One advantage to using a parametric approach is that you can include other covariates like demographics. You can also use polynomial regression and include terms like <code>test_score²</code> or <code>test_score³</code> or even <code>test_score⁴</code> to make the line fit the data as close as possible.</p>
+<p>Here we fit the model to the entire data, but in real life, we care most about the observations right around the threshold. Scores that are super high or super low shouldn’t really influence our effect size, since we only care about the people who score just barely under and just barely over 75.</p>
+<p>We can fit the same model but restrict it to people within a smaller window, or bandwidth, like ±10 points, or ±5 points:</p>
+<pre class="r"><code>model_bw_10 &lt;- lm(final_score ~ test_score_centered + aig, 
+                  data = filter(aig_program_centered, 
+                                test_score_centered &gt;= -10 &amp; test_score_centered &lt;= 10))
+tidy(model_bw_10)</code></pre>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 100%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><col><col><tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">term</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">estimate</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">std.error</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">statistic</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">p.value</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">(Intercept)</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">62.5&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.669</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">93.5&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">2.9e-316</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">test_score_centered</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.458</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.103</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">4.43</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">1.17e-05</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">aigTRUE</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">9.2&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1.17&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">7.89</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1.97e-14</td>
+</tr>
+</table>
+
+<pre class="r"><code>model_bw_5 &lt;- lm(final_score ~ test_score_centered + aig, 
+                 data = filter(aig_program_centered, 
+                               test_score_centered &gt;= -5 &amp; test_score_centered &lt;= 5))
+tidy(model_bw_5)</code></pre>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 100%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><col><col><tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">term</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">estimate</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">std.error</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">statistic</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">p.value</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">(Intercept)</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">63.6&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0.908</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">70.1&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">3.69e-168</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">test_score_centered</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.859</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">0.274</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; padding: 4pt 4pt 4pt 4pt;">3.14</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">0.00191&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">aigTRUE</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">7.36&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1.58&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">4.66</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">5.22e-06&nbsp;</td>
+</tr>
+</table>
+
+<p>We can compare all these models simultaneously with <code>huxreg()</code>:</p>
+<pre class="r"><code># Notice how I used a named list to add column names for the models
+huxreg(list(&quot;Simple&quot; = model_simple, 
+            &quot;Bandwidth = 10&quot; = model_bw_10, 
+            &quot;Bandwidth = 5&quot; = model_bw_5))</code></pre>
+<table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 50%; margin-left: auto; margin-right: auto;  ">
+<col><col><col><col><tr>
+<td style="vertical-align: top; text-align: center; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;"></td>
+<td style="vertical-align: top; text-align: center; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">Simple</td>
+<td style="vertical-align: top; text-align: center; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">Bandwidth = 10</td>
+<td style="vertical-align: top; text-align: center; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">Bandwidth = 5</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(Intercept)</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">63.075 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">62.513 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">63.614 ***</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;"></td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.466)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.669)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.908)&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">test_score_centered</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.535 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.458 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.859 **&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;"></td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.028)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.103)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">(0.274)&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">aigTRUE</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">8.470 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">9.196 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">7.361 ***</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;"></td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">(0.743)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">(1.166)&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">(1.581)&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">N</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">497&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">257&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">R2</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.716&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.513&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">0.456&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">logLik</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">-3292.006&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">-1640.572&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">-842.102&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt; padding: 4pt 4pt 4pt 4pt;">AIC</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt; padding: 4pt 4pt 4pt 4pt;">6592.012&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt; padding: 4pt 4pt 4pt 4pt;">3289.145&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt; padding: 4pt 4pt 4pt 4pt;">1692.204&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4" style="vertical-align: top; text-align: left; white-space: normal; padding: 4pt 4pt 4pt 4pt;"> *** p &lt; 0.001;  ** p &lt; 0.01;  * p &lt; 0.05.</td>
+</tr>
+</table>
+
+<p>The effect of <code>aig</code> differs a lot across these different models, from 7.3 to 9.2. Which one is right? I don’t know. Also notice how much the sample size (N) changes across the models. As you narrow the bandwidth, you look at fewer and fewer observations.</p>
+<pre class="r"><code>ggplot(aig_program, aes(x = test_score, y = final_score, color = aig)) +
+  geom_point(size = 0.5, alpha = 0.2) + 
+  # Add lines for the full model (model_simple)
+  geom_smooth(data = filter(aig_program, test_score &lt; 75), 
+              method = &quot;lm&quot;, se = FALSE, linetype = &quot;dotted&quot;) +
+  geom_smooth(data = filter(aig_program, test_score &gt;= 75), 
+              method = &quot;lm&quot;, se = FALSE, linetype = &quot;dotted&quot;) +
+  # Add lines for bandwidth = 10
+  geom_smooth(data = filter(aig_program, test_score &lt; 75, test_score &gt;= 65), 
+              method = &quot;lm&quot;, se = FALSE, linetype = &quot;dashed&quot;) +
+  geom_smooth(data = filter(aig_program, test_score &gt;= 75, test_score &lt;= 85), 
+              method = &quot;lm&quot;, se = FALSE, linetype = &quot;dashed&quot;) +
+  # Add lines for bandwidth = 5
+  geom_smooth(data = filter(aig_program, test_score &lt; 75, test_score &gt;= 70), 
+              method = &quot;lm&quot;, se = FALSE) +
+  geom_smooth(data = filter(aig_program, test_score &gt;= 75, test_score &lt;= 80), 
+              method = &quot;lm&quot;, se = FALSE) +
+  geom_vline(xintercept = 75) +
+  # Zoom in
+  coord_cartesian(xlim = c(60, 90), ylim = c(55, 80)) +
+  labs(x = &quot;AIG test score&quot;, y = &quot;Final score&quot;, color = &quot;In program&quot;)</code></pre>
+<p><img src="/class/11-class_files/figure-html/different-lm-bandwidths-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="nonparametric-estimation" class="section level4">
+<h4>Nonparametric estimation</h4>
+<p>Instead of using linear regression to measure the size of the discontinuity, we can use nonparametric methods. Essentially this means that R will not try to fit a straight line to the data—instead it’ll curve around the points and try to fit everything as smoothly as possible.</p>
+<p>The <code>rdrobust()</code> function makes it really easy to measure the gap at the cutoff with nonparametric estimation. Here’s the simplest version:</p>
+<pre class="r"><code># Notice how we have to use the aig_program$final_score syntax here. Also make
+# sure you set the cutoff with c
+rdrobust(y = aig_program$final_score, x = aig_program$test_score, c = 75) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                       mserd
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            138         198
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  6.584       6.584
+## BW bias (b)                  9.576       9.576
+## rho (h/b)                    0.688       0.688
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     8.011     1.494     5.360     0.000     [5.082 , 10.940]    
+##         Robust         -         -     4.437     0.000     [4.315 , 11.144]    
+## =============================================================================</code></pre>
+<p>There are a few important pieces of information to look at in this output:</p>
+<ul>
+<li>The thing you care about the most is the actual effect size. This is the coefficient in the table at the bottom, indicated with the “Conventional” method. Here it’s 8.011, which means the AIG program causes an 8-point increase in final test scores. The table at the bottom also includes standard errors, p-values, and confidence intervals for the coefficient, both normal estimates (conventional) and robust estimates (robust). According to both types of estimates, this 8 point bump is statistically significant (p &lt; 0.001; the 95% confidence interval definitely doesn’t ever include 0).</li>
+<li>The model used a bandwidth of 6.584 (<code>BW est. (h)</code> in the output), which means it only looked at people with test scores of 75 ± 6.6. It decided on this bandwidth automatically, but you can change it to whatever you want.</li>
+<li>The model used a triangular kernel. This is the most esoteric part of the model—the kernel decides how much weight to give to observations around the cutoff. Test scores like 74.99 or 75.01 are extremely close to 75, so they get the most weight. Scores like 73 or 77 are a little further away so they matter less. Scores like 69 or 81 matter even less, so they get even less weight. You can use different kernels too, and <a href="https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use">Wikipedia has a nice graphic showing the shapes of these different kernels</a> and how they give different weights to observations at different distances.</li>
+</ul>
+<p>We can plot this nonparametric model with <code>rdplot()</code>. It unfortunately doesn’t use the same plotting system as <code>ggplot()</code>, so you can’t add layers like <code>labs()</code> or <code>geom_point()</code> or anything else, which is sad. Oh well.</p>
+<pre class="r"><code>rdplot(y = aig_program$final_score, x = aig_program$test_score, c = 75)</code></pre>
+<p><img src="/class/11-class_files/figure-html/rdplot-basic-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Look at that 8 point jump at 75! Neat!</p>
+<p>By default, <code>rdrobust()</code> chooses the bandwidth size automatically based on fancy algorithms that economists have developed. You can use <code>rdbwselect()</code> to see what that bandwidth is, and if you include the <code>all = TRUE</code> argument, you can see a bunch of different potential bandwidths based on a bunch of different algorithms:</p>
+<pre class="r"><code># This says to use the mserd version, which according to the help file for
+# rdbwselect means &quot;the mean squared error-optimal bandwidth selector for RD
+# treatment effects&quot;. Sounds great.
+rdbwselect(y = aig_program$final_score, x = aig_program$test_score, c = 75) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdbwselect
+## 
+## Number of Obs.                 1000
+## BW type                       mserd
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## Unique Obs.                    346         654
+## 
+## =======================================================
+##                   BW est. (h)    BW bias (b)
+##             Left of c Right of c  Left of c Right of c
+## =======================================================
+##      mserd     6.584      6.584      9.576      9.576
+## =======================================================</code></pre>
+<p>What are the different possible bandwidths we could use?</p>
+<pre class="r"><code>rdbwselect(y = aig_program$final_score, x = aig_program$test_score, c = 75, all = TRUE) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdbwselect
+## 
+## Number of Obs.                 1000
+## BW type                         All
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## Unique Obs.                    346         654
+## 
+## =======================================================
+##                   BW est. (h)    BW bias (b)
+##             Left of c Right of c  Left of c Right of c
+## =======================================================
+##      mserd     6.584      6.584      9.576      9.576
+##     msetwo    14.057      5.671     22.401      8.491
+##     msesum     6.039      6.039      8.939      8.939
+##   msecomb1     6.039      6.039      8.939      8.939
+##   msecomb2     6.584      6.039      9.576      8.939
+##      cerrd     4.661      4.661      9.576      9.576
+##     certwo     9.952      4.015     22.401      8.491
+##     cersum     4.275      4.275      8.939      8.939
+##   cercomb1     4.275      4.275      8.939      8.939
+##   cercomb2     4.661      4.275      9.576      8.939
+## =======================================================</code></pre>
+<p>Phew. There are a lot here. The best one was <code>mserd</code>, or ±6.5. Some say ±6, others ±4.5ish, other are asymmetric and say -14 before and +5 after, or -9 before and +4 after. Try a bunch of different bandwidths as part of your sensitivity analysis and see if your effect size changes substantially as a result.</p>
+<p>Another common approach to sensitivity analysis is to use the ideal bandwidth, twice the ideal, and half the ideal (so in our case 6.5, 13, and 3.25) and see if the estimate changes substantially. Use the <code>h</code> argument to specify your own bandwidth</p>
+<pre class="r"><code>rdrobust(y = aig_program$final_score, x = aig_program$test_score, c = 75, h = 6.5) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                      Manual
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            136         197
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  6.500       6.500
+## BW bias (b)                  6.500       6.500
+## rho (h/b)                    1.000       1.000
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     7.986     1.501     5.321     0.000     [5.044 , 10.928]    
+##         Robust         -         -     4.492     0.000     [4.734 , 12.063]    
+## =============================================================================</code></pre>
+<pre class="r"><code>rdrobust(y = aig_program$final_score, x = aig_program$test_score, c = 75, h = 6.5 * 2) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                      Manual
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            237         409
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                 13.000      13.000
+## BW bias (b)                 13.000      13.000
+## rho (h/b)                    1.000       1.000
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     8.774     1.131     7.759     0.000     [6.558 , 10.991]    
+##         Robust         -         -     5.182     0.000     [5.047 , 11.186]    
+## =============================================================================</code></pre>
+<pre class="r"><code>rdrobust(y = aig_program$final_score, x = aig_program$test_score, c = 75, h = 6.5 / 2) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                      Manual
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.             74          95
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  3.250       3.250
+## BW bias (b)                  3.250       3.250
+## rho (h/b)                    1.000       1.000
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     8.169     1.774     4.606     0.000     [4.693 , 11.645]    
+##         Robust         -         -     3.433     0.001     [3.311 , 12.123]    
+## =============================================================================</code></pre>
+<p>Here the coefficients change slightly:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Bandwidth</th>
+<th align="center">Effect size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">6.5 (ideal)</td>
+<td align="center">7.986</td>
+</tr>
+<tr class="even">
+<td align="center">13 (twice)</td>
+<td align="center">8.774</td>
+</tr>
+<tr class="odd">
+<td align="center">3.25 (half)</td>
+<td align="center">8.169</td>
+</tr>
+</tbody>
+</table>
+<p>You can also adjust the kernel. By default <code>rd_robust</code> uses a triangular kernel (more distant observations have less weight linearly), but you can switch it to Epanechnikov (more distant observations have less weight following a curve) or uniform (more distant observations have the same weight as closer observations; this is unweighted).</p>
+<pre class="r"><code># Non-parametric RD with different kernels
+rdrobust(y = aig_program$final_score, x = aig_program$test_score, 
+         c = 75, kernel = &quot;triangular&quot;) %&gt;% 
+  summary()  # Default</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                       mserd
+## Kernel                   Triangular
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            138         198
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  6.584       6.584
+## BW bias (b)                  9.576       9.576
+## rho (h/b)                    0.688       0.688
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     8.011     1.494     5.360     0.000     [5.082 , 10.940]    
+##         Robust         -         -     4.437     0.000     [4.315 , 11.144]    
+## =============================================================================</code></pre>
+<pre class="r"><code>rdrobust(y = aig_program$final_score, x = aig_program$test_score, 
+         c = 75, kernel = &quot;epanechnikov&quot;) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                       mserd
+## Kernel                   Epanechnikov
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            129         178
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  5.994       5.994
+## BW bias (b)                  9.277       9.277
+## rho (h/b)                    0.646       0.646
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     7.866     1.547     5.084     0.000     [4.834 , 10.898]    
+##         Robust         -         -     4.184     0.000     [4.012 , 11.082]    
+## =============================================================================</code></pre>
+<pre class="r"><code>rdrobust(y = aig_program$final_score, x = aig_program$test_score, 
+         c = 75, kernel = &quot;uniform&quot;) %&gt;% 
+  summary()</code></pre>
+<pre><code>## Call: rdrobust
+## 
+## Number of Obs.                 1000
+## BW type                       mserd
+## Kernel                      Uniform
+## VCE method                       NN
+## 
+## Number of Obs.                 346         654
+## Eff. Number of Obs.            121         163
+## Order est. (p)                   1           1
+## Order bias  (q)                  2           2
+## BW est. (h)                  5.598       5.598
+## BW bias (b)                 10.148      10.148
+## rho (h/b)                    0.552       0.552
+## Unique Obs.                    346         654
+## 
+## =============================================================================
+##         Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
+## =============================================================================
+##   Conventional     7.733     1.554     4.975     0.000     [4.686 , 10.779]    
+##         Robust         -         -     4.081     0.000     [3.776 , 10.753]    
+## =============================================================================</code></pre>
+<p>Again, the coefficients change slightly:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Kernel</th>
+<th align="center">Effect size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Triangular</td>
+<td align="center">8.011</td>
+</tr>
+<tr class="even">
+<td align="center">Epanechnikov</td>
+<td align="center">7.866</td>
+</tr>
+<tr class="odd">
+<td align="center">Uniform</td>
+<td align="center">7.733</td>
+</tr>
+</tbody>
+</table>
+<p>Which one is best? ¯\_(ツ)_/¯. All that really matters is that the size and direction of the effect doesn’t change. It’s still positive and it’s still in the 7-8 point range.</p>
+</div>
+</div>
+<div id="step-6-compare-all-the-effects" class="section level3">
+<h3>Step 6: Compare all the effects</h3>
+<p>We just estimated a ton of effect sizes. In real life you’d generally just report one of these as your final effect, but you’d run the different parametric and nonparametric models to check how reliable and robust your findings are. Here’s everything we just found:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Method</th>
+<th align="center">Bandwidth</th>
+<th align="center">Kernel</th>
+<th align="center">Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Parametric</td>
+<td align="center">Full data</td>
+<td align="center">Unweighted</td>
+<td align="center">8.470</td>
+</tr>
+<tr class="even">
+<td align="center">Parametric</td>
+<td align="center">10</td>
+<td align="center">Unweighted</td>
+<td align="center">9.196</td>
+</tr>
+<tr class="odd">
+<td align="center">Parametric</td>
+<td align="center">5</td>
+<td align="center">Unweighted</td>
+<td align="center">7.361</td>
+</tr>
+<tr class="even">
+<td align="center">Nonparametric</td>
+<td align="center">6.584</td>
+<td align="center">Triangular</td>
+<td align="center">8.011</td>
+</tr>
+<tr class="odd">
+<td align="center">Nonparametric</td>
+<td align="center">6.5</td>
+<td align="center">Triangular</td>
+<td align="center">7.986</td>
+</tr>
+<tr class="even">
+<td align="center">Nonparametric</td>
+<td align="center">13</td>
+<td align="center">Triangular</td>
+<td align="center">8.774</td>
+</tr>
+<tr class="odd">
+<td align="center">Nonparametric</td>
+<td align="center">3.25</td>
+<td align="center">Triangular</td>
+<td align="center">8.169</td>
+</tr>
+<tr class="even">
+<td align="center">Nonparametric</td>
+<td align="center">6.584</td>
+<td align="center">Epanechnikov</td>
+<td align="center">7.866</td>
+</tr>
+<tr class="odd">
+<td align="center">Nonparametric</td>
+<td align="center">6.584</td>
+<td align="center">Uniform (unweighted)</td>
+<td align="center">7.733</td>
+</tr>
+</tbody>
+</table>
+<p>In real life, I’d likely report the simplest one (row 4: nonparametric, automatic bandwidth, triangular kernel), but knowing how much the effect varies across model specifications is helpful.</p>
+</div>
+</div>
+<div id="clearest-and-muddiest-things" class="section level2">
+<h2>Clearest and muddiest things</h2>
+    <p>Go to <a href="https://forms.gle/6wB88JPeigzBuLXFA">this form</a> and answer these three questions:</p>
+    <ol style="list-style-type: decimal">
+        <li>What was the muddiest thing from class today? What are you still wondering about?</li>
+        <li>What was the clearest thing from class today?</li>
+        <li>What was the most exciting thing you learned?</li>
+    </ol>
+    <p>I’ll compile the questions and send out answers after class.</p>
+
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on April 9, 2020</p>
+
+                    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/dyurovsky/learning-humans-machines/edit/master/content/class/11-class.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>85426/85726: Learning in Humans and Machines (Fall 2020)</strong><br>
+
+                <a href="https://www.cmu.edu" target="_blank" rel="noopener">Carnegie Mellon University</a> &emsp;&emsp;
+                <a href="https://www.cmu.edu/dietrich/psychology/" target="_blank" rel="noopener">Department of Psychology</a>
+            </p>
+
+            <p>
+                <a href="https://www.danyurovsky.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Dan Yurovsky</a> &emsp;&emsp;
+                <a href="mailto:yurovsky@cmu.edu"><i class="fas fa-envelope"></i>
+                    yurovsky@cmu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Tuesday/Thursday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:30–2:50 PM <br>
+                <i class="fas fa-university"></i> Zoom Room
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.danyurovsky.com" target="_blank" rel="noopener">Dan Yurovsky</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/dyurovsky/learning-humans-machines.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/learning-humans-machines/js/academic.min.e5c8525332f417fe3589df9a6b25b6c4.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
