@@ -25,22 +25,23 @@
 &lt;li&gt;&lt;a href=&#34;#code&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;/learning-humans-machines/slides/intro.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;slides/intro.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
-    &lt;a href=&#34;/learning-humans-machines/slides/intro.pdf&#34;&gt;&lt;img src=&#34;/learning-humans-machines/slides/intro.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;slides/intro.pdf&#34;&gt;&lt;img src=&#34;slides/intro.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Code&lt;/h2&gt;
-&lt;p&gt;McMurray (2007) model – &lt;a href=&#34;/learning-humans-machines/code/01-learning-humans-machines/vocabulary_explosion.html&#34;&gt;html&lt;/a&gt; and &lt;a href=&#34;/learning-humans-machines/code/01-learning-humans-machines/vocabulary_explosion.Rmd&#34;&gt;Rmd&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;McMurray (2007) model – &lt;a href=&#34;code/vocabulary_explosion.html&#34;&gt;html&lt;/a&gt; and &lt;a href=&#34;code/vocabulary_explosion.Rmd&#34;&gt;Rmd&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recording&lt;/h2&gt;
@@ -56,6 +57,10 @@
     &lt;/ol&gt;
     &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
 
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;papers/mcmurray2007.pdf&#34;&gt;McMurray (2007)&lt;/a&gt;. Defusing the childhood vocabulary explosion. &lt;em&gt;Science&lt;/em&gt;, &lt;em&gt;317&lt;/em&gt;, 631.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -97,10 +102,8 @@
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/class/01-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 3&lt;/td&gt;
