@@ -66,6 +66,49 @@
     </item>
     
     <item>
+      <title>R, RStudio, and Github</title>
+      <link>/learning-humans-machines/class/02-class/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/02-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/r_and_github.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/r_and_github.pdf&#34;&gt;&lt;img src=&#34;slides/r_and_github.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7jhw7wqvifsorsb4wg6ym5gcr1g40nsw&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Schedule</title>
       <link>/learning-humans-machines/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -116,10 +159,8 @@
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/02-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 8&lt;/td&gt;
@@ -757,7 +798,7 @@
 &lt;li&gt;&lt;a href=&#34;#accommodations-for-students-with-disabilities&#34;&gt;Accommodations for Students with Disabilities:&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#respect-in-the-classroom&#34;&gt;Respect in the Classroom&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#health-well-being&#34;&gt;Health &amp;amp; Well-Being&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#academic-honesty&#34;&gt;Academic honesty:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#academic-honesty&#34;&gt;Academic honesty&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and grades&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -919,7 +960,7 @@ use visual aids (e.g. slides, figures drawn on the zoom board).&lt;/p&gt;&lt;/l
 &lt;p&gt;Take care of yourself. Maintaining a healthy lifestyle via good nutrition, exercise, rest, and relaxation will help you achieve your goals and cope with stress. All of us benefit from support during times of struggle. There are many helpful resources available, so please reach out to us if you need help connecting with them on campus or virtually. Asking for support sooner rather than later is almost always helpful. If you or anyone you know experiences academic stress, difficult life events, or feelings of anxiety or depression, please seek support. &lt;a href=&#34;http://www.cmu.edu/counseling/&#34;&gt;Counseling and Psychological Services (CaPS)&lt;/a&gt; is available online and at 412-268-2922 or via. Consider reaching out to a friend, faculty member, or family member you trust for assistance with getting connected to the support that can help.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;academic-honesty&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Academic honesty:&lt;/h3&gt;
+&lt;h3&gt;Academic honesty&lt;/h3&gt;
 &lt;p&gt;Cheating and plagiarism are defined in the CMU Student Handbook, and include (1) submitting work that is not your own for assignments or exams; (2) copying ideas, words, or graphics from a published or unpublished source without appropriate citation; (3) submitting or using falsified data; and (4) submitting the same work for credit in two courses without prior consent of both instructors. Any student who is found cheating or plagiarizing on any work for this course will receive a failing grade for that work. Further action may be taken if necessary, including a report to the dean.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

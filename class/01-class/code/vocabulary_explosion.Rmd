@@ -40,7 +40,7 @@ How many words are learned by each time step?
 timesteps <- tibble(time = 1:6000)
 
 learned_by_timestep <- timesteps %>%
-  rowwise() %>%
+  group_by(time)  %>%
   mutate(learned = sum(time >= pull(word_difficulties, difficulty)))
 
 datatable(learned_by_timestep, rownames = FALSE)
