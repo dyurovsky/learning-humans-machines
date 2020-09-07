@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Learing in humans and machines</title>
+      <title>Learning in humans and machines</title>
       <link>/learning-humans-machines/class/01-class/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/learning-humans-machines/class/01-class/</guid>
@@ -116,13 +116,14 @@
       <description>
 
 
-&lt;div id=&#34;required&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Required&lt;/h2&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Ramscar, M., Yarlett, D., Dye, M., Denny, K., &amp;amp; Thorpe, K. &lt;a href=&#34;ramscar2010.pdf&#34;&gt;The Effects of feature-label-order and their implications for symbolic learning&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;34&lt;/em&gt;, 909-957.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Smith, L. B. &lt;a href=&#34;/learning-humans-machines/reading/smith2000.pdf&#34;&gt;Learning how to learn words: An associative crane&lt;/a&gt;. In R. Golinkoff, &amp;amp; K. Hirsh-Pasek (Eds.), &lt;em&gt;Breaking the word learning barrier&lt;/em&gt; (pp. 51-80). Oxford: Oxford University Press.&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Ramscar, M., Yarlett, D., Dye, M., Denny, K., &amp;amp; Thorpe, K. &lt;a href=&#34;/learning-humans-machines/reading/ramscar2010.pdf&#34;&gt;The Effects of feature-label-order and their implications for symbolic learning&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;34&lt;/em&gt;, 909-957.&lt;/li&gt;
+&lt;li&gt;This is a challenging paper—both the theory and the model are pretty dense. If you don’t understand all of the distinctions that the authors are drawing between reference and prediction don’t worry too much about that (section 1). But make sure you understand sections 2-8. The rest of the paper is optional.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Smith, L. B. &lt;a href=&#34;smith2000.pdf&#34;&gt;Learning how to learn words: An associative crane&lt;/a&gt;. In R. Golinkoff, &amp;amp; K. Hirsh-Pasek (Eds.), &lt;em&gt;Breaking the word learning barrier&lt;/em&gt; (pp. 51-80). Oxford: Oxford University Press.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This paper should be a little bit easier. Make sure you understand the primary argument about the difference between cranes and skyhooks as explanations, and how that maps onto theories of word learning according to Smith.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
