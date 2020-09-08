@@ -829,6 +829,7 @@
         &lt;ul class=&#34;icon-list&#34;&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-user&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.danyurovsky.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Dan Yurovsky&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://cmu.zoom.us/j/92066334665?pwd=MU94ek1CMWk1cDRsVXBHWklITmJZUT09&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Zoom Office&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;far fa-calendar&#34;&gt;&lt;/i&gt; Tuesday 4:30-6:40 PM&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-envelope&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:yurovsky@cmu.edu&#34;&gt; yurovsky@cmu.edu&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fab fa-twitter&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/danyurovsky&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; @danyurovsky&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
