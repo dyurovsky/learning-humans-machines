@@ -620,12 +620,12 @@ h4 {
 <p><span class="math display">\[\Delta V = \alpha \cdot \left(\lambda - V_{total}\right)\]</span></p>
 <div id="problem-1-describe-in-words-what-each-symbol-in-this-equation-means-and-how-it-is-related-to-learning-1-point." class="section level4">
 <h4><strong>Problem 1</strong>: Describe, in words, what each symbol in this equation means and how it is related to learning (1 point).</h4>
-<p>Now let’s turn this equation into <code>R</code> code. You’ll write a function called <code>rw_delta_v</code> that computes <span class="math inline">\(\Delta V\)</span> according to the Rescorla-Wagner equation. It should take all three of relevant parameters(<span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\lambda\)</span>, and <span class="math inline">\(V_{total}\)</span>), and also the current weight of the conditioned stimulus (<span class="math inline">\(V\)</span>). It should return the amount that this weight will change.</p>
+<p>Now let’s turn this equation into <code>R</code> code. You’ll write a function called <code>rw_delta_v</code> that computes <span class="math inline">\(\Delta V\)</span> according to the Rescorla-Wagner equation. It should take all three of relevant parameters(<span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\lambda\)</span>, and <span class="math inline">\(V_{total}\)</span>). It should return the amount that the target weight will change.</p>
 </div>
 <div id="problem-2-write-rw_delta_v-1-point." class="section level4">
 <h4><strong>Problem 2</strong>: Write <code>rw_delta_v</code> (1 point).</h4>
 <p>You’ll use the stub in the R Markdown file in the GitHub Repository that looks like this:</p>
-<pre class="r"><code>rw_delta_v &lt;- function(V, Vtotal, alpha = .1, lambda = 1) {
+<pre class="r"><code>rw_delta_v &lt;- function(Vtotal, alpha = .1, lambda = 1) {
   
 }</code></pre>
 <p>One thing to notice is that function parameters in <code>R</code> can have defaults specified. If you don’t pass in a value for that parameter, it will get the default value inside the function.</p>

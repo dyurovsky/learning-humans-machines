@@ -50,12 +50,12 @@ h4 {
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\Delta V = \alpha \cdot \left(\lambda - V_{total}\right)\]&lt;/span&gt;&lt;/p&gt;
 &lt;div id=&#34;problem-1-describe-in-words-what-each-symbol-in-this-equation-means-and-how-it-is-related-to-learning-1-point.&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 1&lt;/strong&gt;: Describe, in words, what each symbol in this equation means and how it is related to learning (1 point).&lt;/h4&gt;
-&lt;p&gt;Now let’s turn this equation into &lt;code&gt;R&lt;/code&gt; code. You’ll write a function called &lt;code&gt;rw_delta_v&lt;/code&gt; that computes &lt;span class=&#34;math inline&#34;&gt;\(\Delta V\)&lt;/span&gt; according to the Rescorla-Wagner equation. It should take all three of relevant parameters(&lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(V_{total}\)&lt;/span&gt;), and also the current weight of the conditioned stimulus (&lt;span class=&#34;math inline&#34;&gt;\(V\)&lt;/span&gt;). It should return the amount that this weight will change.&lt;/p&gt;
+&lt;p&gt;Now let’s turn this equation into &lt;code&gt;R&lt;/code&gt; code. You’ll write a function called &lt;code&gt;rw_delta_v&lt;/code&gt; that computes &lt;span class=&#34;math inline&#34;&gt;\(\Delta V\)&lt;/span&gt; according to the Rescorla-Wagner equation. It should take all three of relevant parameters(&lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(V_{total}\)&lt;/span&gt;). It should return the amount that the target weight will change.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;problem-2-write-rw_delta_v-1-point.&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 2&lt;/strong&gt;: Write &lt;code&gt;rw_delta_v&lt;/code&gt; (1 point).&lt;/h4&gt;
 &lt;p&gt;You’ll use the stub in the R Markdown file in the GitHub Repository that looks like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rw_delta_v &amp;lt;- function(V, Vtotal, alpha = .1, lambda = 1) {
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rw_delta_v &amp;lt;- function(Vtotal, alpha = .1, lambda = 1) {
   
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One thing to notice is that function parameters in &lt;code&gt;R&lt;/code&gt; can have defaults specified. If you don’t pass in a value for that parameter, it will get the default value inside the function.&lt;/p&gt;
