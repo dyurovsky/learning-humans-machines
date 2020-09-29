@@ -246,7 +246,7 @@ h4 {
 &lt;div id=&#34;problem-5-use-the-provided-code-to-run-neuralnet-on-your-xor-data-and-the-plot-your-neuralnet-to-see-what-the-weights-on-each-node-are.-did-it-learn-the-same-thing-as-the-network-you-made-from-scratch&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 5&lt;/strong&gt;: Use the provided code to run &lt;code&gt;neuralnet&lt;/code&gt; on your xor data, and the &lt;code&gt;plot&lt;/code&gt; your neuralnet to see what the weights on each node are. Did it learn the same thing as the network you made from scratch?&lt;/h4&gt;
 &lt;p&gt;Now that you understand how this package works, you’ll use it to solve a more interesting classification problem. You’ll be learning to classify handwritten digits from the &lt;strong&gt;MNIST&lt;/strong&gt; dataset that are a classic success story for modern neural networks. You’ll be working with just a small, scaled down subset of the real dataset — 100 examples of each of the digits 0-9. Here is the first example of each:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/assignment/02-networks_files/figure-html/show-mnist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/mnist.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Your goal will be to try out the &lt;code&gt;neuralnet&lt;/code&gt; package to find what kinds of network structures matter for learning to classify these digits. The representation you’ll work with is a linearized version of the digits — imagine taking all of the rows of these figures and chaining them all into one long row. This means your network won’t have any ability to use the spatial structure of the images. But even with just the pixel values, you’ll find that you can do a fair bit better than chance (&lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{10}\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;neuralnet&lt;/code&gt; package uses what is called a &lt;em&gt;one-hot&lt;/em&gt; encoding: The output layer will have ten nodes, each corresponding to a digit. The goal of the network when it reads say a &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; is for all of the output nodes except for the one corresponding to &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; to have no activation, and for the &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; node to have 1.&lt;/p&gt;
 &lt;/div&gt;
@@ -486,7 +486,7 @@ h4 {
     </item>
     
     <item>
-      <title>Recurrent neural networks</title>
+      <title>Backpropagation details</title>
       <link>/learning-humans-machines/class/07-class/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/learning-humans-machines/class/07-class/</guid>
@@ -498,16 +498,15 @@ h4 {
 &lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#backpropopagation-example&#34;&gt;Backpropopagation example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;slides/recurrent.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;slides/backprop.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
-    &lt;a href=&#34;slides/recurrent.pdf&#34;&gt;&lt;img src=&#34;slides/recurrent.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;slides/backprop.pdf&#34;&gt;&lt;img src=&#34;slides/backprop.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -531,10 +530,6 @@ h4 {
 &lt;h2&gt;Backpropopagation example&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://bit.ly/backprop-demo&#34;&gt;XOR by hand&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Papers&lt;/h2&gt;
-&lt;p&gt;Elman, J. L. (1990). &lt;a href=&#34;papers/elman1990.pdf&#34;&gt;Finding structure in time&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 179—211.&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -555,6 +550,54 @@ h4 {
 &lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recording&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/22ky1hhgumcoudzqjy7ci8rwxyfx67yq&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recurrent neural networks</title>
+      <link>/learning-humans-machines/class/09-class/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/09-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/recurrent.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/recurrent.pdf&#34;&gt;&lt;img src=&#34;slides/recurrent.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/9z9b63nfznb5a57f616om6opfb2u0i7b&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Elman, J. L. (1990). &lt;a href=&#34;papers/elman1990.pdf&#34;&gt;Finding structure in time&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 179—211.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
@@ -740,7 +783,7 @@ h4 {
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 22&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Recurrent neural networks&lt;/strong&gt;&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Backpropagation details&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -763,6 +806,20 @@ h4 {
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/08-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 29&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Recurrent neural networks&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/09-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -789,7 +846,7 @@ h4 {
             &lt;td style=&#34;width:10%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Class&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 29&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 1&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Basics of Bayesian Inference&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -805,24 +862,8 @@ h4 {
             &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 1&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Hierarchical Models&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 6&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Models at different levels&lt;/strong&gt;&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Hierarchical models&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -838,6 +879,22 @@ h4 {
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 8&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Models at different levels&lt;/strong&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 13&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Rational analysis&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -869,7 +926,7 @@ h4 {
             &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 13&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 15&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Bayesian associative learning&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -885,24 +942,8 @@ h4 {
             &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 15&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Sampling methods&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 20&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Sampling in people&lt;/strong&gt;&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Sampling methods&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;

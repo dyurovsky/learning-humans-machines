@@ -294,7 +294,7 @@
     </item>
     
     <item>
-      <title>Recurrent neural networks</title>
+      <title>Backpropagation details</title>
       <link>/learning-humans-machines/class/07-class/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/learning-humans-machines/class/07-class/</guid>
@@ -306,16 +306,15 @@
 &lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#backpropopagation-example&#34;&gt;Backpropopagation example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;slides/recurrent.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;slides/backprop.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
 &lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
-    &lt;a href=&#34;slides/recurrent.pdf&#34;&gt;&lt;img src=&#34;slides/recurrent.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;slides/backprop.pdf&#34;&gt;&lt;img src=&#34;slides/backprop.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -339,10 +338,6 @@
 &lt;h2&gt;Backpropopagation example&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://bit.ly/backprop-demo&#34;&gt;XOR by hand&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Papers&lt;/h2&gt;
-&lt;p&gt;Elman, J. L. (1990). &lt;a href=&#34;papers/elman1990.pdf&#34;&gt;Finding structure in time&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 179—211.&lt;/p&gt;
-&lt;/div&gt;
 </description>
     </item>
     
@@ -363,6 +358,54 @@
 &lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recording&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/22ky1hhgumcoudzqjy7ci8rwxyfx67yq&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recurrent neural networks</title>
+      <link>/learning-humans-machines/class/09-class/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/09-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/recurrent.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/recurrent.pdf&#34;&gt;&lt;img src=&#34;slides/recurrent.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/9z9b63nfznb5a57f616om6opfb2u0i7b&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Elman, J. L. (1990). &lt;a href=&#34;papers/elman1990.pdf&#34;&gt;Finding structure in time&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 179—211.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
