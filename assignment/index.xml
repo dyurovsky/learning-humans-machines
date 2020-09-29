@@ -104,5 +104,105 @@ h4 {
 </description>
     </item>
     
+    <item>
+      <title>Homework 2</title>
+      <link>/learning-humans-machines/assignment/02-networks/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/assignment/02-networks/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#perceptrons&#34;&gt;Perceptrons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multi-layer-networks&#34;&gt;Multi-layer networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#using-the-neuralnet-package&#34;&gt;Using the &lt;code&gt;neuralnet&lt;/code&gt; package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style type=&#34;text/css&#34;&gt;
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: #d45026;
+  border-style: solid;
+  background-color: rgba(212, 80, 38, 0.2);
+  font-weight: normal;
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;strong&gt;Getting your assignment: &lt;/strong&gt; You can find template code for your submission here at this &lt;a href=&#34;https://classroom.github.com/a/UoRs801q&#34;&gt;GitHub Classroom link&lt;/a&gt;. All of the code you write you should go in &lt;code&gt;hw2.Rmd&lt;/code&gt;, and please knit the Markdown file in your completed submission.&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Neural networks were a revolution in the scientific study of cognitive neuroscience, spawning a large body of work investigating the computational properties of systems designed to model the operation of the brain’s basic computational units (&lt;a href=&#34;https://dyurovsky.github.io/learning-humans-machines/class/05-class/papers/rosenblatt1958.pdf&#34;&gt;Rosenblatt, 1958&lt;/a&gt;. These perceptrons varied along a number of dimensions, but all of them had the same critical flaw: they could not learn non-linear combinations of inputs, leading to their failure on even simple problems like Exclusive Or (XOR; Minsky &amp;amp; Papert, 1967).&lt;/p&gt;
+&lt;p&gt;In the 1980s, work by David Rumelhart and his colleagues rekindled the field’s interest in neural networks by devising an algorithm by which these models &lt;em&gt;could&lt;/em&gt; learn non-linear combinations of input and develop genuinely interesting and surprisingly representations of their input (&lt;a href=&#34;https://dyurovsky.github.io/learning-humans-machines/class/06-class/papers/rumelhart1986.pdf&#34;&gt;Rumelhart, Hinton, &amp;amp; Williams, 1986&lt;/a&gt;). This lead to an explosion of work in artificial neural networks in the following decades, and also, following Marr’s perspective, a reconsideration of what these models were intended to describe (e.g. the neurons in the networks need not map on to neurons in the brain).&lt;/p&gt;
+&lt;p&gt;In this assignment you will first implement simple one-layer perceptrons that learn with the perceptron learning rule. You’ll show that these can learn several logical functions: AND, OR, and NOT. But they cannot learn XOR.&lt;/p&gt;
+&lt;p&gt;You will then build a very simple multi-layer network that uses backpropagation to learn XOR. You’ll finally use the &lt;code&gt;neuralnet&lt;/code&gt; package to solve this same problem, and then use it to build a digit classifier using a small version of the &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;MNIST dataset&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;perceptrons&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Perceptrons&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/perceptron.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Your first goal will be to train a perceptron to solve logical AND. I’ve provided a set of stub functions that scaffold one way of doing this. The idea is to approximate a sort of pseudo-object oriented structure using a named list. This is overkill for just this simple perceptron, but you’ll find that it extends easily to a backprop network.&lt;/p&gt;
+&lt;p&gt;This object defined in the &lt;code&gt;perceptron&lt;/code&gt; function. A &lt;code&gt;perceptron&lt;/code&gt; is a list that has 5 elements:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;A &lt;code&gt;tibble&lt;/code&gt; of inputs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A list of target &lt;code&gt;y&lt;/code&gt;s for those inputs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A list of &lt;code&gt;output&lt;/code&gt;s for the last run of the network corresponding to these inputs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A list of &lt;code&gt;activation&lt;/code&gt;s that occur after applying the &lt;code&gt;sigmoid&lt;/code&gt; function to those &lt;code&gt;output&lt;/code&gt;s&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A list of &lt;code&gt;weights&lt;/code&gt; – 3 in total. Two that connect from the input nodes (&lt;code&gt;x1&lt;/code&gt;, &lt;code&gt;x2&lt;/code&gt;), and one that connects from a bias node (&lt;code&gt;1&lt;/code&gt;) to the output node (&lt;code&gt;y&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This list will track the state of the perceptron as it goes through the training function you write (&lt;code&gt;train_perceptron&lt;/code&gt;). You can write this function as two nested for loop, the outer one over iterations, and the inner one over examples. In each run of the inner loop, you will&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Run &lt;code&gt;perceptron_feedforward&lt;/code&gt; over the training example.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run &lt;code&gt;perceptron_feedback&lt;/code&gt; over that training example to update the weights.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In each run of the outer loop, you will run &lt;code&gt;perceptron_feedforward&lt;/code&gt; and &lt;code&gt;perceptron_feewdback&lt;/code&gt; on all of the examples, and then compute the error for that iteration and store it in the network, e.g. &lt;code&gt;perceptron$errors[iteration] &amp;lt;- sq_error(...)&lt;/code&gt;.You’ll need to make sure you define &lt;code&gt;perceptron$errors&lt;/code&gt; as a list of the right length at the start of the &lt;code&gt;train_perceptron&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;If you want to use these stubs, your plan of attack should be:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Write the helper functions &lt;code&gt;sigmoid&lt;/code&gt; and &lt;code&gt;sq_error&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make the &lt;code&gt;and_data&lt;/code&gt; tibble with columns &lt;code&gt;x1&lt;/code&gt;, &lt;code&gt;x2&lt;/code&gt;, and &lt;code&gt;y&lt;/code&gt; that corresponds to the four possible input and output combinations for AND&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write the &lt;code&gt;perceptron_feedforward&lt;/code&gt; and &lt;code&gt;perceptron_feedback&lt;/code&gt; functions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write &lt;code&gt;train_perceptron&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run &lt;code&gt;train_perceptron&lt;/code&gt; on your AND data, and plot or otherwise summarize the change in errors over time and the final weights.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;problem-1-fill-out-the-stub-helper-functions-sigmoid-and-sq_error-1-point&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 1&lt;/strong&gt;: Fill out the stub helper functions &lt;code&gt;sigmoid&lt;/code&gt; and &lt;code&gt;sq_error&lt;/code&gt; (1 point)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-2-write-code-to-train-a-perceptron-to-solve-logical-and.-you-can-use-the-stubs-provided-in-the-hw2.rmd-or-write-your-own.-train-the-perceptron-and-report-back-on-the-results.-did-the-error-in-the-network-go-down-over-the-course-of-training-what-were-the-final-weights-3-points&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 2&lt;/strong&gt;: Write code to train a perceptron to solve logical AND. You can use the stubs provided in the &lt;code&gt;hw2.Rmd&lt;/code&gt; or write your own. Train the perceptron, and report back on the results. Did the error in the network go down over the course of training? What were the final weights? (3 points)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-3-use-your-functions-to-train-the-perceptron-on-or-not-x1-and-xor.-which-problems-did-it-succeed-on.-which-did-it-fail-on-what-were-the-final-weights-for-each-do-they-make-sense-2-points&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 3&lt;/strong&gt;: Use your functions to train the perceptron on OR, NOT X1, and XOR. Which problems did it succeed on. Which did it fail on? What were the final weights for each? Do they make sense? (2 points)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multi-layer-networks&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Multi-layer networks&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/multi-layer.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;If everything went right, you will have discovered in &lt;strong&gt;Problem 3&lt;/strong&gt; that perceptrons cannot learn to solve non-linear classification problems like XOR. But with a hidden layer, we can fix this problem. You can use the same strategy you used for your perceptron to implement a 2-layer backpropagation network. You might find the backprop by hand example we did helpful for reference for the weight update formulas.&lt;/p&gt;
+&lt;div id=&#34;problem-4-write-code-to-train-a-2-layer-network-to-learn-xor.-you-should-have-3-hidden-layer-nodes-2-that-take-input-from-the-input-layer-and-1-bias-node.-after-training-investigate-the-hidden-layer-nodes.-what-has-the-network-learned-3-points&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 4&lt;/strong&gt;: Write code to train a 2-layer network to learn XOR. You should have 3 hidden layer nodes — 2 that take input from the input layer, and 1 bias node. After training, investigate the hidden layer nodes. What has the network learned? (3 points)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-the-neuralnet-package&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using the &lt;code&gt;neuralnet&lt;/code&gt; package&lt;/h2&gt;
+&lt;p&gt;The network you implemented is likely to be pretty inefficient. In practice, most implementations of neural networks use matrix multiplication to compute weights and outputs, which drastically speeds things up. For the last two problems, you’ll be using the &lt;code&gt;neuralnet&lt;/code&gt; r package to investigate what these networks can learn in a more interesting problem.&lt;/p&gt;
+&lt;p&gt;The workhorse of the package is the &lt;code&gt;neuralnet&lt;/code&gt; function which trains neural nets to solve problems. It uses formula notation just like &lt;code&gt;lm&lt;/code&gt; and other standard statistical methods in &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;problem-5-use-the-provided-code-to-run-neuralnet-on-your-xor-data-and-the-plot-your-neuralnet-to-see-what-the-weights-on-each-node-are.-did-it-learn-the-same-thing-as-the-network-you-made-from-scratch&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 5&lt;/strong&gt;: Use the provided code to run &lt;code&gt;neuralnet&lt;/code&gt; on your xor data, and the &lt;code&gt;plot&lt;/code&gt; your neuralnet to see what the weights on each node are. Did it learn the same thing as the network you made from scratch?&lt;/h4&gt;
+&lt;p&gt;Now that you understand how this package works, you’ll use it to solve a more interesting classification problem. You’ll be learning to classify handwritten digits from the &lt;strong&gt;MNIST&lt;/strong&gt; dataset that are a classic success story for modern neural networks. You’ll be working with just a small, scaled down subset of the real dataset — 100 examples of each of the digits 0-9. Here is the first example of each:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/assignment/02-networks_files/figure-html/show-mnist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Your goal will be to try out the &lt;code&gt;neuralnet&lt;/code&gt; package to find what kinds of network structures matter for learning to classify these digits. The representation you’ll work with is a linearized version of the digits — imagine taking all of the rows of these figures and chaining them all into one long row. This means your network won’t have any ability to use the spatial structure of the images. But even with just the pixel values, you’ll find that you can do a fair bit better than chance (&lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{10}\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;neuralnet&lt;/code&gt; package uses what is called a &lt;em&gt;one-hot&lt;/em&gt; encoding: The output layer will have ten nodes, each corresponding to a digit. The goal of the network when it reads say a &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; is for all of the output nodes except for the one corresponding to &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; to have no activation, and for the &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; node to have 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-6-play-around-with-the-hidden-layer-structure-of-the-network.-you-can-specify-how-many-units-there-are.-for-instance-using-the-argument-hidden-2-makes-2-hidden-layer-nodes-plus-a-bias.-using-the-argument-hidden-c32-makes-2-hidden-layers---the-first-having-3-units-and-the-second-having-2-plus-a-bias.-if-the-number-of-units-gets-too-big-youll-find-that-the-network-crashes-or-fails-to-converge.-but-report-back-on-at-least-3-argument-values-that-successfully-ran.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 6&lt;/strong&gt;: Play around with the hidden layer structure of the network. You can specify how many units there are. For instance, using the argument &lt;code&gt;hidden = 2&lt;/code&gt; makes 2 hidden layer nodes (plus a bias). using the argument &lt;code&gt;hidden = c(3,2)&lt;/code&gt; makes 2 hidden layers - the first having 3 units and the second having 2 (plus a bias). If the number of units gets too big you’ll find that the network crashes or fails to converge. But report back on at least 3 argument values that successfully ran.&lt;/h4&gt;
+&lt;p&gt;You can use the provided &lt;code&gt;prediction_error&lt;/code&gt; function will compute how much error there is. Make sure you look at error both on the training set (&lt;code&gt;mnist_train&lt;/code&gt;) and on a set of examples that it hasn’t been trained on (&lt;code&gt;mnist_test&lt;/code&gt;). Is the network overfitting? What is it learning? Feel free to extend the &lt;code&gt;prediction_error&lt;/code&gt; function to compute other metrics if you think they would be interesting.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
