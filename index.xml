@@ -709,6 +709,38 @@ h4 {
     
     <item>
       <title>Models at different levels</title>
+      <link>/learning-humans-machines/class/12-class/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/12-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/pjgyq00dohkxwbxoi69n1zqeoe6wvbit&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Models at different levels</title>
       <link>/learning-humans-machines/reading/12-reading/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
       <guid>/learning-humans-machines/reading/12-reading/</guid>
@@ -925,7 +957,7 @@ h4 {
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 29&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Recurrent neural networks&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Recurrent neural networks&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -998,10 +1030,8 @@ h4 {
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/12-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 13&lt;/td&gt;
