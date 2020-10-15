@@ -597,5 +597,55 @@
 </description>
     </item>
     
+    <item>
+      <title>Inference by sampling</title>
+      <link>/learning-humans-machines/class/14-class/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/14-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/sampling.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/sampling.pdf&#34;&gt;&lt;img src=&#34;slides/sampling.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/foo9x0wdomhnvdhayt7p0ufonfnxb7yt&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Sanborn, A. N., Griffiths, T. L., &amp;amp; Shiffrin, R. M. (2010). &lt;a href=&#34;papers/sanborn2010.pdf&#34;&gt;Uncovering mental representations with Markov chain Monte Carlo&lt;/a&gt;. &lt;em&gt;Cognitive psychology&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 63—106.&lt;/p&gt;
+&lt;p&gt;Vul, E., Goodman, N., Griffiths, T. L., &amp;amp; Tenenbaum, J. B. (2014). &lt;a href=&#34;papers/vul2014.pdf&#34;&gt;One and done? Optimal decisions from very few samples&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;38&lt;/em&gt;, 599—637.&lt;/p&gt;
+&lt;p&gt;Vul, E., &amp;amp; Pashler, H. (2008). &lt;a href=&#34;papers/vul2008.pdf&#34;&gt;Measuring the crowd within: Probabilistic representations within individuals&lt;/a&gt;. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;19&lt;/em&gt;, 645—647.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
