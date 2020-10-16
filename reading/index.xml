@@ -13,6 +13,27 @@
     </image>
     
     <item>
+      <title>Bayesian associative learning</title>
+      <link>/learning-humans-machines/reading/15-reading/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/reading/15-reading/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Gershman, S., J. (2015). &lt;a href=&#34;gershman2015.pdf&#34;&gt;A unifying probabilistic view of associative learning&lt;/a&gt;. &lt;em&gt;PLoS Computational Biology&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;, e1004567.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You should read the first ~half of the paper until the start of the temporal difference section (bottom of page 7). There’s a great &lt;a href=&#34;https://www.youtube.com/watch?v=K5RVbXeDE5A&#34;&gt;youtube talk&lt;/a&gt;-form of this paper from Sam Gershman that is really helpful for understanding the paper. The part for the first half of the paper ends at ~35 minutes. You can watch this instead of or in addition to the reading if you like.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your goal should be to understand why this model is different from the Rescorla-Wagner model that you learned about the start of the semester, and be able to talk about their relative merits, and how they relate to higher-level ideas about frameworks for thinking about learning.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Gershman, S., J., &amp;amp; Niv, Y. (2012). &lt;a href=&#34;gershman2012.pdf&#34;&gt;Exploring a latent cause theory of classical conditioning&lt;/a&gt;. &lt;em&gt;Learning &amp;amp; Behavior&lt;/em&gt;, &lt;em&gt;40&lt;/em&gt;, 255—268.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You should understand what motivated this model (relative to classical conditioning models), the phenomena described, and why the model accounts for them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The primary goal this week is to talk about how this framing of the learning problem is different from prior models of classical conditioning, what it buys us, and how compelling you find this account.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Models at different levels</title>
       <link>/learning-humans-machines/reading/12-reading/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
