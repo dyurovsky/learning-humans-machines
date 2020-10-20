@@ -960,6 +960,22 @@ h4 {
     </item>
     
     <item>
+      <title>Machines that learn like people</title>
+      <link>/learning-humans-machines/reading/17-reading/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/reading/17-reading/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Lake, B. M., Ullman, T. D., Tenenbaum, J. B., &amp;amp; Gershman, S. J. (2017). &lt;a href=&#34;lake2017.pdf&#34;&gt;Building machines that learn and think like people&lt;/a&gt;. &lt;em&gt;Behavioral and Brain Sciences&lt;/em&gt;, &lt;em&gt;40&lt;/em&gt;, e253.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You should read the entire target article (roughly the first 25 pages). The commentaries and response from the authors are optional.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sign up to lead discussion here: &lt;a href=&#34;http://bit.ly/lhm-signup&#34;&gt;http://bit.ly/lhm-signup&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Bayesian associative learning</title>
       <link>/learning-humans-machines/reading/15-reading/</link>
       <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
@@ -1348,11 +1364,10 @@ h4 {
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 27&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Top-down vs. bottom-up&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Machines that learn like people&lt;/strong&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/17-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
