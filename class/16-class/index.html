@@ -30,13 +30,14 @@
   
     
   
-  <meta name="description" content="Slides Recording Papers Clearest and most confusing things   Slides Download the slides from today’s class.
-   Recording Lecture recording on CMU box.
- Papers Sanborn, A. N., Griffiths, T. L., &amp; Shiffrin, R. M. (2010). Uncovering mental representations with Markov chain Monte Carlo. Cognitive psychology, 60, 63—106.
-Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and done? Optimal decisions from very few samples.">
+  <meta name="description" content="Slides Code Recording Clearest and most confusing things   Slides Download the slides from today’s class.
+   Code Pit &amp; Myung (2007) model – html and Rmd.
+ Recording Lecture recording on CMU box.
+ Clearest and most confusing things Go to this form and answer these three questions:
+What was the most confusing thing from class today? What are you still wondering about? What was the clearest thing from class today?">
 
   
-  <link rel="alternate" hreflang="en-us" href="/learning-humans-machines/class/14-class/">
+  <link rel="alternate" hreflang="en-us" href="/learning-humans-machines/class/16-class/">
 
   
 
@@ -221,7 +222,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
   <link rel="icon" type="image/png" href="/learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/learning-humans-machines/class/14-class/">
+  <link rel="canonical" href="/learning-humans-machines/class/16-class/">
 
   
   
@@ -237,18 +238,19 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
   <meta property="twitter:creator" content="@dyurovsky">
   
   <meta property="og:site_name" content="Learning in Humans and Machines">
-  <meta property="og:url" content="/learning-humans-machines/class/14-class/">
-  <meta property="og:title" content="Inference by sampling | Learning in Humans and Machines">
-  <meta property="og:description" content="Slides Recording Papers Clearest and most confusing things   Slides Download the slides from today’s class.
-   Recording Lecture recording on CMU box.
- Papers Sanborn, A. N., Griffiths, T. L., &amp; Shiffrin, R. M. (2010). Uncovering mental representations with Markov chain Monte Carlo. Cognitive psychology, 60, 63—106.
-Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and done? Optimal decisions from very few samples."><meta property="og:image" content="/learning-humans-machines/img/social-image.png">
+  <meta property="og:url" content="/learning-humans-machines/class/16-class/">
+  <meta property="og:title" content="Comparing models | Learning in Humans and Machines">
+  <meta property="og:description" content="Slides Code Recording Clearest and most confusing things   Slides Download the slides from today’s class.
+   Code Pit &amp; Myung (2007) model – html and Rmd.
+ Recording Lecture recording on CMU box.
+ Clearest and most confusing things Go to this form and answer these three questions:
+What was the most confusing thing from class today? What are you still wondering about? What was the clearest thing from class today?"><meta property="og:image" content="/learning-humans-machines/img/social-image.png">
   <meta property="twitter:image" content="/learning-humans-machines/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-10-15T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-10-20T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-10-15T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-10-20T00:00:00&#43;00:00">
   
 
   
@@ -275,7 +277,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
   <meta name="msapplication-TileImage" content="/learning-humans-machines/img/mstile-144x144.png" />
 
 
-  <title>Inference by sampling | Learning in Humans and Machines</title>
+  <title>Comparing models | Learning in Humans and Machines</title>
 
 </head>
 
@@ -593,7 +595,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
         <a href="/learning-humans-machines/class/13-class/">13: Rational Analysis</a>
       </li>
       
-      <li class="active">
+      <li >
         <a href="/learning-humans-machines/class/14-class/">14: Inference by sampling</a>
       </li>
       
@@ -601,7 +603,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
         <a href="/learning-humans-machines/class/15-class/">15: Bayesian associative learning</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/learning-humans-machines/class/16-class/">16: Comparing models</a>
       </li>
       
@@ -622,7 +624,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Inference by sampling</h1>
+                    <h1>Comparing models</h1>
 
                     
 
@@ -630,7 +632,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Thursday, October 15, 2020
+                        Materials from class on Tuesday, October 20, 2020
                     </div>
                     
 
@@ -640,8 +642,8 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
 <div id="TOC">
 <ul>
 <li><a href="#slides">Slides</a></li>
+<li><a href="#code">Code</a></li>
 <li><a href="#recording">Recording</a></li>
-<li><a href="#papers">Papers</a></li>
 <li><a href="#clearest-and-most-confusing-things">Clearest and most confusing things</a></li>
 </ul>
 </div>
@@ -649,22 +651,20 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
 <div id="slides" class="section level2">
 <h2>Slides</h2>
 
-<p><a href="slides/sampling.pdf">Download the slides from today’s class</a>.</p>
+<p><a href="slides/comparing_models.pdf">Download the slides from today’s class</a>.</p>
 <figure class="slide-thumb" style="width:50%">
-    <a href="slides/sampling.pdf"><img src="slides/sampling.png" alt="First slide" /></a>
+    <a href="slides/comparing_models.pdf"><img src="slides/comparing_models.png" alt="First slide" /></a>
 </figure>
 
 
 </div>
+<div id="code" class="section level2">
+<h2>Code</h2>
+<p>Pit &amp; Myung (2007) model – <a href="code/model_fitting.html">html</a> and <a href="code/model_fitting.Rmd">Rmd</a>.</p>
+</div>
 <div id="recording" class="section level2">
 <h2>Recording</h2>
-<p><a href="https://cmu.box.com/s/foo9x0wdomhnvdhayt7p0ufonfnxb7yt">Lecture recording</a> on CMU box.</p>
-</div>
-<div id="papers" class="section level2">
-<h2>Papers</h2>
-<p>Sanborn, A. N., Griffiths, T. L., &amp; Shiffrin, R. M. (2010). <a href="papers/sanborn2010.pdf">Uncovering mental representations with Markov chain Monte Carlo</a>. <em>Cognitive psychology</em>, <em>60</em>, 63—106.</p>
-<p>Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). <a href="papers/vul2014.pdf">One and done? Optimal decisions from very few samples</a>. <em>Cognitive Science</em>, <em>38</em>, 599—637.</p>
-<p>Vul, E., &amp; Pashler, H. (2008). <a href="papers/vul2008.pdf">Measuring the crowd within: Probabilistic representations within individuals</a>. <em>Psychological Science</em>, <em>19</em>, 645—647.</p>
+<p><a href="https://cmu.box.com/s/xe0iuvd4u89z8jcourulv6mmeo85dy4p">Lecture recording</a> on CMU box.</p>
 </div>
 <div id="clearest-and-most-confusing-things" class="section level2">
 <h2>Clearest and most confusing things</h2>
@@ -688,7 +688,7 @@ Vul, E., Goodman, N., Griffiths, T. L., &amp; Tenenbaum, J. B. (2014). One and d
                 </div>
 
                 <div class="body-footer">
-                    <p>Last updated on October 15, 2020</p>
+                    <p>Last updated on October 20, 2020</p>
 
                     
 
