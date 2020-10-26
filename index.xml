@@ -472,6 +472,133 @@ h4 {
     </item>
     
     <item>
+      <title>Homework 4</title>
+      <link>/learning-humans-machines/assignment/04-mcmc/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/assignment/04-mcmc/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-metropolis-algorithm&#34;&gt;The Metropolis Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sampling-from-an-exponential-distribution&#34;&gt;Sampling from an Exponential Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sampling-from-a-dirichlet-distribution&#34;&gt;Sampling from a Dirichlet Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inference-via-markov-chain-monte-carlo&#34;&gt;Inference via Markov Chain Monte Carlo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style type=&#34;text/css&#34;&gt;
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: #d45026;
+  border-style: solid;
+  background-color: rgba(212, 80, 38, 0.2);
+  font-weight: normal;
+}
+
+&lt;/style&gt;
+&lt;div id=&#34;template&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Getting your assignment: &lt;/strong&gt; You can find template code for your submission here at this &lt;a href=&#34;https://classroom.github.com/a/2w7lj1Y3&#34;&gt;GitHub Classroom link&lt;/a&gt;. All of the code you write you should go in &lt;code&gt;hw4.Rmd&lt;/code&gt;, and please knit the Markdown file in your completed submission.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the last decade, we have seen an explosion of impressive results in Machine Learning, producing models that match and even sometimes outperform humans on &lt;a href=&#34;https://dyurovsky.github.io/learning-humans-machines/reading/17-reading/lake2017.pdf&#34;&gt;challenging tasks&lt;/a&gt;. A non-trivial part of the challenge in developing these models is not in specifying how they should solve the problems they are developed solve, but in figuring out how to actually derive predictions from these models.&lt;/p&gt;
+&lt;p&gt;Earlier this semester, we read a paper from &lt;a href=&#34;https://dyurovsky.github.io/learning-humans-machines/reading/12-reading/kemp2007.pdf&#34;&gt;Charles Kemp, Amy Perfors, and Josh Tenebaum&lt;/a&gt; that shows how overhypotheses like the shape bias can be understood through the lens of rational analysis. Because the model does not have an analytic solution, A sizeable chunk of the article describes approximation methods that the authors use for for determining approximately what the model predicts.&lt;/p&gt;
+&lt;p&gt;The approach that Kemp et al. use, and that is a mainstay in modern Bayesian approaches, is technique called Markov chain Monte Carlo (MCMC). Markov chain Monte Carlo is a method for approximating samples from a complex Distribution by drawing samples from other simpler distributions and reweighing or combining them together.&lt;/p&gt;
+&lt;p&gt;In this assignment, you will implement the Metropolis Algorithm, an MCMC algorithm in the sequential sampling family. In this family of algorithms, samples are drawn from a simple Proposal distribution and then either Accepted (if they have high probability under the target distribution), or Rejected in favor of keep the current sample.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-metropolis-algorithm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Metropolis Algorithm&lt;/h2&gt;
+&lt;p&gt;Metropolis is a simple sequential sampling scheme for drawing samples from a target distribution &lt;span class=&#34;math inline&#34;&gt;\(P\left(x\right)\)&lt;/span&gt; by using a density function &lt;span class=&#34;math inline&#34;&gt;\(f\left(x\right)\)&lt;/span&gt; that is proportional to &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;– i.e., that can give the relative probability of two different samples &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The algorithm works by starting a chain at some arbitrary point &lt;span class=&#34;math inline&#34;&gt;\(x_0\)&lt;/span&gt;. Then, in each iteration &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;, a new sample &lt;span class=&#34;math inline&#34;&gt;\(x1\)&lt;/span&gt; by modifying the previous sample &lt;span class=&#34;math inline&#34;&gt;\(x_{t}\)&lt;/span&gt; according to a proposal distribution &lt;span class=&#34;math inline&#34;&gt;\(g\left(x&amp;#39;|x_{t}\right)\)&lt;/span&gt;. The critical requirement is that &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; is a symmetric distribution &lt;span class=&#34;math inline&#34;&gt;\(g\left(x&amp;#39;|x\right) = g\left(x|x&amp;#39;\right)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;For your simulation, you should use a simple Normal distribution centered at the previous sample &lt;span class=&#34;math inline&#34;&gt;\(g\left(x&amp;#39;|x\right) \sim \text{Normal}\left(x, \sigma\right)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You then run the algorithm for some number of iterations, e.g. 1000, at each iteration performing the following steps:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Propose a new sample &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; by drawing from &lt;span class=&#34;math inline&#34;&gt;\(g\left(x&amp;#39;|x_{t}\right)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the acceptance ratio &lt;span class=&#34;math inline&#34;&gt;\(\alpha = \frac{f\left(x&amp;#39;\right)}{f\left(x\right)}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sample &lt;span class=&#34;math inline&#34;&gt;\(u \sim \text{Uniform}\left(0,1\right)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(u \leq \alpha\)&lt;/span&gt;, accept the proposed sample (&lt;span class=&#34;math inline&#34;&gt;\(x_{t+1} = x&amp;#39;\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Otherwise, reject the proposed sample and keep the previous sample (&lt;span class=&#34;math inline&#34;&gt;\(x_{t+1} = x_{t}\)&lt;/span&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sampling-from-an-exponential-distribution&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sampling from an Exponential Distribution&lt;/h2&gt;
+&lt;p&gt;Exponential distributions are a common distribution in models of cognition, for example they are sometimes used to model forgetting in memory. The Exponential distribution has one parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; which defines the rate of decay (or forgetting).&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(x \sim \text{Exponential}\left(\lambda\right)\)&lt;/span&gt;,
+&lt;span class=&#34;math inline&#34;&gt;\(P\left(x\right) = \lambda e^{-\lambda x}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;R&lt;/strong&gt; actually can draw samples from an Exponential distribution. For example, here are 1000 samples from &lt;span class=&#34;math inline&#34;&gt;\(\text{Exponential}\left(3\right)\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;samples &amp;lt;- tibble(sample = 1:1000, value = rexp(1000, rate = 3))
+
+ggplot(samples, aes(x = value)) + 
+  geom_histogram(fill = &amp;quot;white&amp;quot;, color = &amp;quot;black&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/assignment/04-mcmc_files/figure-html/exponential-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;But let’s see how can draw samples from an exponential distribution using Metropolis-Hastings samples instead.&lt;/p&gt;
+&lt;p&gt;You will need to do 4 things:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Define the Exponential target distribution &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; using the Exponential definition above.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define the proposal distribution &lt;span class=&#34;math inline&#34;&gt;\(g(x&amp;#39;|x)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define and Metropolis sequential sampling algorithm&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run the Algorithm for some number of iterations and plot the results.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;problem-1-implement-the-exponential-probability-density-function.-this-function-should-take-in-a-value-x-and-a-parameter-lambda-and-return-the-probability-of-sampling-the-value-x-from-the-exponential-distribution-with-parameter-lambda-see-above-1-point.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 1&lt;/strong&gt;: Implement the Exponential probability density function. This function should take in a value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and a parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; and return the probability of sampling the value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; from the Exponential distribution with parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; (see above, 1 point).&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-2-implement-a-gaussian-proposal-function.-this-should-take-in-a-current-value-x-a-parameter-sigma-which-defines-how-wide-the-proposal-distribution-is.-it-should-return-a-new-proposed-sample-x-1-point.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 2&lt;/strong&gt;: Implement a Gaussian proposal function. This should take in a current value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, a parameter sigma which defines how wide the proposal distribution is. It should return a new proposed sample &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; (1 point).&lt;/h4&gt;
+&lt;p&gt;One thing you might notice is that the Metropolis samples won’t look like Exponential samples right away. Here is a plot of &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; for 1000 samples from Metropolis:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(output, aes(x = iteration, y = f)) + 
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/assignment/04-mcmc_files/figure-html/show-bad-start-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can see that first several hundred samples, every sample has low probability under the target distribution. This happens when the starting point of the chain is far away from the area of high density in the target distribution. For this reason, it is common to discard some of the initial samples–a process called &lt;strong&gt;burn in&lt;/strong&gt;. You may find this helpful in future simulations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-3-implement-a-metropolis-sampler-for-an-exponential-distribution-and-use-it-draw-1000-samples-from-an-exponential-distribution-with-lambda3.-try-lambda1-as-well.-do-the-distributions-look-different-you-should-use-the-two-functions-you-just-wrote-for-problems-1-and-2.-2-points&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 3&lt;/strong&gt;: Implement a Metropolis sampler for an Exponential distribution and use it draw 1000 samples from an Exponential distribution with &lt;span class=&#34;math inline&#34;&gt;\(\lambda=3\)&lt;/span&gt;. Try &lt;span class=&#34;math inline&#34;&gt;\(\lambda=1\)&lt;/span&gt; as well. Do the distributions look different? You should use the two functions you just wrote for Problems 1 and 2. (2 points)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sampling-from-a-dirichlet-distribution&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sampling from a Dirichlet Distribution&lt;/h2&gt;
+&lt;p&gt;The Dirichlet Distribution is a highly flexible distribution that is that can many different forms depending on its parameters. It often finds use in Cognitive models precisely when the goal is to learn about something than has unknown shape before learning starts (e.g. the probability of category membership given some set of features). It’s also not available in the &lt;strong&gt;R&lt;/strong&gt; statistics library. You can sample from it using MCMC!&lt;/p&gt;
+&lt;p&gt;The Dirichlet distribution takes &lt;span class=&#34;math inline&#34;&gt;\(K \geq 2\)&lt;/span&gt; parameters (corresponding to separate dimensions) which are commonly represented as a vector &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol \alpha\)&lt;/span&gt;. Each &lt;span class=&#34;math inline&#34;&gt;\(\alpha_{i} \geq 0\)&lt;/span&gt; is a concentration parameter which specifies how much of the probability mass of the function is concentrated on that dimension.&lt;/p&gt;
+&lt;p&gt;For a vector &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol x\)&lt;/span&gt;,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\text{Dirichlet}(\boldsymbol x) = \frac{1}{B\left(\boldsymbol\alpha\right)} \prod_{i=1}^{K}{x_{i}^{\alpha_{i} - 1}}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is a normalizing constants: The &lt;span class=&#34;math inline&#34;&gt;\(Beta\)&lt;/span&gt; function&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\text{Beta}(\boldsymbol \alpha) = \frac{\prod_{i=1}^{K}{\Gamma\left(\alpha_{i}\right)}}{\Gamma\left(\sum_{i=1}^{K}\alpha_{i}\right)}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And &lt;span class=&#34;math inline&#34;&gt;\(\Gamma\)&lt;/span&gt; is the continuous generalization of the factorial (&lt;span class=&#34;math inline&#34;&gt;\(x!\)&lt;/span&gt;) function. You can call it in &lt;strong&gt;R&lt;/strong&gt; with &lt;code&gt;gamma(x)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can use Metropolis to sample from the Dirichlet distribution in the same way you did for the Exponential distribution with one wrinkle: You need a different proposal distribution. The exponential distribution is defined over all positive real numbers, so you used Gaussian proposals and simply cut the distribution off when &lt;span class=&#34;math inline&#34;&gt;\(x &amp;lt; 0\)&lt;/span&gt;. However, the Dirichlet distribution is defined only when the value on every dimension is between 0 and 1, and the sum of the values across the dimensions adds up to 1 (this is called a simplex). So if you try to make Gaussian proposals, almost every proposal will be rejected because the Dirichlet distribution will give probability 0 for it.&lt;/p&gt;
+&lt;p&gt;Instead, you can use a proposal function where you generate values from a uniform distribution between a small negative and small positive fraction, and this fraction to one dimension while subtracting it from the other. This will keep your &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;s in the desired range.&lt;/p&gt;
+&lt;div id=&#34;problem-4-implement-the-beta-function-the-dirichlet-distribution-probability-function-and-the-delta-proposal-function.-the-equations-will-be-different-from-the-functions-above-but-the-process-should-be-very-similar-2-points.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 4&lt;/strong&gt;: Implement the Beta function, the Dirichlet distribution probability function, and the Delta proposal function. The equations will be different from the functions above, but the process should be very similar (2 points).&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-5-implement-a-metropolis-sampler-for-a-dirichlet-distribution-and-use-it-draw-samples-from-a-dirichlet-distribution-with-alpha-.74.-how-many-burn-in-samples-do-you-need-before-the-chain-stabilizes-2-points&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 5&lt;/strong&gt;: Implement a Metropolis sampler for a Dirichlet distribution and use it draw samples from a Dirichlet distribution with &lt;span class=&#34;math inline&#34;&gt;\(\alpha = &amp;lt;.7,4&amp;gt;\)&lt;/span&gt;. How many burn in samples do you need before the chain stabilizes? (2 points)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inference-via-markov-chain-monte-carlo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inference via Markov Chain Monte Carlo&lt;/h2&gt;
+&lt;p&gt;In addition to it’s utility in sampling from complex distributions, MCMC is a powerful tool for inference in these same distributions. If we have samples from a distribution with unknown parameters, we can use MCMC to infer the parameters that generated it (e.g. we can infer the category structure most likely to have produced the exemplars we observed).&lt;/p&gt;
+&lt;p&gt;In the final part of the assignment, you will use Metropolis to infer the unknown parameters of a Dirichlet distribution from a set of samples from it. To do this, we will leverage Bayes’ rule: &lt;span class=&#34;math inline&#34;&gt;\(P\left(H|D\right) \propto P\left(D|H\right)P(H)\)&lt;/span&gt;. In the previous section, you used the likelihood function for a known Dirichlet distribution &lt;span class=&#34;math inline&#34;&gt;\(P(D|H)\)&lt;/span&gt; in order to draw samples from it. Now you will use that same likelihood function for inference. The intuition here is that the parameters that assign high probability to a given sample are more likely to have been the source of that sample.&lt;/p&gt;
+&lt;p&gt;In the previous sections, in each iteration you proposed a sample from the distribution and rejected it if it was not sufficiently likely. Now, you will propose hypothetical parameters for the distribution, and reject them if they do not make the sample sufficiently likely.&lt;/p&gt;
+&lt;p&gt;The homework template will provide you 100 samples from this unknown Dirichlet distribution and your job will be to recover the parameters that generated it. Think carefully about the proposal distribution you want to use here. Remember, each proposal will now move you around on the parameter space of the Dirichlet distribution–not the space of values produced by the Dirichlet.&lt;/p&gt;
+&lt;div id=&#34;problem-6-implement-the-compound-dirichlet-probability-function-and-an-appropriate-proposal-function.-this-compound-probability-distribution-should-take-in-a-list-of-samples-and-a-set-of-parameters-alpha-and-return-the-probability-of-generating-all-of-the-samples-from-a-dirichlet-distribution-with-the-given-parameters.-2-points.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 6&lt;/strong&gt;: Implement the compound Dirichlet probability function and an appropriate proposal function. This compound probability distribution should take in a list of samples and a set of parameters &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, and return the probability of generating all of the samples from a Dirichlet distribution with the given parameters. (2 points).&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-7-run-your-new-mcmc-sampler-to-determine-the-generating-parameters.-you-may-need-to-play-around-a-bit-with-proposal-distributions-and-number-of-samplesburn-in-2-points.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;strong&gt;Problem 7&lt;/strong&gt;: Run your new MCMC sampler to determine the generating parameters. You may need to play around a bit with proposal distributions and number of samples/burn in (2 points).&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How far can simple associative learning get you?</title>
       <link>/learning-humans-machines/class/04-class/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
@@ -1454,7 +1581,7 @@ h4 {
             &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 28&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;November 6&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Markov chain monte-carlo&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
