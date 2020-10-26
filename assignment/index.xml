@@ -390,10 +390,8 @@ h4 {
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;samples &amp;lt;- tibble(sample = 1:1000, value = rexp(1000, rate = 3))
 
 ggplot(samples, aes(x = value)) + 
-  geom_histogram(fill = &amp;quot;white&amp;quot;, color = &amp;quot;black&amp;quot;)
-
-ggsave(&amp;quot;exponential3.jpeg&amp;quot;, width = 4, height = 4/1.66, units = &amp;quot;in&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/exponential_3.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+  geom_histogram(fill = &amp;quot;white&amp;quot;, color = &amp;quot;black&amp;quot;)b&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/exponential3.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;But let’s see how can draw samples from an exponential distribution using Metropolis-Hastings samples instead.&lt;/p&gt;
 &lt;p&gt;You will need to do 4 things:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -409,10 +407,7 @@ ggsave(&amp;quot;exponential3.jpeg&amp;quot;, width = 4, height = 4/1.66, units 
 &lt;h4&gt;&lt;strong&gt;Problem 2&lt;/strong&gt;: Implement a Gaussian proposal function. This should take in a current value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, a parameter sigma which defines how wide the proposal distribution is. It should return a new proposed sample &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; (1 point).&lt;/h4&gt;
 &lt;p&gt;One thing you might notice is that the Metropolis samples won’t look like Exponential samples right away. Here is a plot of &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; for 1000 samples from Metropolis:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(output, aes(x = iteration, y = f)) + 
-  geom_line()
-
-
-ggsave(&amp;quot;burnin.jpeg&amp;quot;, width = 4, height = 4/1.66, units = &amp;quot;in&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+  geom_line()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/burnin.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;You can see that first several hundred samples, every sample has low probability under the target distribution. This happens when the starting point of the chain is far away from the area of high density in the target distribution. For this reason, it is common to discard some of the initial samples–a process called &lt;strong&gt;burn in&lt;/strong&gt;. You may find this helpful in future simulations.&lt;/p&gt;
 &lt;/div&gt;
