@@ -630,7 +630,7 @@ h4 {
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>In the last decade, we have seen an explosion of impressive results in Machine Learning, producing models that match and even sometimes outperform humans on <a href="https://dyurovsky.github.io/learning-humans-machines/reading/17-reading/lake2017.pdf">challenging tasks</a>. A non-trivial part of the challenge in developing these models is not in specifying how they should solve the problems they are developed solve, but in figuring out how to actually derive predictions from these models.</p>
-<p>Earlier this semester, we read a paper from <a href="https://dyurovsky.github.io/learning-humans-machines/reading/12-reading/kemp2007.pdf">Charles Kemp, Amy Perfors, and Josh Tenebaum</a> that shows how overhypotheses like the shape bias can be understood through the lens of rational analysis. Because the model does not have an analytic solution, A sizeable chunk of the article describes approximation methods that the authors use for for determining approximately what the model predicts.</p>
+<p>Earlier this semester, we read a paper from <a href="https://dyurovsky.github.io/learning-humans-machines/reading/12-reading/kemp2007.pdf">Charles Kemp, And Perfors, and Josh Tenebaum</a> that shows how overhypotheses like the shape bias can be understood through the lens of rational analysis. Because the model does not have an analytic solution, A sizeable chunk of the article describes approximation methods that the authors use for for determining approximately what the model predicts.</p>
 <p>The approach that Kemp et al. use, and that is a mainstay in modern Bayesian approaches, is technique called Markov chain Monte Carlo (MCMC). Markov chain Monte Carlo is a method for approximating samples from a complex Distribution by drawing samples from other simpler distributions and reweighing or combining them together.</p>
 <p>In this assignment, you will implement the Metropolis Algorithm, an MCMC algorithm in the sequential sampling family. In this family of algorithms, samples are drawn from a simple Proposal distribution and then either Accepted (if they have high probability under the target distribution), or Rejected in favor of keep the current sample.</p>
 <hr />
@@ -658,8 +658,10 @@ h4 {
 <pre class="r"><code>samples &lt;- tibble(sample = 1:1000, value = rexp(1000, rate = 3))
 
 ggplot(samples, aes(x = value)) + 
-  geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;)</code></pre>
-<p><img src="/learning-humans-machines/assignment/04-mcmc_files/figure-html/exponential-1.png" width="672" /></p>
+  geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;)
+
+ggsave(&quot;exponential3.jpeg&quot;, width = 4, height = 4/1.66, units = &quot;in&quot;)</code></pre>
+<p><img src="/learning-humans-machines/img/assignments/exponential_3.jpeg" /><!-- --></p>
 <p>But let’s see how can draw samples from an exponential distribution using Metropolis-Hastings samples instead.</p>
 <p>You will need to do 4 things:</p>
 <ol style="list-style-type: decimal">
@@ -675,8 +677,11 @@ ggplot(samples, aes(x = value)) +
 <h4><strong>Problem 2</strong>: Implement a Gaussian proposal function. This should take in a current value <span class="math inline">\(x\)</span>, a parameter sigma which defines how wide the proposal distribution is. It should return a new proposed sample <span class="math inline">\(x&#39;\)</span> (1 point).</h4>
 <p>One thing you might notice is that the Metropolis samples won’t look like Exponential samples right away. Here is a plot of <span class="math inline">\(f(x)\)</span> for 1000 samples from Metropolis:</p>
 <pre class="r"><code>ggplot(output, aes(x = iteration, y = f)) + 
-  geom_line()</code></pre>
-<p><img src="/learning-humans-machines/assignment/04-mcmc_files/figure-html/show-bad-start-1.png" width="672" /></p>
+  geom_line()
+
+
+ggsave(&quot;burnin.jpeg&quot;, width = 4, height = 4/1.66, units = &quot;in&quot;)</code></pre>
+<p><img src="/learning-humans-machines/img/assignments/burnin.jpeg" /><!-- --></p>
 <p>You can see that first several hundred samples, every sample has low probability under the target distribution. This happens when the starting point of the chain is far away from the area of high density in the target distribution. For this reason, it is common to discard some of the initial samples–a process called <strong>burn in</strong>. You may find this helpful in future simulations.</p>
 </div>
 <div id="problem-3-implement-a-metropolis-sampler-for-an-exponential-distribution-and-use-it-draw-1000-samples-from-an-exponential-distribution-with-lambda3.-try-lambda1-as-well.-do-the-distributions-look-different-you-should-use-the-two-functions-you-just-wrote-for-problems-1-and-2.-2-points" class="section level4">
