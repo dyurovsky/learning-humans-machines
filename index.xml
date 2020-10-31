@@ -1249,6 +1249,23 @@ ggplot(samples, aes(x = value)) +
     </item>
     
     <item>
+      <title>What makes a good teacher?</title>
+      <link>/learning-humans-machines/reading/19-reading/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/reading/19-reading/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Gweon, H., Shafto, P., &amp;amp; Schulz, L. (2018). &lt;a href=&#34;gweon2018.pdf&#34;&gt;Development of children’s sensitivity to overinformativeness in learning and teaching&lt;/a&gt;. &lt;em&gt;Developmental Psychology&lt;/em&gt;, &lt;em&gt;54&lt;/em&gt;, 2113—2125.&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Ho, M. K., MacGlashan, J., Littman, M. L., &amp;amp; Cushman, F. (2017). &lt;a href=&#34;ho2017.pdf&#34;&gt;Social is special: A normative framework for teaching with and learning from evaluative feedback&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;167&lt;/em&gt;, 91—106.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Please read both of these short articles. The first is an extension of the teaching and learning framework we have already discussed. The second is a theoretical argument about the relationship between teaching and reinforcement learning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sign up to lead discussion here: &lt;a href=&#34;http://bit.ly/lhm-signup&#34;&gt;http://bit.ly/lhm-signup&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Machines that learn like people</title>
       <link>/learning-humans-machines/reading/17-reading/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
@@ -1700,10 +1717,9 @@ ggplot(samples, aes(x = value)) +
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;What makes a good teacher?&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/19-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
