@@ -342,56 +342,6 @@
     </item>
     
     <item>
-      <title>Learning from teaching</title>
-      <link>/learning-humans-machines/class/18-class/</link>
-      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/18-class/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Slides&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;slides/teaching.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
-&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
-    &lt;a href=&#34;slides/teaching.pdf&#34;&gt;&lt;img src=&#34;slides/teaching.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-
-&lt;/div&gt;
-&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recording&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/x8rowmvvcdpgskoyu4lzkwybkocx0jc1&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Papers&lt;/h2&gt;
-&lt;p&gt;Bonawitz, E., Shafto, P., Gweon, H., Goodman, N. D., Spelke, E., &amp;amp; Schulz, L. (2011). &lt;a href=&#34;papers/bonawitz2011.pdf&#34;&gt;The double-edged sword of pedagogy: Instruction limits spontaneous exploration and discovery&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;120&lt;/em&gt;, 322—330.&lt;/p&gt;
-&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Frank, M. C. (2012). &lt;a href=&#34;papers/shafto2012.pdf&#34;&gt;Learning from others: The consequences of psychological reasoning for human learning&lt;/a&gt;. &lt;em&gt;Perspectives on Psychological Science&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;, 341—351.&lt;/p&gt;
-&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Griffiths, T. L. (2014). &lt;a href=&#34;papers/shafto2014.pdf&#34;&gt;A rational account of pedagogical reasoning: Teaching by, and learning from, examples&lt;/a&gt;. &lt;em&gt;Cognitive Psychology&lt;/em&gt;, &lt;em&gt;71&lt;/em&gt;, 55—89.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
-    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
-    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
-        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
-        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Limits to connectionism</title>
       <link>/learning-humans-machines/class/08-class/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
@@ -808,6 +758,56 @@
     </item>
     
     <item>
+      <title>Learning from teaching</title>
+      <link>/learning-humans-machines/class/18-class/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/18-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/teaching.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/teaching.pdf&#34;&gt;&lt;img src=&#34;slides/teaching.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/x8rowmvvcdpgskoyu4lzkwybkocx0jc1&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Bonawitz, E., Shafto, P., Gweon, H., Goodman, N. D., Spelke, E., &amp;amp; Schulz, L. (2011). &lt;a href=&#34;papers/bonawitz2011.pdf&#34;&gt;The double-edged sword of pedagogy: Instruction limits spontaneous exploration and discovery&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;120&lt;/em&gt;, 322—330.&lt;/p&gt;
+&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Frank, M. C. (2012). &lt;a href=&#34;papers/shafto2012.pdf&#34;&gt;Learning from others: The consequences of psychological reasoning for human learning&lt;/a&gt;. &lt;em&gt;Perspectives on Psychological Science&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;, 341—351.&lt;/p&gt;
+&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Griffiths, T. L. (2014). &lt;a href=&#34;papers/shafto2014.pdf&#34;&gt;A rational account of pedagogical reasoning: Teaching by, and learning from, examples&lt;/a&gt;. &lt;em&gt;Cognitive Psychology&lt;/em&gt;, &lt;em&gt;71&lt;/em&gt;, 55—89.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>What makes a good teacher?</title>
       <link>/learning-humans-machines/class/19-class/</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
@@ -824,6 +824,58 @@
 &lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recording&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/qsdklxuagpq0q8w3iwur9eoqrtry553q&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rational speech acts</title>
+      <link>/learning-humans-machines/class/20-class/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/20-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/rsa.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/rsa.pdf&#34;&gt;&lt;img src=&#34;slides/rsa.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/v9ppjbo0j8jsay96mfuyo3hup3yxe258&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Frank, M. C., &amp;amp; Goodman, N. D. (2014). &lt;a href=&#34;papers/frank2014.pdf&#34;&gt;Inferring word meanings by assuming that speakers are informative&lt;/a&gt;. &lt;em&gt;Cognitive Psychology&lt;/em&gt;, &lt;em&gt;75&lt;/em&gt;, 80—96.&lt;/p&gt;
+&lt;p&gt;Goodman, N. D., &amp;amp; Frank, M. C. (2016). &lt;a href=&#34;papers/goodman2016.pdf&#34;&gt;Pragmatic language interpretation as probabilistic inference&lt;/a&gt;. &lt;em&gt;Trends in Cognitive Sciences&lt;/em&gt;, 20, 818—829.&lt;/p&gt;
+&lt;p&gt;Kao, J. T., Wu, J. Y., Bergen, L., &amp;amp; Goodman, N. D. (2014). &lt;a href=&#34;papers/kao2014.pdf&#34;&gt;Nonliteral understanding of number words&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;111&lt;/em&gt;, 12002—12007.&lt;/p&gt;
+&lt;p&gt;Yoon, E. J., Tessler, M. H., Goodman, N. D., &amp;amp; Frank, M. C. (in press). &lt;a href=&#34;papers/yoon2020.pdf&#34;&gt;Polite speech emerges from competing social goals&lt;/a&gt;. &lt;em&gt;Open Mind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Yurovsky, D., Case, S., &amp;amp; Frank, M. C. (2017). Preschoolers flexibly adapt to linguistic input in a noisy channel. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;28&lt;/em&gt;, 132—140.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
