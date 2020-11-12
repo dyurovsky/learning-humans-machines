@@ -1365,6 +1365,58 @@ ggplot(samples, aes(x = value)) +
     </item>
     
     <item>
+      <title>Iterated learning</title>
+      <link>/learning-humans-machines/class/22-class/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/class/22-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/iterated_learning.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/iterated_learning.pdf&#34;&gt;&lt;img src=&#34;slides/iterated_learning.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/ib87bigznal6iosit0zu1jnhb8r2dtou&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Lupyan, G., &amp;amp; Dale, R. (2010). &lt;a href=&#34;papers/lupyan2010.pdf&#34;&gt;Language structure is partly determined by social structure&lt;/a&gt;. &lt;em&gt;PLOS ONE&lt;/em&gt;, &lt;em&gt;5&lt;/em&gt;, e8559.&lt;/p&gt;
+&lt;p&gt;Kemp, C., &amp;amp; Regier, T. (2012). &lt;a href=&#34;papers/kemp2012.pdf&#34;&gt;Kinship categories across languages reflect general communicative principles&lt;/a&gt;. &lt;em&gt;Science&lt;/em&gt;, 336, 1049—1054.&lt;/p&gt;
+&lt;p&gt;Kirby, S., Cornish, H., &amp;amp; Smith, K. (2008). &lt;a href=&#34;papers/kirby2008.pdf&#34;&gt;Cumulative cultural evolution in the laboratory: An experimental approach to the origins of structure in human language&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;105&lt;/em&gt;, 10681—10686.&lt;/p&gt;
+&lt;p&gt;Kirby, S., Tamariz, M., Cornish, H., &amp;amp; Smith, K. (2015). &lt;a href=&#34;papers/kirby2015.pdf&#34;&gt;Compression and communication in the cultural evolution of linguistic structure&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;141&lt;/em&gt;, 87—102.&lt;/p&gt;
+&lt;p&gt;Silvey, C., Kirby, S., &amp;amp; Smith, K. (2015). &lt;a href=&#34;papers/silvey2015.pdf&#34;&gt;Word meanings evolve to selectively preserve distinctions on salient dimensions&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;39&lt;/em&gt;, 212—226.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Indirectly learning from language</title>
       <link>/learning-humans-machines/reading/21-reading/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
@@ -1906,22 +1958,6 @@ ggplot(samples, aes(x = value)) +
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;November 11&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Learning and teaching&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 12&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; &lt;strong&gt;Iterated learning&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
@@ -1932,10 +1968,8 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/22-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 17&lt;/td&gt;
