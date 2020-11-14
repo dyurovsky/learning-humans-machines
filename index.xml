@@ -1417,6 +1417,27 @@ ggplot(samples, aes(x = value)) +
     </item>
     
     <item>
+      <title>Community effects on learning from others</title>
+      <link>/learning-humans-machines/reading/23-reading/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/learning-humans-machines/reading/23-reading/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Centola, D., &amp;amp; Baronchelli, A. (2015). &lt;a href=&#34;centola2015.pdf&#34;&gt;The spontaneous emergence of conventions: An experimental study of cultural evolution&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;112&lt;/em&gt;, 1989—1994.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might also enjoy this &lt;a href=&#34;https://www.youtube.com/watch?v=TLyQ3fz33X4&#34;&gt;talk&lt;/a&gt; from the first author on this work here. It’s a little bit long, so feel free to skip around, but it might be helpful for seeing the stimuli and getting a better sense for the experiment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-file-alt&#34;&gt;&lt;/i&gt; Hawkins, R.D., Goodman, N.D., Goldberg, A.E. , &amp;amp; Griffiths, T.L. (2020). &lt;a href=&#34;hawkins2020.pdf&#34;&gt;Generalizing meanings from partners to populations: Hierarchical inference supports convention formation on networks&lt;/a&gt;. &lt;em&gt;Proceedings of the 42nd Annual Conference of the Cognitive Science Society&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might also enjoy this short &lt;a href=&#34;https://www.youtube.com/watch?v=bgM9Ee697Mw&#34;&gt;talk&lt;/a&gt; from the first author on this work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These papers are both short but pretty tense. Make sure you understand what the authors are trying to demonstrate, how their experiments work, and (roughly) how the models they describe work.&lt;/p&gt;
+&lt;p&gt;Sign up to lead discussion here: &lt;a href=&#34;http://bit.ly/lhm-signup&#34;&gt;http://bit.ly/lhm-signup&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Indirectly learning from language</title>
       <link>/learning-humans-machines/reading/21-reading/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
@@ -1973,11 +1994,10 @@ ggplot(samples, aes(x = value)) +
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 17&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Community effects on iterated learning&lt;/strong&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Community effects on learning from others&lt;/strong&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/23-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
