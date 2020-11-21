@@ -1,0 +1,54 @@
+---
+title: "Defusing the childhood vocabulary explosion"
+output:
+  html_document:
+    highlight: kate
+    theme: cosmo
+editor_options: 
+  chunk_output_type: console
+---
+Load packages and set plot theme
+```{r load-libraries, message=FALSE}
+library(tidyverse)
+library(ggthemes)
+library(here)
+library(DT)
+
+theme_set(theme_few(base_size = 16))
+
+knitr::opts_chunk$set(fig.width = 6, fig.height = 4, cache = TRUE, 
+                  message = FALSE, warn = FALSE)
+```
+
+Set up the model
+```{r word-difficulties}
+word_difficulties <- tibble(word = 1:10000,
+                            difficulty = rnorm(n = 10000, mean = 4000, 
+                                               sd = 1000))
+
+datatable(word_difficulties, rownames = FALSE)
+```
+
+```{r plot-difficulties}
+ggplot(word_difficulties, aes(x = difficulty)) + 
+  geom_freqpoly() +
+  labs(x = "ease of acquisition", y = "# of words")
+```
+
+How many words are learned by each time step?
+```{r compute-learned}
+timesteps <- tibble(time = 1:6000)
+
+learned_by_timestep <- timesteps %>%
+  group_by(time)  %>%
+  mutate(learned = sum(time >= pull(word_difficulties, difficulty)))
+
+datatable(learned_by_timestep, rownames = FALSE)
+```
+
+```{r plot-learned}
+ggplot(learned_by_timestep, aes(x = time, y = learned)) + 
+  geom_line() + 
+  scale_x_continuous(breaks = seq(0, 6000, 1000)) +
+  labs(x = "time step", y = "words learned")
+```

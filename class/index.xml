@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Class details | Learning in Humans and Machines</title>
+    <link>https://dyurovsky.github.io/learning-humans-machines/class/</link>
+      <atom:link href="https://dyurovsky.github.io/learning-humans-machines/class/index.xml" rel="self" type="application/rss+xml" />
+    <description>Class details</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dyurovsky.github.io/learning-humans-machines/media/social-image-f20.png</url>
+      <title>Class details</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/</link>
+    </image>
+    
+    <item>
+      <title>Learning in humans and machines</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/01-class/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/01-class/</guid>
+      <description>
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;../hw.css&#34; type=&#34;text/css&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/intro.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/intro.pdf&#34;&gt;&lt;img src=&#34;slides/intro.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Code&lt;/h2&gt;
+&lt;p&gt;McMurray (2007) model – &lt;a href=&#34;code/vocabulary_explosion.html&#34;&gt;html&lt;/a&gt; and &lt;a href=&#34;code/vocabulary_explosion.Rmd&#34;&gt;Rmd&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/jzwglbffia52dhoke8frr97rhdrywpdp&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;McMurray, B. (2007). &lt;a href=&#34;papers/mcmurray2007.pdf&#34;&gt;Defusing the childhood vocabulary explosion&lt;/a&gt;. &lt;em&gt;Science&lt;/em&gt;, &lt;em&gt;317&lt;/em&gt;, 631.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R, RStudio, and Github</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/02-class/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/02-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/r_and_github.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/r_and_github.pdf&#34;&gt;&lt;img src=&#34;slides/r_and_github.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7jhw7wqvifsorsb4wg6ym5gcr1g40nsw&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Associative learning</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/03-class/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/03-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/associative_learning.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/associative_learning.pdf&#34;&gt;&lt;img src=&#34;slides/associative_learning.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/oxiomkj4mbtb4hz96kqvr5jv4qr7v8u5&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Rescorla R. A., &amp;amp; Wagner A. R. (1972). &lt;a href=&#34;papers/rescorlawagner1972.pdf&#34;&gt;A theory of Pavlovian conditioning: Variations in the effectiveness of reinforcement and nonreinforcement&lt;/a&gt;. In A. H. Black &amp;amp; W. F. Prokasy (Eds.), &lt;em&gt;Classical Conditioning II: Current Research and Theory&lt;/em&gt;. New York: Appleton Century Crofts.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How far can simple associative learning get you?</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/04-class/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/04-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/16b05vtiritzrzog3ikej1m3498bbtyg&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perceptrons</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/05-class/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/05-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/perceptrons.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/perceptrons.pdf&#34;&gt;&lt;img src=&#34;slides/perceptrons.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;hhttps://cmu.box.com/s/l5kz5kl6m8a2a60wfqe1xku1n04xcg0s&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Rosenblatt, F. (1958). &lt;a href=&#34;papers/rosenblatt1958.pdf&#34;&gt;The perceptron: A probabilistic model for information storage and organization in the brain&lt;/a&gt;. &lt;em&gt;Psychological review&lt;/em&gt;, &lt;em&gt;65&lt;/em&gt;, 386—408.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multi-layer networks</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/06-class/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/06-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#youtube-videos&#34;&gt;Youtube videos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/multi_layer.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/multi_layer.pdf&#34;&gt;&lt;img src=&#34;slides/multi_layer.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/41qxz1dk2apcq5rsjv05nqumhzz9yoga&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;youtube-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Youtube videos&lt;/h2&gt;
+&lt;p&gt;3Blue1BRown - &lt;a href=&#34;https://www.youtube.com/watch?v=Ilg3gGewQ5U&#34;&gt;What is backpropogation really doing?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3Blue1BRown - &lt;a href=&#34;https://www.youtube.com/watch?v=tIeHLnjs5U8&#34;&gt;Backpropogation calculus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;McClelland, J. L., &amp;amp; Rogers, T. T. (2003). &lt;a href=&#34;papers/mcclelland2003.pdf&#34;&gt;The parallel distributed processing approach to semantic cognition&lt;/a&gt;. &lt;em&gt;Nature Reviews Neuroscience&lt;/em&gt;, &lt;em&gt;4&lt;/em&gt;, 310—322.&lt;/p&gt;
+&lt;p&gt;McClelland, J. L., &amp;amp; Rumelhart, D. E. (1981). &lt;a href=&#34;papers/mcclelland1981.pdf&#34;&gt;An interactive activation model of context effects in letter perception: I. An account of basic findings&lt;/a&gt;. &lt;em&gt;Psychological Review&lt;/em&gt;, &lt;em&gt;88&lt;/em&gt;, 375—407.&lt;/p&gt;
+&lt;p&gt;Rumelhart, D. E., Hinton, G. E., &amp;amp; Williams, R. J. (1986). &lt;a href=&#34;papers/rumelhart1986.pdf&#34;&gt;Learning representations by back-propagating errors&lt;/a&gt;. &lt;em&gt;Nature&lt;/em&gt;, &lt;em&gt;323&lt;/em&gt;, 533—536.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Backpropagation details</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/07-class/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/07-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#backpropopagation-example&#34;&gt;Backpropopagation example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/backprop.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/backprop.pdf&#34;&gt;&lt;img src=&#34;slides/backprop.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/bb4v8j9q96gsgx1jq7l46wnz6ovkyp12&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;backpropopagation-example&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Backpropopagation example&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/backprop-demo&#34;&gt;XOR by hand&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Limits to connectionism</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/08-class/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/08-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/22ky1hhgumcoudzqjy7ci8rwxyfx67yq&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recurrent neural networks</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/09-class/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/09-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/recurrent.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/recurrent.pdf&#34;&gt;&lt;img src=&#34;slides/recurrent.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/9z9b63nfznb5a57f616om6opfb2u0i7b&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Elman, J. L. (1990). &lt;a href=&#34;papers/elman1990.pdf&#34;&gt;Finding structure in time&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;, 179—211.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bayesian inference</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/10-class/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/10-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/bayes_basics.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/bayes_basics.pdf&#34;&gt;&lt;img src=&#34;slides/bayes_basics.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7v68c5avvh1c36eujbaxuiesoenysob3&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning by Bayesian inference</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/11-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/11-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/causal_learning.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/causal_learning.pdf&#34;&gt;&lt;img src=&#34;slides/causal_learning.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/f1tlx4k726qagl3upbej0t6xxmf9vh9x&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Tenenbaum, J. B. (2000). &lt;a href=&#34;papers/tenenbaum2000.pdf&#34;&gt;Rules and similarity in concept learning&lt;/a&gt;. In &lt;em&gt;Advances in neural information processing systems&lt;/em&gt; (pp. 59—65).&lt;/p&gt;
+&lt;p&gt;Xu, F., &amp;amp; Tenenbaum, J. B. (2007). &lt;a href=&#34;papers/xu2007.pdf&#34;&gt;Word learning as Bayesian inference&lt;/a&gt;. &lt;em&gt;Psychological Review&lt;/em&gt;, 114, 245—272..&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Models at different levels</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/12-class/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/12-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/pjgyq00dohkxwbxoi69n1zqeoe6wvbit&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rational Analysis</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/13-class/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/13-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/rational_analysis.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/rational_analysis.pdf&#34;&gt;&lt;img src=&#34;slides/rational_analysis.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/lyih1cmogob5p2tl05bxym9y2pdzyibh&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Anderson, J. R., &amp;amp; Schooler, L. J. (1991). &lt;a href=&#34;papers/anderson1991.pdf&#34;&gt;Reflections of the environment in memory&lt;/a&gt;. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;, 396—408.&lt;/p&gt;
+&lt;p&gt;Griffiths, T. L., &amp;amp; Tenenbaum, J. B. (2006). &lt;a href=&#34;papers/griffiths2006.pdf&#34;&gt;Optimal predictions in everyday cognition&lt;/a&gt;. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;17&lt;/em&gt;, 767—773.&lt;/p&gt;
+&lt;p&gt;Kidd, C., Piantadosi, S. T., &amp;amp; Aslin, R. N. (2012). &lt;a href=&#34;papers/kidd2012.pdf&#34;&gt;The Goldilocks effect: Human infants allocate attention to visual sequences that are neither too simple nor too complex&lt;/a&gt;. &lt;em&gt;PlOS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;, e36399.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Inference by sampling</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/14-class/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/14-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/sampling.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/sampling.pdf&#34;&gt;&lt;img src=&#34;slides/sampling.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/foo9x0wdomhnvdhayt7p0ufonfnxb7yt&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Sanborn, A. N., Griffiths, T. L., &amp;amp; Shiffrin, R. M. (2010). &lt;a href=&#34;papers/sanborn2010.pdf&#34;&gt;Uncovering mental representations with Markov chain Monte Carlo&lt;/a&gt;. &lt;em&gt;Cognitive psychology&lt;/em&gt;, &lt;em&gt;60&lt;/em&gt;, 63—106.&lt;/p&gt;
+&lt;p&gt;Vul, E., Goodman, N., Griffiths, T. L., &amp;amp; Tenenbaum, J. B. (2014). &lt;a href=&#34;papers/vul2014.pdf&#34;&gt;One and done? Optimal decisions from very few samples&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;38&lt;/em&gt;, 599—637.&lt;/p&gt;
+&lt;p&gt;Vul, E., &amp;amp; Pashler, H. (2008). &lt;a href=&#34;papers/vul2008.pdf&#34;&gt;Measuring the crowd within: Probabilistic representations within individuals&lt;/a&gt;. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;19&lt;/em&gt;, 645—647.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bayesian associative learning</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/15-class/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/15-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/91l5vcvn6ffp9zmyyvwxcfir921427vp&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comparing models</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/16-class/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/16-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/comparing_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/comparing_models.pdf&#34;&gt;&lt;img src=&#34;slides/comparing_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;code&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Code&lt;/h2&gt;
+&lt;p&gt;Pit &amp;amp; Myung (2007) model – &lt;a href=&#34;code/model_fitting.html&#34;&gt;html&lt;/a&gt; and &lt;a href=&#34;code/model_fitting.Rmd&#34;&gt;Rmd&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/xe0iuvd4u89z8jcourulv6mmeo85dy4p&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Machines that learn like people</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/17-class/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/17-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/bihh9y8ekets9nc9mf55s3m8vhs2fkih&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning from teaching</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/18-class/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/18-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/teaching.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/teaching.pdf&#34;&gt;&lt;img src=&#34;slides/teaching.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/x8rowmvvcdpgskoyu4lzkwybkocx0jc1&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Bonawitz, E., Shafto, P., Gweon, H., Goodman, N. D., Spelke, E., &amp;amp; Schulz, L. (2011). &lt;a href=&#34;papers/bonawitz2011.pdf&#34;&gt;The double-edged sword of pedagogy: Instruction limits spontaneous exploration and discovery&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;120&lt;/em&gt;, 322—330.&lt;/p&gt;
+&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Frank, M. C. (2012). &lt;a href=&#34;papers/shafto2012.pdf&#34;&gt;Learning from others: The consequences of psychological reasoning for human learning&lt;/a&gt;. &lt;em&gt;Perspectives on Psychological Science&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;, 341—351.&lt;/p&gt;
+&lt;p&gt;Shafto, P., Goodman, N. D., &amp;amp; Griffiths, T. L. (2014). &lt;a href=&#34;papers/shafto2014.pdf&#34;&gt;A rational account of pedagogical reasoning: Teaching by, and learning from, examples&lt;/a&gt;. &lt;em&gt;Cognitive Psychology&lt;/em&gt;, &lt;em&gt;71&lt;/em&gt;, 55—89.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What makes a good teacher?</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/19-class/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/19-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/qsdklxuagpq0q8w3iwur9eoqrtry553q&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rational speech acts</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/20-class/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/20-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/rsa.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/rsa.pdf&#34;&gt;&lt;img src=&#34;slides/rsa.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/v9ppjbo0j8jsay96mfuyo3hup3yxe258&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Frank, M. C., &amp;amp; Goodman, N. D. (2014). &lt;a href=&#34;papers/frank2014.pdf&#34;&gt;Inferring word meanings by assuming that speakers are informative&lt;/a&gt;. &lt;em&gt;Cognitive Psychology&lt;/em&gt;, &lt;em&gt;75&lt;/em&gt;, 80—96.&lt;/p&gt;
+&lt;p&gt;Goodman, N. D., &amp;amp; Frank, M. C. (2016). &lt;a href=&#34;papers/goodman2016.pdf&#34;&gt;Pragmatic language interpretation as probabilistic inference&lt;/a&gt;. &lt;em&gt;Trends in Cognitive Sciences&lt;/em&gt;, 20, 818—829.&lt;/p&gt;
+&lt;p&gt;Kao, J. T., Wu, J. Y., Bergen, L., &amp;amp; Goodman, N. D. (2014). &lt;a href=&#34;papers/kao2014.pdf&#34;&gt;Nonliteral understanding of number words&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;111&lt;/em&gt;, 12002—12007.&lt;/p&gt;
+&lt;p&gt;Yoon, E. J., Tessler, M. H., Goodman, N. D., &amp;amp; Frank, M. C. (in press). &lt;a href=&#34;papers/yoon2020.pdf&#34;&gt;Polite speech emerges from competing social goals&lt;/a&gt;. &lt;em&gt;Open Mind&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Yurovsky, D., Case, S., &amp;amp; Frank, M. C. (2017). Preschoolers flexibly adapt to linguistic input in a noisy channel. &lt;em&gt;Psychological Science&lt;/em&gt;, &lt;em&gt;28&lt;/em&gt;, 132—140.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning indirectly from language</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/21-class/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/21-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/iw6hesuzoo8rac0ojfvbw00z51audotr&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Iterated learning</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/22-class/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/22-class/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/iterated_learning.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/iterated_learning.pdf&#34;&gt;&lt;img src=&#34;slides/iterated_learning.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/ib87bigznal6iosit0zu1jnhb8r2dtou&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Lupyan, G., &amp;amp; Dale, R. (2010). &lt;a href=&#34;papers/lupyan2010.pdf&#34;&gt;Language structure is partly determined by social structure&lt;/a&gt;. &lt;em&gt;PLOS ONE&lt;/em&gt;, &lt;em&gt;5&lt;/em&gt;, e8559.&lt;/p&gt;
+&lt;p&gt;Kemp, C., &amp;amp; Regier, T. (2012). &lt;a href=&#34;papers/kemp2012.pdf&#34;&gt;Kinship categories across languages reflect general communicative principles&lt;/a&gt;. &lt;em&gt;Science&lt;/em&gt;, 336, 1049—1054.&lt;/p&gt;
+&lt;p&gt;Kirby, S., Cornish, H., &amp;amp; Smith, K. (2008). &lt;a href=&#34;papers/kirby2008.pdf&#34;&gt;Cumulative cultural evolution in the laboratory: An experimental approach to the origins of structure in human language&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;105&lt;/em&gt;, 10681—10686.&lt;/p&gt;
+&lt;p&gt;Kirby, S., Tamariz, M., Cornish, H., &amp;amp; Smith, K. (2015). &lt;a href=&#34;papers/kirby2015.pdf&#34;&gt;Compression and communication in the cultural evolution of linguistic structure&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;141&lt;/em&gt;, 87—102.&lt;/p&gt;
+&lt;p&gt;Silvey, C., Kirby, S., &amp;amp; Smith, K. (2015). &lt;a href=&#34;papers/silvey2015.pdf&#34;&gt;Word meanings evolve to selectively preserve distinctions on salient dimensions&lt;/a&gt;. &lt;em&gt;Cognitive Science&lt;/em&gt;, &lt;em&gt;39&lt;/em&gt;, 212—226.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Community effects on learning from others</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/23-class/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/23-class/</guid>
+      <description>
+&lt;link href=&#34;https://dyurovsky.github.io/learning-humans-machines/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://dyurovsky.github.io/learning-humans-machines/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/acjpcsfh13dboawc2agxnaoyhje6n1u7&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The structure in language</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/24-class/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/24-class/</guid>
+      <description>
+&lt;link href=&#34;https://dyurovsky.github.io/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://dyurovsky.github.io/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/structure_language.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/structure_language.pdf&#34;&gt;&lt;img src=&#34;slides/structure_language.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7k8yklyx4to9rxvpx73ofeonsj7ea817&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Bedny, M., Koster-Hale, J., Elli, G., Yazzolino, L., &amp;amp; Saxe, R. (2019). &lt;a href=&#34;papers/bedny2019.pdf&#34;&gt;There’s more to “sparkle” than meets the eye: Knowledge of vision and light verbs among congenitally blind and sighted individuals&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;189&lt;/em&gt;, 105—115.&lt;/p&gt;
+&lt;p&gt;Bergey*, C., Morris*, B., &amp;amp; Yurovsky, D. (2020). &lt;a href=&#34;papers/bergey2020.pdf&#34;&gt;Children hear more about what is atypical than what is typical&lt;/a&gt;. &lt;em&gt;Proceedings of the 41st Annual Conference of the Cognitive Science Society&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Griffiths, T. L., &amp;amp; Steyvers, M. (2004). &lt;a href=&#34;papers/griffiths2004.pdf&#34;&gt;Finding scientific topics&lt;/a&gt;. &lt;em&gt;Proceedings of the National academy of Sciences&lt;/em&gt;, &lt;em&gt;101&lt;/em&gt;, 5228—5235.&lt;/p&gt;
+&lt;p&gt;Landauer, T. K., &amp;amp; Dumais, S. T. (1997). &lt;a href=&#34;papers/landauer1997.pdf&#34;&gt;A solution to Plato’s problem: The latent semantic analysis theory of acquisition, induction, and representation of knowledge&lt;/a&gt;. &lt;em&gt;Psychological Review&lt;/em&gt;, &lt;em&gt;104&lt;/em&gt;, 211—240.&lt;/p&gt;
+&lt;p&gt;Marmor, G. S. (1978). &lt;a href=&#34;papers/marmor1978.pdf&#34;&gt;Age at onset of blindness and the development of the semantics of color names&lt;/a&gt;. &lt;em&gt;Journal of Experimental Child Psychology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;, 267—278.&lt;/p&gt;
+&lt;p&gt;Roy, B. C., Frank, M. C., DeCamp, P., Miller, M., &amp;amp; Roy, D. (2015). &lt;a href=&#34;papers/roy2015.pdf&#34;&gt;Predicting the birth of a spoken word&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;112&lt;/em&gt;, 12663—12668.&lt;/p&gt;
+&lt;p&gt;Steyvers, M., &amp;amp; Griffiths, T. (2007). &lt;a href=&#34;papers/steyvers2007.pdf&#34;&gt;Probabilistic topic models&lt;/a&gt;. &lt;em&gt;Handbook of Latent Semantic Analysis&lt;/em&gt;, &lt;em&gt;427&lt;/em&gt;, 424—440.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

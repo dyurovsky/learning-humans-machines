@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction The Metropolis Algorithm Sampling from an Exponential Distribution Sampling from a Dirichlet Distribution Inference via Markov Chain Monte Carlo   h4 { margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; border-color: #d45026; border-style: solid; background-color: rgba(212, 80, 38, 0.2); font-weight: normal; }  Getting your assignment:  You can find template code for your submission here at this GitHub Classroom link. All of the code you write you should go in hw4.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dyurovsky.github.io/learning-humans-machines/assignment/04-mcmc/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#d45026">
+  
+
+  
+  
+  
+  <script src="/learning-humans-machines/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRoboto:400,400i,700,700i&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/learning-humans-machines/css/wowchemy.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/learning-humans-machines/index.webmanifest">
+  <link rel="icon" type="image/png" href="/learning-humans-machines/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/learning-humans-machines/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://dyurovsky.github.io/learning-humans-machines/assignment/04-mcmc/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dyurovsky">
+  <meta property="twitter:creator" content="@dyurovsky">
+  
+  <meta property="og:site_name" content="Learning in Humans and Machines">
+  <meta property="og:url" content="https://dyurovsky.github.io/learning-humans-machines/assignment/04-mcmc/">
+  <meta property="og:title" content="Homework 4 | Learning in Humans and Machines">
+  <meta property="og:description" content="Introduction The Metropolis Algorithm Sampling from an Exponential Distribution Sampling from a Dirichlet Distribution Inference via Markov Chain Monte Carlo   h4 { margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; border-color: #d45026; border-style: solid; background-color: rgba(212, 80, 38, 0.2); font-weight: normal; }  Getting your assignment:  You can find template code for your submission here at this GitHub Classroom link. All of the code you write you should go in hw4."><meta property="og:image" content="https://dyurovsky.github.io/learning-humans-machines/media/social-image-f20.png">
+  <meta property="twitter:image" content="https://dyurovsky.github.io/learning-humans-machines/media/social-image-f20.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-10-26T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-10-26T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+    <link rel="stylesheet" type="text/css" href="/custom-css/print.css" media="print" />
+
+    <link rel="shortcut icon" href="https://dyurovsky.github.io/learning-humans-machines/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://dyurovsky.github.io/learning-humans-machines/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://dyurovsky.github.io/learning-humans-machines/img/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="85426/85726: Learning in Humans and Machines" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://dyurovsky.github.io/learning-humans-machines/img/mstile-144x144.png" />
+
+
+  <title>Homework 4 | Learning in Humans and Machines</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/learning-humans-machines/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/learning-humans-machines/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/learning-humans-machines/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/learning-humans-machines/learning-humans-machines/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/learning-humans-machines/learning-humans-machines/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://piazza.com/cmu/fall2020/85426" target="_blank" rel="noopener"><span>Piazza</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+    
+  
+
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/learning-humans-machines/assignment/">Assignments</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/learning-humans-machines/assignment/">Assignment details</a>
+      </li>
+
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/learning-humans-machines/assignment/01-rescorla-wagner/">Homeworks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/learning-humans-machines/assignment/01-rescorla-wagner/">Homework 1</a>
+      </li>
+
+      
+      <li >
+        <a href="/learning-humans-machines/assignment/02-networks/">Homework 2</a>
+      </li>
+
+      
+      <li >
+        <a href="/learning-humans-machines/assignment/03-bayes/">Homework 3</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="/learning-humans-machines/assignment/04-mcmc/">Homework 4</a>
+      </li>
+
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Final project</a>
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Homework 4</h1>
+
+                    
+                    <div class="due-date p-2 mb-3 bg-primary text-white">
+                        Due by <strong>11:59 PM</strong> on Friday, November 6, 2020
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#the-metropolis-algorithm">The Metropolis Algorithm</a></li>
+<li><a href="#sampling-from-an-exponential-distribution">Sampling from an Exponential Distribution</a></li>
+<li><a href="#sampling-from-a-dirichlet-distribution">Sampling from a Dirichlet Distribution</a></li>
+<li><a href="#inference-via-markov-chain-monte-carlo">Inference via Markov Chain Monte Carlo</a></li>
+</ul>
+</div>
+
+<style type="text/css">
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: #d45026;
+  border-style: solid;
+  background-color: rgba(212, 80, 38, 0.2);
+  font-weight: normal;
+}
+
+</style>
+<div id="template">
+<p><strong>Getting your assignment: </strong> You can find template code for your submission here at this <a href="https://classroom.github.com/a/2w7lj1Y3">GitHub Classroom link</a>. All of the code you write you should go in <code>hw4.Rmd</code>, and please knit the Markdown file in your completed submission.</p>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>In the last decade, we have seen an explosion of impressive results in Machine Learning, producing models that match and even sometimes outperform humans on <a href="https://dyurovsky.github.io/learning-humans-machines/reading/17-reading/lake2017.pdf">challenging tasks</a>. A non-trivial part of the challenge in developing these models is not in specifying how they should solve the problems they are developed solve, but in figuring out how to actually derive predictions from these models.</p>
+<p>Earlier this semester, we read a paper from <a href="https://dyurovsky.github.io/learning-humans-machines/reading/12-reading/kemp2007.pdf">Charles Kemp, And Perfors, and Josh Tenebaum</a> that shows how overhypotheses like the shape bias can be understood through the lens of rational analysis. Because the model does not have an analytic solution, A sizeable chunk of the article describes approximation methods that the authors use for for determining approximately what the model predicts.</p>
+<p>The approach that Kemp et al. use, and that is a mainstay in modern Bayesian approaches, is technique called Markov chain Monte Carlo (MCMC). Markov chain Monte Carlo is a method for approximating samples from a complex Distribution by drawing samples from other simpler distributions and reweighing or combining them together.</p>
+<p>In this assignment, you will implement the Metropolis Algorithm, an MCMC algorithm in the sequential sampling family. In this family of algorithms, samples are drawn from a simple Proposal distribution and then either Accepted (if they have high probability under the target distribution), or Rejected in favor of keep the current sample.</p>
+<hr />
+</div>
+<div id="the-metropolis-algorithm" class="section level2">
+<h2>The Metropolis Algorithm</h2>
+<p>Metropolis is a simple sequential sampling scheme for drawing samples from a target distribution <span class="math inline">\(P\left(x\right)\)</span> by using a density function <span class="math inline">\(f\left(x\right)\)</span> that is proportional to <span class="math inline">\(P\)</span>– i.e., that can give the relative probability of two different samples <span class="math inline">\(x\)</span> and <span class="math inline">\(x&#39;\)</span>.</p>
+<p>The algorithm works by starting a chain at some arbitrary point <span class="math inline">\(x_0\)</span>. Then, in each iteration <span class="math inline">\(t\)</span>, a new sample <span class="math inline">\(x1\)</span> by modifying the previous sample <span class="math inline">\(x_{t}\)</span> according to a proposal distribution <span class="math inline">\(g\left(x&#39;|x_{t}\right)\)</span>. The critical requirement is that <span class="math inline">\(g\)</span> is a symmetric distribution <span class="math inline">\(g\left(x&#39;|x\right) = g\left(x|x&#39;\right)\)</span>.</p>
+<p>For your simulation, you should use a simple Normal distribution centered at the previous sample <span class="math inline">\(g\left(x&#39;|x\right) \sim \text{Normal}\left(x, \sigma\right)\)</span>.</p>
+<p>You then run the algorithm for some number of iterations, e.g. 1000, at each iteration performing the following steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Propose a new sample <span class="math inline">\(x&#39;\)</span> by drawing from <span class="math inline">\(g\left(x&#39;|x_{t}\right)\)</span></p></li>
+<li><p>Compute the acceptance ratio <span class="math inline">\(\alpha = \frac{f\left(x&#39;\right)}{f\left(x\right)}\)</span></p></li>
+<li><p>Sample <span class="math inline">\(u \sim \text{Uniform}\left(0,1\right)\)</span>.</p>
+<p>If <span class="math inline">\(u \leq \alpha\)</span>, accept the proposed sample (<span class="math inline">\(x_{t+1} = x&#39;\)</span>).</p>
+<p>Otherwise, reject the proposed sample and keep the previous sample (<span class="math inline">\(x_{t+1} = x_{t}\)</span>).</p></li>
+</ol>
+</div>
+<div id="sampling-from-an-exponential-distribution" class="section level2">
+<h2>Sampling from an Exponential Distribution</h2>
+<p>Exponential distributions are a common distribution in models of cognition, for example they are sometimes used to model forgetting in memory. The Exponential distribution has one parameter <span class="math inline">\(\lambda\)</span> which defines the rate of decay (or forgetting).</p>
+<p>If <span class="math inline">\(x \sim \text{Exponential}\left(\lambda\right)\)</span>,
+<span class="math inline">\(P\left(x\right) = \lambda e^{-\lambda x}\)</span>.</p>
+<p><strong>R</strong> actually can draw samples from an Exponential distribution. For example, here are 1000 samples from <span class="math inline">\(\text{Exponential}\left(3\right)\)</span></p>
+<pre class="r"><code>samples &lt;- tibble(sample = 1:1000, value = rexp(1000, rate = 3))
+
+ggplot(samples, aes(x = value)) + 
+  geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;)b</code></pre>
+<p><img src="/learning-humans-machines/img/assignments/exponential3.jpeg" /><!-- --></p>
+<p>But let’s see how can draw samples from an exponential distribution using Metropolis-Hastings samples instead.</p>
+<p>You will need to do 4 things:</p>
+<ol style="list-style-type: decimal">
+<li><p>Define the Exponential target distribution <span class="math inline">\(f(x)\)</span> using the Exponential definition above.</p></li>
+<li><p>Define the proposal distribution <span class="math inline">\(g(x&#39;|x)\)</span></p></li>
+<li><p>Define and Metropolis sequential sampling algorithm</p></li>
+<li><p>Run the Algorithm for some number of iterations and plot the results.</p></li>
+</ol>
+<div id="problem-1-implement-the-exponential-probability-density-function.-this-function-should-take-in-a-value-x-and-a-parameter-lambda-and-return-the-probability-of-sampling-the-value-x-from-the-exponential-distribution-with-parameter-lambda-see-above-1-point." class="section level4">
+<h4><strong>Problem 1</strong>: Implement the Exponential probability density function. This function should take in a value <span class="math inline">\(x\)</span> and a parameter <span class="math inline">\(\lambda\)</span> and return the probability of sampling the value <span class="math inline">\(x\)</span> from the Exponential distribution with parameter <span class="math inline">\(\lambda\)</span> (see above, 1 point).</h4>
+</div>
+<div id="problem-2-implement-a-gaussian-proposal-function.-this-should-take-in-a-current-value-x-a-parameter-sigma-which-defines-how-wide-the-proposal-distribution-is.-it-should-return-a-new-proposed-sample-x-1-point." class="section level4">
+<h4><strong>Problem 2</strong>: Implement a Gaussian proposal function. This should take in a current value <span class="math inline">\(x\)</span>, a parameter sigma which defines how wide the proposal distribution is. It should return a new proposed sample <span class="math inline">\(x&#39;\)</span> (1 point).</h4>
+<p>One thing you might notice is that the Metropolis samples won’t look like Exponential samples right away. Here is a plot of <span class="math inline">\(f(x)\)</span> for 1000 samples from Metropolis:</p>
+<pre class="r"><code>ggplot(output, aes(x = iteration, y = f)) + 
+  geom_line()</code></pre>
+<p><img src="/learning-humans-machines/img/assignments/burnin.jpeg" /><!-- --></p>
+<p>You can see that first several hundred samples, every sample has low probability under the target distribution. This happens when the starting point of the chain is far away from the area of high density in the target distribution. For this reason, it is common to discard some of the initial samples–a process called <strong>burn in</strong>. You may find this helpful in future simulations.</p>
+</div>
+<div id="problem-3-implement-a-metropolis-sampler-for-an-exponential-distribution-and-use-it-draw-1000-samples-from-an-exponential-distribution-with-lambda3.-try-lambda1-as-well.-do-the-distributions-look-different-you-should-use-the-two-functions-you-just-wrote-for-problems-1-and-2.-2-points" class="section level4">
+<h4><strong>Problem 3</strong>: Implement a Metropolis sampler for an Exponential distribution and use it draw 1000 samples from an Exponential distribution with <span class="math inline">\(\lambda=3\)</span>. Try <span class="math inline">\(\lambda=1\)</span> as well. Do the distributions look different? You should use the two functions you just wrote for Problems 1 and 2. (2 points)</h4>
+</div>
+</div>
+<div id="sampling-from-a-dirichlet-distribution" class="section level2">
+<h2>Sampling from a Dirichlet Distribution</h2>
+<p>The Dirichlet Distribution is a highly flexible distribution that is that can many different forms depending on its parameters. It often finds use in Cognitive models precisely when the goal is to learn about something than has unknown shape before learning starts (e.g. the probability of category membership given some set of features). It’s also not available in the <strong>R</strong> statistics library. You can sample from it using MCMC!</p>
+<p>The Dirichlet distribution takes <span class="math inline">\(K \geq 2\)</span> parameters (corresponding to separate dimensions) which are commonly represented as a vector <span class="math inline">\(\boldsymbol \alpha\)</span>. Each <span class="math inline">\(\alpha_{i} \geq 0\)</span> is a concentration parameter which specifies how much of the probability mass of the function is concentrated on that dimension.</p>
+<p>For a vector <span class="math inline">\(\boldsymbol x\)</span>,</p>
+<p><span class="math display">\[
+\text{Dirichlet}(\boldsymbol x) = \frac{1}{B\left(\boldsymbol\alpha\right)} \prod_{i=1}^{K}{x_{i}^{\alpha_{i} - 1}}
+\]</span></p>
+<p>Where <span class="math inline">\(B\)</span> is a normalizing constants: The <span class="math inline">\(Beta\)</span> function</p>
+<p><span class="math display">\[
+\text{Beta}(\boldsymbol \alpha) = \frac{\prod_{i=1}^{K}{\Gamma\left(\alpha_{i}\right)}}{\Gamma\left(\sum_{i=1}^{K}\alpha_{i}\right)}
+\]</span></p>
+<p>And <span class="math inline">\(\Gamma\)</span> is the continuous generalization of the factorial (<span class="math inline">\(x!\)</span>) function. You can call it in <strong>R</strong> with <code>gamma(x)</code></p>
+<p>You can use Metropolis to sample from the Dirichlet distribution in the same way you did for the Exponential distribution with one wrinkle: You need a different proposal distribution. The exponential distribution is defined over all positive real numbers, so you used Gaussian proposals and simply cut the distribution off when <span class="math inline">\(x &lt; 0\)</span>. However, the Dirichlet distribution is defined only when the value on every dimension is between 0 and 1, and the sum of the values across the dimensions adds up to 1 (this is called a simplex). So if you try to make Gaussian proposals, almost every proposal will be rejected because the Dirichlet distribution will give probability 0 for it.</p>
+<p>Instead, you can use a proposal function where you generate values from a uniform distribution between a small negative and small positive fraction, and this fraction to one dimension while subtracting it from the other. This will keep your <span class="math inline">\(x\)</span>s in the desired range.</p>
+<div id="problem-4-implement-the-beta-function-the-dirichlet-distribution-probability-function-and-the-delta-proposal-function.-the-equations-will-be-different-from-the-functions-above-but-the-process-should-be-very-similar-2-points." class="section level4">
+<h4><strong>Problem 4</strong>: Implement the Beta function, the Dirichlet distribution probability function, and the Delta proposal function. The equations will be different from the functions above, but the process should be very similar (2 points).</h4>
+</div>
+<div id="problem-5-implement-a-metropolis-sampler-for-a-dirichlet-distribution-and-use-it-draw-samples-from-a-dirichlet-distribution-with-alpha-.74.-how-many-burn-in-samples-do-you-need-before-the-chain-stabilizes-2-points" class="section level4">
+<h4><strong>Problem 5</strong>: Implement a Metropolis sampler for a Dirichlet distribution and use it draw samples from a Dirichlet distribution with <span class="math inline">\(\alpha = &lt;.7,4&gt;\)</span>. How many burn in samples do you need before the chain stabilizes? (2 points)</h4>
+</div>
+</div>
+<div id="inference-via-markov-chain-monte-carlo" class="section level2">
+<h2>Inference via Markov Chain Monte Carlo</h2>
+<p>In addition to it’s utility in sampling from complex distributions, MCMC is a powerful tool for inference in these same distributions. If we have samples from a distribution with unknown parameters, we can use MCMC to infer the parameters that generated it (e.g. we can infer the category structure most likely to have produced the exemplars we observed).</p>
+<p>In the final part of the assignment, you will use Metropolis to infer the unknown parameters of a Dirichlet distribution from a set of samples from it. To do this, we will leverage Bayes’ rule: <span class="math inline">\(P\left(H|D\right) \propto P\left(D|H\right)P(H)\)</span>. In the previous section, you used the likelihood function for a known Dirichlet distribution <span class="math inline">\(P(D|H)\)</span> in order to draw samples from it. Now you will use that same likelihood function for inference. The intuition here is that the parameters that assign high probability to a given sample are more likely to have been the source of that sample.</p>
+<p>In the previous sections, in each iteration you proposed a sample from the distribution and rejected it if it was not sufficiently likely. Now, you will propose hypothetical parameters for the distribution, and reject them if they do not make the sample sufficiently likely.</p>
+<p>The homework template will provide you 100 samples from this unknown Dirichlet distribution and your job will be to recover the parameters that generated it. Think carefully about the proposal distribution you want to use here. Remember, each proposal will now move you around on the parameter space of the Dirichlet distribution–not the space of values produced by the Dirichlet.</p>
+<div id="problem-6-implement-the-compound-dirichlet-probability-function-and-an-appropriate-proposal-function.-this-compound-probability-distribution-should-take-in-a-list-of-samples-and-a-set-of-parameters-alpha-and-return-the-probability-of-generating-all-of-the-samples-from-a-dirichlet-distribution-with-the-given-parameters.-2-points." class="section level4">
+<h4><strong>Problem 6</strong>: Implement the compound Dirichlet probability function and an appropriate proposal function. This compound probability distribution should take in a list of samples and a set of parameters <span class="math inline">\(\alpha\)</span>, and return the probability of generating all of the samples from a Dirichlet distribution with the given parameters. (2 points).</h4>
+</div>
+<div id="problem-7-run-your-new-mcmc-sampler-to-determine-the-generating-parameters.-you-may-need-to-play-around-a-bit-with-proposal-distributions-and-number-of-samplesburn-in-2-points." class="section level4">
+<h4><strong>Problem 7</strong>: Run your new MCMC sampler to determine the generating parameters. You may need to play around a bit with proposal distributions and number of samples/burn in (2 points).</h4>
+</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on October 26, 2020</p>
+
+                    
+
+
+
+
+
+                    
+
+
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>85426/85726: Learning in Humans and Machines (Fall 2020)</strong><br>
+
+                <a href="https://www.cmu.edu" target="_blank" rel="noopener">Carnegie Mellon University</a> &emsp;&emsp;
+                <a href="https://www.cmu.edu/dietrich/psychology/" target="_blank" rel="noopener">Department of Psychology</a>
+            </p>
+
+            <p>
+                <a href="https://www.danyurovsky.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Dan Yurovsky</a> &emsp;&emsp;
+                <a href="mailto:yurovsky@cmu.edu"><i class="fas fa-envelope"></i>
+                    yurovsky@cmu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Tuesday/Thursday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:30–2:50 PM <br>
+                <i class="fas fa-university"></i> <a href="https://cmu.zoom.us/j/92066334665?pwd=MU94ek1CMWk1cDRsVXBHWklITmJZUT09" target="_blank" rel="noopener"> Zoom Room</a>
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.danyurovsky.com" target="_blank" rel="noopener">Dan Yurovsky</a></p>
+
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+
+            <p><a href="https://github.com/dyurovsky/learning-humans-machines" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/learning-humans-machines/js/wowchemy.min.7a9d0eb18fb898bf29101b90670e4b97.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

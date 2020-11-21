@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Learning in Humans and Machines</title>
+    <link>https://dyurovsky.github.io/learning-humans-machines/authors/</link>
+      <atom:link href="https://dyurovsky.github.io/learning-humans-machines/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator>
+    <image>
+      <url>https://dyurovsky.github.io/learning-humans-machines/media/social-image-f20.png</url>
+      <title>Authors</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/authors/</link>
+    </image>
+    
+  </channel>
+</rss>
