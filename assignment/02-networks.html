@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dan Yurovsky">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction Perceptrons Multi-layer networks Using the neuralnet package   h4 { margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; border-color: #d45026; border-style: solid; background-color: rgba(212, 80, 38, 0.2); font-weight: normal; }  Getting your assignment:  You can find template code for your submission here at this GitHub Classroom link. All of the code you write you should go in hw2.Rmd, and please knit the Markdown file in your completed submission.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dyurovsky.github.io/learning-humans-machines/assignment/02-networks.html">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#d45026">
+  
+
+  
+  
+  
+  <script src="../learning-humans-machines/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRoboto:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="../learning-humans-machines/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="../learning-humans-machines/index.webmanifest">
+  <link rel="icon" type="image/png" href="../learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="../learning-humans-machines/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://dyurovsky.github.io/learning-humans-machines/assignment/02-networks.html">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dyurovsky">
+  <meta property="twitter:creator" content="@dyurovsky">
+  
+  <meta property="og:site_name" content="Learning in Humans and Machines">
+  <meta property="og:url" content="https://dyurovsky.github.io/learning-humans-machines/assignment/02-networks.html">
+  <meta property="og:title" content="Homework 2 | Learning in Humans and Machines">
+  <meta property="og:description" content="Introduction Perceptrons Multi-layer networks Using the neuralnet package   h4 { margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; border-color: #d45026; border-style: solid; background-color: rgba(212, 80, 38, 0.2); font-weight: normal; }  Getting your assignment:  You can find template code for your submission here at this GitHub Classroom link. All of the code you write you should go in hw2.Rmd, and please knit the Markdown file in your completed submission."><meta property="og:image" content="https://dyurovsky.github.io/learning-humans-machines/img/social-image.png">
+  <meta property="twitter:image" content="https://dyurovsky.github.io/learning-humans-machines/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-09-29T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-09-29T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="https://dyurovsky.github.io/learning-humans-machines/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://dyurovsky.github.io/learning-humans-machines/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://dyurovsky.github.io/learning-humans-machines/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://dyurovsky.github.io/learning-humans-machines/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="85426/85726: Learning in Humans and Machines" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="https://dyurovsky.github.io/learning-humans-machines/img/mstile-144x144.png" />
+
+
+  <title>Homework 2 | Learning in Humans and Machines</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="../learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="../learning-humans-machines/">Learning in Humans and Machines</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../learning-humans-machines/learning-humans-machines/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../learning-humans-machines/learning-humans-machines/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../learning-humans-machines/learning-humans-machines/reading/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="../learning-humans-machines/learning-humans-machines/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="../learning-humans-machines/learning-humans-machines/class/"><span>Classes</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://piazza.com/cmu/fall2020/85426" target="_blank" rel="noopener"><span>Piazza</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="../learning-humans-machines/assignment.html">Assignments</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="../learning-humans-machines/assignment.html">Assignment details</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="../learning-humans-machines/assignment/01-rescorla-wagner.html">Homeworks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="../learning-humans-machines/assignment/01-rescorla-wagner.html">Homework 1</a>
+      </li>
+      
+      <li class="active">
+        <a href="../learning-humans-machines/assignment/02-networks.html">Homework 2</a>
+      </li>
+      
+      <li >
+        <a href="../learning-humans-machines/assignment/03-bayes.html">Homework 3</a>
+      </li>
+      
+      <li >
+        <a href="../learning-humans-machines/assignment/04-mcmc.html">Homework 4</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Final project</a>
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Homework 2</h1>
+
+                    
+                    <div class="due-date p-2 mb-3 bg-primary text-white">
+                        Due by <strong>11:59 PM</strong> on Friday, October 9, 2020
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#perceptrons">Perceptrons</a></li>
+<li><a href="#multi-layer-networks">Multi-layer networks</a></li>
+<li><a href="#using-the-neuralnet-package">Using the <code>neuralnet</code> package</a></li>
+</ul>
+</div>
+
+<style type="text/css">
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: #d45026;
+  border-style: solid;
+  background-color: rgba(212, 80, 38, 0.2);
+  font-weight: normal;
+}
+
+</style>
+<p><strong>Getting your assignment: </strong> You can find template code for your submission here at this <a href="https://classroom.github.com/a/UoRs801q">GitHub Classroom link</a>. All of the code you write you should go in <code>hw2.Rmd</code>, and please knit the Markdown file in your completed submission.</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Neural networks were a revolution in the scientific study of cognitive neuroscience, spawning a large body of work investigating the computational properties of systems designed to model the operation of the brain’s basic computational units (<a href="https://dyurovsky.github.io/learning-humans-machines/class/05-class/papers/rosenblatt1958.pdf">Rosenblatt, 1958</a>. These perceptrons varied along a number of dimensions, but all of them had the same critical flaw: they could not learn non-linear combinations of inputs, leading to their failure on even simple problems like Exclusive Or (XOR; Minsky &amp; Papert, 1967).</p>
+<p>In the 1980s, work by David Rumelhart and his colleagues rekindled the field’s interest in neural networks by devising an algorithm by which these models <em>could</em> learn non-linear combinations of input and develop genuinely interesting and surprisingly representations of their input (<a href="https://dyurovsky.github.io/learning-humans-machines/class/06-class/papers/rumelhart1986.pdf">Rumelhart, Hinton, &amp; Williams, 1986</a>). This lead to an explosion of work in artificial neural networks in the following decades, and also, following Marr’s perspective, a reconsideration of what these models were intended to describe (e.g. the neurons in the networks need not map on to neurons in the brain).</p>
+<p>In this assignment you will first implement simple one-layer perceptrons that learn with the perceptron learning rule. You’ll show that these can learn several logical functions: AND, OR, and NOT. But they cannot learn XOR.</p>
+<p>You will then build a very simple multi-layer network that uses backpropagation to learn XOR. You’ll finally use the <code>neuralnet</code> package to solve this same problem, and then use it to build a digit classifier using a small version of the <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a></p>
+</div>
+<div id="perceptrons" class="section level2">
+<h2>Perceptrons</h2>
+<p><img src="../learning-humans-machines/img/assignments/perceptron.png" /><!-- --></p>
+<p>Your first goal will be to train a perceptron to solve logical AND. I’ve provided a set of stub functions that scaffold one way of doing this. The idea is to approximate a sort of pseudo-object oriented structure using a named list. This is overkill for just this simple perceptron, but you’ll find that it extends easily to a backprop network.</p>
+<p>This object defined in the <code>perceptron</code> function. A <code>perceptron</code> is a list that has 5 elements:</p>
+<ol style="list-style-type: decimal">
+<li><p>A <code>tibble</code> of inputs</p></li>
+<li><p>A list of target <code>y</code>s for those inputs</p></li>
+<li><p>A list of <code>output</code>s for the last run of the network corresponding to these inputs</p></li>
+<li><p>A list of <code>activation</code>s that occur after applying the <code>sigmoid</code> function to those <code>output</code>s</p></li>
+<li><p>A list of <code>weights</code> – 3 in total. Two that connect from the input nodes (<code>x1</code>, <code>x2</code>), and one that connects from a bias node (<code>1</code>) to the output node (<code>y</code>).</p></li>
+</ol>
+<p>This list will track the state of the perceptron as it goes through the training function you write (<code>train_perceptron</code>). You can write this function as two nested for loop, the outer one over iterations, and the inner one over examples. In each run of the inner loop, you will</p>
+<ol style="list-style-type: decimal">
+<li><p>Run <code>perceptron_feedforward</code> over the training example.</p></li>
+<li><p>Run <code>perceptron_feedback</code> over that training example to update the weights.</p></li>
+</ol>
+<p>In each run of the outer loop, you will run <code>perceptron_feedforward</code> and <code>perceptron_feewdback</code> on all of the examples, and then compute the error for that iteration and store it in the network, e.g. <code>perceptron$errors[iteration] &lt;- sq_error(...)</code>.You’ll need to make sure you define <code>perceptron$errors</code> as a list of the right length at the start of the <code>train_perceptron</code> function.</p>
+<p>If you want to use these stubs, your plan of attack should be:</p>
+<ol style="list-style-type: decimal">
+<li><p>Write the helper functions <code>sigmoid</code> and <code>sq_error</code></p></li>
+<li><p>Make the <code>and_data</code> tibble with columns <code>x1</code>, <code>x2</code>, and <code>y</code> that corresponds to the four possible input and output combinations for AND</p></li>
+<li><p>Write the <code>perceptron_feedforward</code> and <code>perceptron_feedback</code> functions</p></li>
+<li><p>Write <code>train_perceptron</code></p></li>
+<li><p>Run <code>train_perceptron</code> on your AND data, and plot or otherwise summarize the change in errors over time and the final weights.</p></li>
+</ol>
+<div id="problem-1-fill-out-the-stub-helper-functions-sigmoid-and-sq_error-1-point" class="section level4">
+<h4><strong>Problem 1</strong>: Fill out the stub helper functions <code>sigmoid</code> and <code>sq_error</code> (1 point)</h4>
+</div>
+<div id="problem-2-write-code-to-train-a-perceptron-to-solve-logical-and.-you-can-use-the-stubs-provided-in-the-hw2.rmd-or-write-your-own.-train-the-perceptron-and-report-back-on-the-results.-did-the-error-in-the-network-go-down-over-the-course-of-training-what-were-the-final-weights-3-points" class="section level4">
+<h4><strong>Problem 2</strong>: Write code to train a perceptron to solve logical AND. You can use the stubs provided in the <code>hw2.Rmd</code> or write your own. Train the perceptron, and report back on the results. Did the error in the network go down over the course of training? What were the final weights? (3 points)</h4>
+</div>
+<div id="problem-3-use-your-functions-to-train-the-perceptron-on-or-not-x1-and-xor.-which-problems-did-it-succeed-on.-which-did-it-fail-on-what-were-the-final-weights-for-each-do-they-make-sense-2-points" class="section level4">
+<h4><strong>Problem 3</strong>: Use your functions to train the perceptron on OR, NOT X1, and XOR. Which problems did it succeed on. Which did it fail on? What were the final weights for each? Do they make sense? (2 points)</h4>
+</div>
+</div>
+<div id="multi-layer-networks" class="section level2">
+<h2>Multi-layer networks</h2>
+<p><img src="../learning-humans-machines/img/assignments/multi-layer.png" /><!-- --></p>
+<p>If everything went right, you will have discovered in <strong>Problem 3</strong> that perceptrons cannot learn to solve non-linear classification problems like XOR. But with a hidden layer, we can fix this problem. You can use the same strategy you used for your perceptron to implement a 2-layer backpropagation network. You might find the backprop by hand example we did helpful for reference for the weight update formulas.</p>
+<div id="problem-4-write-code-to-train-a-2-layer-network-to-learn-xor.-you-should-have-3-hidden-layer-nodes-2-that-take-input-from-the-input-layer-and-1-bias-node.-after-training-investigate-the-hidden-layer-nodes.-what-has-the-network-learned-3-points" class="section level4">
+<h4><strong>Problem 4</strong>: Write code to train a 2-layer network to learn XOR. You should have 3 hidden layer nodes — 2 that take input from the input layer, and 1 bias node. After training, investigate the hidden layer nodes. What has the network learned? (3 points)</h4>
+</div>
+</div>
+<div id="using-the-neuralnet-package" class="section level2">
+<h2>Using the <code>neuralnet</code> package</h2>
+<p>The network you implemented is likely to be pretty inefficient. In practice, most implementations of neural networks use matrix multiplication to compute weights and outputs, which drastically speeds things up. For the last two problems, you’ll be using the <code>neuralnet</code> r package to investigate what these networks can learn in a more interesting problem.</p>
+<p>The workhorse of the package is the <code>neuralnet</code> function which trains neural nets to solve problems. It uses formula notation just like <code>lm</code> and other standard statistical methods in <code>R</code>.</p>
+<div id="problem-5-use-the-provided-code-to-run-neuralnet-on-your-xor-data-and-the-plot-your-neuralnet-to-see-what-the-weights-on-each-node-are.-did-it-learn-the-same-thing-as-the-network-you-made-from-scratch" class="section level4">
+<h4><strong>Problem 5</strong>: Use the provided code to run <code>neuralnet</code> on your xor data, and the <code>plot</code> your neuralnet to see what the weights on each node are. Did it learn the same thing as the network you made from scratch?</h4>
+<p>Now that you understand how this package works, you’ll use it to solve a more interesting classification problem. You’ll be learning to classify handwritten digits from the <strong>MNIST</strong> dataset that are a classic success story for modern neural networks. You’ll be working with just a small, scaled down subset of the real dataset — 100 examples of each of the digits 0-9. Here is the first example of each:</p>
+<p><img src="../learning-humans-machines/img/assignments/mnist.png" width="50%" /></p>
+<p>Your goal will be to try out the <code>neuralnet</code> package to find what kinds of network structures matter for learning to classify these digits. The representation you’ll work with is a linearized version of the digits — imagine taking all of the rows of these figures and chaining them all into one long row. This means your network won’t have any ability to use the spatial structure of the images. But even with just the pixel values, you’ll find that you can do a fair bit better than chance (<span class="math inline">\(\frac{1}{10}\)</span>).</p>
+<p>The <code>neuralnet</code> package uses what is called a <em>one-hot</em> encoding: The output layer will have ten nodes, each corresponding to a digit. The goal of the network when it reads say a <span class="math inline">\(9\)</span> is for all of the output nodes except for the one corresponding to <span class="math inline">\(9\)</span> to have no activation, and for the <span class="math inline">\(9\)</span> node to have 1.</p>
+</div>
+<div id="problem-6-play-around-with-the-hidden-layer-structure-of-the-network.-you-can-specify-how-many-units-there-are.-for-instance-using-the-argument-hidden-2-makes-2-hidden-layer-nodes-plus-a-bias.-using-the-argument-hidden-c32-makes-2-hidden-layers---the-first-having-3-units-and-the-second-having-2-plus-a-bias.-if-the-number-of-units-gets-too-big-youll-find-that-the-network-crashes-or-fails-to-converge.-but-report-back-on-at-least-3-argument-values-that-successfully-ran." class="section level4">
+<h4><strong>Problem 6</strong>: Play around with the hidden layer structure of the network. You can specify how many units there are. For instance, using the argument <code>hidden = 2</code> makes 2 hidden layer nodes (plus a bias). using the argument <code>hidden = c(3,2)</code> makes 2 hidden layers - the first having 3 units and the second having 2 (plus a bias). If the number of units gets too big you’ll find that the network crashes or fails to converge. But report back on at least 3 argument values that successfully ran.</h4>
+<p>You can use the provided <code>prediction_error</code> function will compute how much error there is. Make sure you look at error both on the training set (<code>mnist_train</code>) and on a set of examples that it hasn’t been trained on (<code>mnist_test</code>). Is the network overfitting? What is it learning? Feel free to extend the <code>prediction_error</code> function to compute other metrics if you think they would be interesting.</p>
+</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on September 29, 2020</p>
+
+                    
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>85426/85726: Learning in Humans and Machines (Fall 2020)</strong><br>
+
+                <a href="https://www.cmu.edu" target="_blank" rel="noopener">Carnegie Mellon University</a> &emsp;&emsp;
+                <a href="https://www.cmu.edu/dietrich/psychology/" target="_blank" rel="noopener">Department of Psychology</a>
+            </p>
+
+            <p>
+                <a href="https://www.danyurovsky.com" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Dan Yurovsky</a> &emsp;&emsp;
+                <a href="mailto:yurovsky@cmu.edu"><i class="fas fa-envelope"></i>
+                    yurovsky@cmu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Tuesday/Thursday &emsp;&emsp;
+                <i class="far fa-clock"></i> 1:30–2:50 PM <br>
+                <i class="fas fa-university"></i> <a href="https://cmu.zoom.us/j/92066334665?pwd=MU94ek1CMWk1cDRsVXBHWklITmJZUT09" target="_blank" rel="noopener"> Zoom Room</a>
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.danyurovsky.com" target="_blank" rel="noopener">Dan Yurovsky</a></p>
+
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+
+            <p><a href="https://github.com/dyurovsky/learning-humans-machines" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="../learning-humans-machines/js/academic.min.e5c8525332f417fe3589df9a6b25b6c4.js"></script>
+
+    
+
+
+
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

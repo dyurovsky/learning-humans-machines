@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course materials | Learning in Humans and Machines</title>
-    <link>/learning-humans-machines/</link>
-      <atom:link href="/learning-humans-machines/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://dyurovsky.github.io/learning-humans-machines/</link>
+      <atom:link href="https://dyurovsky.github.io/learning-humans-machines/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/learning-humans-machines/img/social-image.png</url>
+      <url>https://dyurovsky.github.io/learning-humans-machines/img/social-image.png</url>
       <title>Course materials</title>
-      <link>/learning-humans-machines/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/</link>
     </image>
     
     <item>
       <title>Homework 1</title>
-      <link>/learning-humans-machines/assignment/01-rescorla-wagner/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/assignment/01-rescorla-wagner.html</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/assignment/01-rescorla-wagner/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/assignment/01-rescorla-wagner.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -63,7 +63,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;simple-conditioning&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Simple conditioning&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/forward_conditioning.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto auto auto 0;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/forward_conditioning.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto auto auto 0;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;To get started, you’ll simulate of simple conditioning experiment in which someone experiences 10 trials of positive reinforcement in response to a conditioned stimulus. You’ll want to produce a plot of the strength of the conditioned stimulus over the course of these 10 trials so you can see the changes that the model predicts.&lt;/p&gt;
 &lt;p&gt;There are lots of ways of setting up this experiment in &lt;code&gt;R&lt;/code&gt;, and you’re welcome to do it however you like. In case you’d like a hand to get started, he’s one strategy:&lt;/p&gt;
 &lt;ul&gt;
@@ -77,7 +77,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;extinction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Extinction&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/extinction.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/extinction.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s see what happens if we take the reinforcer away. Set up a simulation where the participant is exposed to 10 trials in of positive reinforcement in response to a conditioned stimulus, and then 10 trials in which they get no reinforcement (&lt;span class=&#34;math inline&#34;&gt;\(\lambda = 0\)&lt;/span&gt;). Then make a plot of &lt;span class=&#34;math inline&#34;&gt;\(V\)&lt;/span&gt; over the course of the experiment.&lt;/p&gt;
 &lt;div id=&#34;problem-4-try-the-same-parameter-values-that-you-used-above-in-this-new-experiment.-how-does-the-extinction-curve-depend-on-alpha-and-lambda-2-points.&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 4&lt;/strong&gt;: Try the same parameter values that you used above in this new experiment. How does the extinction curve depend on &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;? (2 points).&lt;/h4&gt;
@@ -86,7 +86,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;blocking&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Blocking&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/blocking.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/blocking.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Now you’re ready to test Rescorla-Wagner’s ability to account for the Blocking phenomenon. In this simulation, you’ll have two cues–&lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;. For the first 10 trials, the simulated participant will be exposed to cue &lt;code&gt;x&lt;/code&gt; and be positively reinforced. Then, on the subsequent 30 trials, both &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; will be present and the participant will get reinforced.&lt;/p&gt;
 &lt;p&gt;One way to make this simulation work is to replace the &lt;code&gt;V&lt;/code&gt; column with two new columns: &lt;code&gt;Vx&lt;/code&gt; and &lt;code&gt;Vy&lt;/code&gt;. And then include two more columns in your tibble, &lt;code&gt;x_present&lt;/code&gt; and &lt;code&gt;y_present&lt;/code&gt;, which indicate whether each cue is present on each trial. You then want to make sure that you simulate updating the weight for all cues that are present &lt;span class=&#34;math inline&#34;&gt;\(\Delta V\)&lt;/span&gt;. And make sure that &lt;span class=&#34;math inline&#34;&gt;\(V_{total}\)&lt;/span&gt; has the right value on each trial!&lt;/p&gt;
 &lt;div id=&#34;problem-5-implement-the-blocking-experiment-described-above-and-make-a-plot-of-the-weights-of-each-of-the-two-cues-over-the-course-of-the-40-trials.-you-can-pick-any-values-for-alpha-and-lambda-3-points.&#34; class=&#34;section level4&#34;&gt;
@@ -95,7 +95,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;conditioned-inhibition&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Conditioned inhibition&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/conditioned_inhibition.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/conditioned_inhibition.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Finally, you’re ready to simulate a phenomenon we talked about in class but that you didn’t see directly: Conditioned inhibition. The setup is similar to blocking–first one cue (&lt;code&gt;x&lt;/code&gt;) is presented and reinforced, and then &lt;code&gt;x&lt;/code&gt; and another cue &lt;code&gt;y&lt;/code&gt; appear together. But, this time their combination is &lt;strong&gt;not&lt;/strong&gt; reinforced. As a result, people (and the model) learn a negative value for &lt;code&gt;y&lt;/code&gt;. Intuitively, &lt;code&gt;y&lt;/code&gt; is the reason that &lt;code&gt;x&lt;/code&gt; appearing did not lead to a positive reinforcer.&lt;/p&gt;
 &lt;div id=&#34;problem-6-implement-the-a-conditioned-inhibition-experiment-just-like-your-blocking-experiment-above-except-this-time-without-reinforcement-on-the-30-trials-with-both-stimuli.-make-a-plot-of-the-values-of-the-two-cues-over-the-course-of-the-experiment.-pick-any-values-for-alpha-and-lambda-2-points.&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 6&lt;/strong&gt;: Implement the a conditioned inhibition experiment just like your blocking experiment above, except this time without reinforcement on the 30 trials with both stimuli. Make a plot of the values of the two cues over the course of the experiment. Pick any values for &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; (2 points).&lt;/h4&gt;
@@ -106,9 +106,9 @@ h4 {
     
     <item>
       <title>Learning in humans and machines</title>
-      <link>/learning-humans-machines/class/01-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/01-class.html</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/01-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/01-class.html</guid>
       <description>
   &lt;link rel=&#34;stylesheet&#34; href=&#34;../hw.css&#34; type=&#34;text/css&#34; /&gt;
 
@@ -160,9 +160,9 @@ h4 {
     
     <item>
       <title>Homework 2</title>
-      <link>/learning-humans-machines/assignment/02-networks/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/assignment/02-networks.html</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/assignment/02-networks/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/assignment/02-networks.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -197,7 +197,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;perceptrons&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Perceptrons&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/perceptron.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/perceptron.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Your first goal will be to train a perceptron to solve logical AND. I’ve provided a set of stub functions that scaffold one way of doing this. The idea is to approximate a sort of pseudo-object oriented structure using a named list. This is overkill for just this simple perceptron, but you’ll find that it extends easily to a backprop network.&lt;/p&gt;
 &lt;p&gt;This object defined in the &lt;code&gt;perceptron&lt;/code&gt; function. A &lt;code&gt;perceptron&lt;/code&gt; is a list that has 5 elements:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -233,7 +233,7 @@ h4 {
 &lt;/div&gt;
 &lt;div id=&#34;multi-layer-networks&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Multi-layer networks&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/multi-layer.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/multi-layer.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;If everything went right, you will have discovered in &lt;strong&gt;Problem 3&lt;/strong&gt; that perceptrons cannot learn to solve non-linear classification problems like XOR. But with a hidden layer, we can fix this problem. You can use the same strategy you used for your perceptron to implement a 2-layer backpropagation network. You might find the backprop by hand example we did helpful for reference for the weight update formulas.&lt;/p&gt;
 &lt;div id=&#34;problem-4-write-code-to-train-a-2-layer-network-to-learn-xor.-you-should-have-3-hidden-layer-nodes-2-that-take-input-from-the-input-layer-and-1-bias-node.-after-training-investigate-the-hidden-layer-nodes.-what-has-the-network-learned-3-points&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 4&lt;/strong&gt;: Write code to train a 2-layer network to learn XOR. You should have 3 hidden layer nodes — 2 that take input from the input layer, and 1 bias node. After training, investigate the hidden layer nodes. What has the network learned? (3 points)&lt;/h4&gt;
@@ -246,7 +246,7 @@ h4 {
 &lt;div id=&#34;problem-5-use-the-provided-code-to-run-neuralnet-on-your-xor-data-and-the-plot-your-neuralnet-to-see-what-the-weights-on-each-node-are.-did-it-learn-the-same-thing-as-the-network-you-made-from-scratch&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;strong&gt;Problem 5&lt;/strong&gt;: Use the provided code to run &lt;code&gt;neuralnet&lt;/code&gt; on your xor data, and the &lt;code&gt;plot&lt;/code&gt; your neuralnet to see what the weights on each node are. Did it learn the same thing as the network you made from scratch?&lt;/h4&gt;
 &lt;p&gt;Now that you understand how this package works, you’ll use it to solve a more interesting classification problem. You’ll be learning to classify handwritten digits from the &lt;strong&gt;MNIST&lt;/strong&gt; dataset that are a classic success story for modern neural networks. You’ll be working with just a small, scaled down subset of the real dataset — 100 examples of each of the digits 0-9. Here is the first example of each:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/mnist.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/mnist.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Your goal will be to try out the &lt;code&gt;neuralnet&lt;/code&gt; package to find what kinds of network structures matter for learning to classify these digits. The representation you’ll work with is a linearized version of the digits — imagine taking all of the rows of these figures and chaining them all into one long row. This means your network won’t have any ability to use the spatial structure of the images. But even with just the pixel values, you’ll find that you can do a fair bit better than chance (&lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{10}\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;neuralnet&lt;/code&gt; package uses what is called a &lt;em&gt;one-hot&lt;/em&gt; encoding: The output layer will have ten nodes, each corresponding to a digit. The goal of the network when it reads say a &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; is for all of the output nodes except for the one corresponding to &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; to have no activation, and for the &lt;span class=&#34;math inline&#34;&gt;\(9\)&lt;/span&gt; node to have 1.&lt;/p&gt;
 &lt;/div&gt;
@@ -260,9 +260,9 @@ h4 {
     
     <item>
       <title>R, RStudio, and Github</title>
-      <link>/learning-humans-machines/class/02-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/02-class.html</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/02-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/02-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -303,9 +303,9 @@ h4 {
     
     <item>
       <title>Homework 3</title>
-      <link>/learning-humans-machines/assignment/03-bayes/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/assignment/03-bayes.html</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/assignment/03-bayes/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/assignment/03-bayes.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -340,7 +340,7 @@ h4 {
 &lt;p&gt;An important problem in inferential learning is that the data available are almost always too sparse to unambiguously pick out the true hypothesis (see e.g. Quine, 1960). Human learners, however, appear to cope with this problem just fine, converging on a small set of possible hypothesis from very little data. In machine learning, this is known as few-shot learning, and is a real challenge for modern learning systems. One hypothesis for what helps human learners is that have a strong prior on the kinds of hypotheses that are likely and relevant, which makes the search problem much easier.&lt;/p&gt;
 &lt;p&gt;In this assignment, you’ll be working with a simple problem designed to demonstrate this phenomenon, and building a model that learns in a human-like way. The number game, developed by &lt;a href=&#34;https://dyurovsky.github.io/learning-humans-machines/class/11-class/papers/tenenbaum200.pdf&#34;&gt;Josh Tenenbaum (2000)&lt;/a&gt;, demonstrates the power of strong sampling for inductive inference. The key insight is that the probability that data is generated by a hypothesized process is proportional to the size of the set of possible data that the hypothesis could generate.&lt;/p&gt;
 &lt;p&gt;In the number game, you get as input one or more numbers between 1 and 100 generated by a computer program according to an unknown rule. Your job is to determine the most likely rule, or to make predictions about which numbers the program will generate next.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/number_game.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/number_game.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modeling-the-number-game&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Modeling the number game&lt;/h1&gt;
@@ -425,9 +425,9 @@ h4 {
     
     <item>
       <title>Associative learning</title>
-      <link>/learning-humans-machines/class/03-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/03-class.html</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/03-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/03-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -473,9 +473,9 @@ h4 {
     
     <item>
       <title>Homework 4</title>
-      <link>/learning-humans-machines/assignment/04-mcmc/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/assignment/04-mcmc.html</link>
       <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/assignment/04-mcmc/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/assignment/04-mcmc.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -536,7 +536,7 @@ h4 {
 
 ggplot(samples, aes(x = value)) + 
   geom_histogram(fill = &amp;quot;white&amp;quot;, color = &amp;quot;black&amp;quot;)b&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/exponential3.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/exponential3.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;But let’s see how can draw samples from an exponential distribution using Metropolis-Hastings samples instead.&lt;/p&gt;
 &lt;p&gt;You will need to do 4 things:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -553,7 +553,7 @@ ggplot(samples, aes(x = value)) +
 &lt;p&gt;One thing you might notice is that the Metropolis samples won’t look like Exponential samples right away. Here is a plot of &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; for 1000 samples from Metropolis:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(output, aes(x = iteration, y = f)) + 
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/learning-humans-machines/learning-humans-machines/img/assignments/burnin.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./learning-humans-machines/img/assignments/burnin.jpeg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;You can see that first several hundred samples, every sample has low probability under the target distribution. This happens when the starting point of the chain is far away from the area of high density in the target distribution. For this reason, it is common to discard some of the initial samples–a process called &lt;strong&gt;burn in&lt;/strong&gt;. You may find this helpful in future simulations.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;problem-3-implement-a-metropolis-sampler-for-an-exponential-distribution-and-use-it-draw-1000-samples-from-an-exponential-distribution-with-lambda3.-try-lambda1-as-well.-do-the-distributions-look-different-you-should-use-the-two-functions-you-just-wrote-for-problems-1-and-2.-2-points&#34; class=&#34;section level4&#34;&gt;
@@ -600,9 +600,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>How far can simple associative learning get you?</title>
-      <link>/learning-humans-machines/class/04-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/04-class.html</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/04-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/04-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -632,9 +632,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Perceptrons</title>
-      <link>/learning-humans-machines/class/05-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/05-class.html</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/05-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/05-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -680,9 +680,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Multi-layer networks</title>
-      <link>/learning-humans-machines/class/06-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/06-class.html</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/06-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/06-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -736,9 +736,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Backpropagation details</title>
-      <link>/learning-humans-machines/class/07-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/07-class.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/07-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/07-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -784,9 +784,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Limits to connectionism</title>
-      <link>/learning-humans-machines/class/08-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/08-class.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/08-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/08-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -816,9 +816,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Recurrent neural networks</title>
-      <link>/learning-humans-machines/class/09-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/09-class.html</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/09-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/09-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -864,9 +864,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Bayesian inference</title>
-      <link>/learning-humans-machines/class/10-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/10-class.html</link>
       <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/10-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/10-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -907,9 +907,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Learning by Bayesian inference</title>
-      <link>/learning-humans-machines/class/11-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/11-class.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/11-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/11-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -956,9 +956,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Models at different levels</title>
-      <link>/learning-humans-machines/class/12-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/12-class.html</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/12-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/12-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -988,9 +988,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Rational Analysis</title>
-      <link>/learning-humans-machines/class/13-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/13-class.html</link>
       <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/13-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/13-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1038,9 +1038,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Inference by sampling</title>
-      <link>/learning-humans-machines/class/14-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/14-class.html</link>
       <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/14-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/14-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1088,9 +1088,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Bayesian associative learning</title>
-      <link>/learning-humans-machines/class/15-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/15-class.html</link>
       <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/15-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/15-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1120,9 +1120,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Comparing models</title>
-      <link>/learning-humans-machines/class/16-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/16-class.html</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/16-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/16-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1168,9 +1168,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Machines that learn like people</title>
-      <link>/learning-humans-machines/class/17-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/17-class.html</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/17-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/17-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1200,9 +1200,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Learning from teaching</title>
-      <link>/learning-humans-machines/class/18-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/18-class.html</link>
       <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/18-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/18-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1250,9 +1250,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>What makes a good teacher?</title>
-      <link>/learning-humans-machines/class/19-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/19-class.html</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/19-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/19-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1282,9 +1282,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Rational speech acts</title>
-      <link>/learning-humans-machines/class/20-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/20-class.html</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/20-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/20-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1334,9 +1334,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Learning indirectly from language</title>
-      <link>/learning-humans-machines/class/21-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/21-class.html</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/21-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/21-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1366,9 +1366,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Iterated learning</title>
-      <link>/learning-humans-machines/class/22-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/22-class.html</link>
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/22-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/22-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1418,10 +1418,12 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Community effects on learning from others</title>
-      <link>/learning-humans-machines/class/23-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/23-class.html</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/23-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/23-class.html</guid>
       <description>
+&lt;link href=&#34;./learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1449,10 +1451,66 @@ ggplot(samples, aes(x = value)) +
     </item>
     
     <item>
+      <title>The structure in language</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/24-class.html</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/24-class.html</guid>
+      <description>
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/structure_language.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/structure_language.pdf&#34;&gt;&lt;img src=&#34;slides/structure_language.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7k8yklyx4to9rxvpx73ofeonsj7ea817&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Bedny, M., Koster-Hale, J., Elli, G., Yazzolino, L., &amp;amp; Saxe, R. (2019). &lt;a href=&#34;papers/bedny2019.pdf&#34;&gt;There’s more to “sparkle” than meets the eye: Knowledge of vision and light verbs among congenitally blind and sighted individuals&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;189&lt;/em&gt;, 105—115.&lt;/p&gt;
+&lt;p&gt;Bergey*, C., Morris*, B., &amp;amp; Yurovsky, D. (2020). &lt;a href=&#34;papers/bergey2020.pdf&#34;&gt;Children hear more about what is atypical than what is typical&lt;/a&gt;. &lt;em&gt;Proceedings of the 41st Annual Conference of the Cognitive Science Society&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Griffiths, T. L., &amp;amp; Steyvers, M. (2004). &lt;a href=&#34;papers/griffiths2004.pdf&#34;&gt;Finding scientific topics&lt;/a&gt;. &lt;em&gt;Proceedings of the National academy of Sciences&lt;/em&gt;, &lt;em&gt;101&lt;/em&gt;, 5228—5235.&lt;/p&gt;
+&lt;p&gt;Landauer, T. K., &amp;amp; Dumais, S. T. (1997). &lt;a href=&#34;papers/landauer1997.pdf&#34;&gt;A solution to Plato’s problem: The latent semantic analysis theory of acquisition, induction, and representation of knowledge&lt;/a&gt;. &lt;em&gt;Psychological Review&lt;/em&gt;, &lt;em&gt;104&lt;/em&gt;, 211—240.&lt;/p&gt;
+&lt;p&gt;Marmor, G. S. (1978). &lt;a href=&#34;papers/marmor1978.pdf&#34;&gt;Age at onset of blindness and the development of the semantics of color names&lt;/a&gt;. &lt;em&gt;Journal of Experimental Child Psychology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;, 267—278.&lt;/p&gt;
+&lt;p&gt;Roy, B. C., Frank, M. C., DeCamp, P., Miller, M., &amp;amp; Roy, D. (2015). &lt;a href=&#34;papers/roy2015.pdf&#34;&gt;Predicting the birth of a spoken word&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;112&lt;/em&gt;, 12663—12668.&lt;/p&gt;
+&lt;p&gt;Steyvers, M., &amp;amp; Griffiths, T. (2007). &lt;a href=&#34;papers/steyvers2007.pdf&#34;&gt;Probabilistic topic models&lt;/a&gt;. &lt;em&gt;Handbook of Latent Semantic Analysis&lt;/em&gt;, &lt;em&gt;427&lt;/em&gt;, 424—440.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Community effects on learning from others</title>
-      <link>/learning-humans-machines/reading/23-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/23-reading.html</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/23-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/23-reading.html</guid>
       <description>
 
 
@@ -1471,9 +1529,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Indirectly learning from language</title>
-      <link>/learning-humans-machines/reading/21-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/21-reading.html</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/21-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/21-reading.html</guid>
       <description>
 
 
@@ -1488,9 +1546,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>What makes a good teacher?</title>
-      <link>/learning-humans-machines/reading/19-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/19-reading.html</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/19-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/19-reading.html</guid>
       <description>
 
 
@@ -1505,9 +1563,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Machines that learn like people</title>
-      <link>/learning-humans-machines/reading/17-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/17-reading.html</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/17-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/17-reading.html</guid>
       <description>
 
 
@@ -1521,9 +1579,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Bayesian associative learning</title>
-      <link>/learning-humans-machines/reading/15-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/15-reading.html</link>
       <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/15-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/15-reading.html</guid>
       <description>
 
 
@@ -1542,9 +1600,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Models at different levels</title>
-      <link>/learning-humans-machines/reading/12-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/12-reading.html</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/12-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/12-reading.html</guid>
       <description>
 
 
@@ -1562,9 +1620,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Limits to connectionism</title>
-      <link>/learning-humans-machines/reading/08-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/08-reading.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/08-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/08-reading.html</guid>
       <description>
 
 
@@ -1587,9 +1645,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>How far can simple associative learning get you?</title>
-      <link>/learning-humans-machines/reading/04-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/04-reading.html</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/04-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/04-reading.html</guid>
       <description>
 
 
@@ -1606,9 +1664,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Schedule</title>
-      <link>/learning-humans-machines/schedule/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/schedule.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/schedule/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/schedule.html</guid>
       <description>
 
 
@@ -1640,7 +1698,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/01-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/01-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1654,7 +1712,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/02-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/02-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1668,20 +1726,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/03-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/03-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 10&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;How far can simple associative learning get you?&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/04-reading/&#34;&gt;
+                    href=&#34;./reading/04-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/04-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1695,7 +1753,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/05-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/05-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1706,7 +1764,7 @@ ggplot(samples, aes(x = value)) +
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/assignment/01-rescorla-wagner/&#34;&gt;
+                    href=&#34;./assignment/01-rescorla-wagner/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -1724,7 +1782,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/06-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/06-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1738,20 +1796,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/07-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/07-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;September 24&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Limits to connectionism&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/08-reading/&#34;&gt;
+                    href=&#34;./reading/08-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/08-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/08-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1765,7 +1823,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/09-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/09-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1776,7 +1834,7 @@ ggplot(samples, aes(x = value)) +
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/assignment/02-networks/&#34;&gt;
+                    href=&#34;./assignment/02-networks/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -1802,7 +1860,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/10-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/10-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1816,20 +1874,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/11-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/11-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 8&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Models at different levels&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/12-reading/&#34;&gt;
+                    href=&#34;./reading/12-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/12-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/12-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1843,7 +1901,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/13-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/13-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1857,20 +1915,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/14-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/14-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 20&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Bayesian associative learning&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/15-reading/&#34;&gt;
+                    href=&#34;./reading/15-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/15-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/15-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1881,7 +1939,7 @@ ggplot(samples, aes(x = value)) +
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/assignment/03-bayes/&#34;&gt;
+                    href=&#34;./assignment/03-bayes/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -1899,20 +1957,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/16-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/16-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;October 27&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Machines that learn like people&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/17-reading/&#34;&gt;
+                    href=&#34;./reading/17-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/17-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/17-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -1923,7 +1981,7 @@ ggplot(samples, aes(x = value)) +
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/assignment/04-mcmc/&#34;&gt;
+                    href=&#34;./assignment/04-mcmc/&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -1949,14 +2007,14 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/18-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/18-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;What makes a good teacher?&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/19-reading/&#34;&gt;
+                    href=&#34;./reading/19-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
@@ -1978,7 +2036,7 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/20-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/20-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -2001,13 +2059,13 @@ ggplot(samples, aes(x = value)) +
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 10&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Indirectly learning from language&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/21-reading/&#34;&gt;
+                    href=&#34;./reading/21-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/21-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/21-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -2021,20 +2079,20 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/22-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/22-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 17&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;i class=&#34;fas fa-comments&#34;&gt;&lt;/i&gt; &lt;strong&gt;Community effects on learning from others&lt;/strong&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/learning-humans-machines/learning-humans-machines/reading/23-reading/&#34;&gt;
+                    href=&#34;./reading/23-reading/&#34;&gt;
                     &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/learning-humans-machines/learning-humans-machines/class/23-class/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/23-class/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -2048,10 +2106,8 @@ ggplot(samples, aes(x = value)) +
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/24-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Nov 24&lt;/td&gt;
@@ -2199,9 +2255,9 @@ ggplot(samples, aes(x = value)) +
     
     <item>
       <title>Syllabus</title>
-      <link>/learning-humans-machines/syllabus/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/syllabus.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/syllabus/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/syllabus.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2394,7 +2450,7 @@ use visual aids (e.g. slides, figures drawn on the zoom board).&lt;/p&gt;&lt;/l
 &lt;/div&gt;
 &lt;div id=&#34;assignments-and-grades&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Assignments and grades&lt;/h2&gt;
-&lt;p&gt;Descriptions for all of the assignments will be posted on the on the &lt;a href=&#34;/learning-humans-machines/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Descriptions for all of the assignments will be posted on the on the &lt;a href=&#34;./assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;centered-table&#34;&gt;
 &lt;table style=&#34;width:58%;&#34;&gt;
 &lt;colgroup&gt;

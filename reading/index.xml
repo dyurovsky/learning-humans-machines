@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reading policy | Learning in Humans and Machines</title>
-    <link>/learning-humans-machines/reading/</link>
-      <atom:link href="/learning-humans-machines/reading/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://dyurovsky.github.io/learning-humans-machines/reading.html</link>
+      <atom:link href="https://dyurovsky.github.io/learning-humans-machines/reading/index.xml" rel="self" type="application/rss+xml" />
     <description>Reading policy</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/learning-humans-machines/img/social-image.png</url>
+      <url>https://dyurovsky.github.io/learning-humans-machines/img/social-image.png</url>
       <title>Reading policy</title>
-      <link>/learning-humans-machines/reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading.html</link>
     </image>
     
     <item>
       <title>Community effects on learning from others</title>
-      <link>/learning-humans-machines/reading/23-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/23-reading.html</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/23-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/23-reading.html</guid>
       <description>
 
 
@@ -35,9 +35,9 @@
     
     <item>
       <title>Indirectly learning from language</title>
-      <link>/learning-humans-machines/reading/21-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/21-reading.html</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/21-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/21-reading.html</guid>
       <description>
 
 
@@ -52,9 +52,9 @@
     
     <item>
       <title>What makes a good teacher?</title>
-      <link>/learning-humans-machines/reading/19-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/19-reading.html</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/19-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/19-reading.html</guid>
       <description>
 
 
@@ -69,9 +69,9 @@
     
     <item>
       <title>Machines that learn like people</title>
-      <link>/learning-humans-machines/reading/17-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/17-reading.html</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/17-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/17-reading.html</guid>
       <description>
 
 
@@ -85,9 +85,9 @@
     
     <item>
       <title>Bayesian associative learning</title>
-      <link>/learning-humans-machines/reading/15-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/15-reading.html</link>
       <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/15-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/15-reading.html</guid>
       <description>
 
 
@@ -106,9 +106,9 @@
     
     <item>
       <title>Models at different levels</title>
-      <link>/learning-humans-machines/reading/12-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/12-reading.html</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/12-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/12-reading.html</guid>
       <description>
 
 
@@ -126,9 +126,9 @@
     
     <item>
       <title>Limits to connectionism</title>
-      <link>/learning-humans-machines/reading/08-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/08-reading.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/08-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/08-reading.html</guid>
       <description>
 
 
@@ -151,9 +151,9 @@
     
     <item>
       <title>How far can simple associative learning get you?</title>
-      <link>/learning-humans-machines/reading/04-reading/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/reading/04-reading.html</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/reading/04-reading/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/reading/04-reading.html</guid>
       <description>
 
 

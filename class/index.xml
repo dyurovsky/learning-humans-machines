@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Class details | Learning in Humans and Machines</title>
-    <link>/learning-humans-machines/class/</link>
-      <atom:link href="/learning-humans-machines/class/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://dyurovsky.github.io/learning-humans-machines/class.html</link>
+      <atom:link href="https://dyurovsky.github.io/learning-humans-machines/class/index.xml" rel="self" type="application/rss+xml" />
     <description>Class details</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/learning-humans-machines/img/social-image.png</url>
+      <url>https://dyurovsky.github.io/learning-humans-machines/img/social-image.png</url>
       <title>Class details</title>
-      <link>/learning-humans-machines/class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class.html</link>
     </image>
     
     <item>
       <title>Learning in humans and machines</title>
-      <link>/learning-humans-machines/class/01-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/01-class.html</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/01-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/01-class.html</guid>
       <description>
   &lt;link rel=&#34;stylesheet&#34; href=&#34;../hw.css&#34; type=&#34;text/css&#34; /&gt;
 
@@ -68,9 +68,9 @@
     
     <item>
       <title>R, RStudio, and Github</title>
-      <link>/learning-humans-machines/class/02-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/02-class.html</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/02-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/02-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -111,9 +111,9 @@
     
     <item>
       <title>Associative learning</title>
-      <link>/learning-humans-machines/class/03-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/03-class.html</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/03-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/03-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -159,9 +159,9 @@
     
     <item>
       <title>How far can simple associative learning get you?</title>
-      <link>/learning-humans-machines/class/04-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/04-class.html</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/04-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/04-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -191,9 +191,9 @@
     
     <item>
       <title>Perceptrons</title>
-      <link>/learning-humans-machines/class/05-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/05-class.html</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/05-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/05-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -239,9 +239,9 @@
     
     <item>
       <title>Multi-layer networks</title>
-      <link>/learning-humans-machines/class/06-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/06-class.html</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/06-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/06-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -295,9 +295,9 @@
     
     <item>
       <title>Backpropagation details</title>
-      <link>/learning-humans-machines/class/07-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/07-class.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/07-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/07-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -343,9 +343,9 @@
     
     <item>
       <title>Limits to connectionism</title>
-      <link>/learning-humans-machines/class/08-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/08-class.html</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/08-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/08-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -375,9 +375,9 @@
     
     <item>
       <title>Recurrent neural networks</title>
-      <link>/learning-humans-machines/class/09-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/09-class.html</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/09-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/09-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -423,9 +423,9 @@
     
     <item>
       <title>Bayesian inference</title>
-      <link>/learning-humans-machines/class/10-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/10-class.html</link>
       <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/10-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/10-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -466,9 +466,9 @@
     
     <item>
       <title>Learning by Bayesian inference</title>
-      <link>/learning-humans-machines/class/11-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/11-class.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/11-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/11-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -515,9 +515,9 @@
     
     <item>
       <title>Models at different levels</title>
-      <link>/learning-humans-machines/class/12-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/12-class.html</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/12-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/12-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -547,9 +547,9 @@
     
     <item>
       <title>Rational Analysis</title>
-      <link>/learning-humans-machines/class/13-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/13-class.html</link>
       <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/13-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/13-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -597,9 +597,9 @@
     
     <item>
       <title>Inference by sampling</title>
-      <link>/learning-humans-machines/class/14-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/14-class.html</link>
       <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/14-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/14-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -647,9 +647,9 @@
     
     <item>
       <title>Bayesian associative learning</title>
-      <link>/learning-humans-machines/class/15-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/15-class.html</link>
       <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/15-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/15-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -679,9 +679,9 @@
     
     <item>
       <title>Comparing models</title>
-      <link>/learning-humans-machines/class/16-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/16-class.html</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/16-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/16-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -727,9 +727,9 @@
     
     <item>
       <title>Machines that learn like people</title>
-      <link>/learning-humans-machines/class/17-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/17-class.html</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/17-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/17-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -759,9 +759,9 @@
     
     <item>
       <title>Learning from teaching</title>
-      <link>/learning-humans-machines/class/18-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/18-class.html</link>
       <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/18-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/18-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -809,9 +809,9 @@
     
     <item>
       <title>What makes a good teacher?</title>
-      <link>/learning-humans-machines/class/19-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/19-class.html</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/19-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/19-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -841,9 +841,9 @@
     
     <item>
       <title>Rational speech acts</title>
-      <link>/learning-humans-machines/class/20-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/20-class.html</link>
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/20-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/20-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -893,9 +893,9 @@
     
     <item>
       <title>Learning indirectly from language</title>
-      <link>/learning-humans-machines/class/21-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/21-class.html</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/21-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/21-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -925,9 +925,9 @@
     
     <item>
       <title>Iterated learning</title>
-      <link>/learning-humans-machines/class/22-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/22-class.html</link>
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/22-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/22-class.html</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -977,10 +977,12 @@
     
     <item>
       <title>Community effects on learning from others</title>
-      <link>/learning-humans-machines/class/23-class/</link>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/23-class.html</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/learning-humans-machines/class/23-class/</guid>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/23-class.html</guid>
       <description>
+&lt;link href=&#34;../learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -992,6 +994,62 @@
 &lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recording&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/acjpcsfh13dboawc2agxnaoyhje6n1u7&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+    &lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+    &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+        &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+        &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+        &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The structure in language</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/24-class.html</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/24-class.html</guid>
+      <description>
+&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/structure_language.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/structure_language.pdf&#34;&gt;&lt;img src=&#34;slides/structure_language.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/7k8yklyx4to9rxvpx73ofeonsj7ea817&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Bedny, M., Koster-Hale, J., Elli, G., Yazzolino, L., &amp;amp; Saxe, R. (2019). &lt;a href=&#34;papers/bedny2019.pdf&#34;&gt;There’s more to “sparkle” than meets the eye: Knowledge of vision and light verbs among congenitally blind and sighted individuals&lt;/a&gt;. &lt;em&gt;Cognition&lt;/em&gt;, &lt;em&gt;189&lt;/em&gt;, 105—115.&lt;/p&gt;
+&lt;p&gt;Bergey*, C., Morris*, B., &amp;amp; Yurovsky, D. (2020). &lt;a href=&#34;papers/bergey2020.pdf&#34;&gt;Children hear more about what is atypical than what is typical&lt;/a&gt;. &lt;em&gt;Proceedings of the 41st Annual Conference of the Cognitive Science Society&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Griffiths, T. L., &amp;amp; Steyvers, M. (2004). &lt;a href=&#34;papers/griffiths2004.pdf&#34;&gt;Finding scientific topics&lt;/a&gt;. &lt;em&gt;Proceedings of the National academy of Sciences&lt;/em&gt;, &lt;em&gt;101&lt;/em&gt;, 5228—5235.&lt;/p&gt;
+&lt;p&gt;Landauer, T. K., &amp;amp; Dumais, S. T. (1997). &lt;a href=&#34;papers/landauer1997.pdf&#34;&gt;A solution to Plato’s problem: The latent semantic analysis theory of acquisition, induction, and representation of knowledge&lt;/a&gt;. &lt;em&gt;Psychological Review&lt;/em&gt;, &lt;em&gt;104&lt;/em&gt;, 211—240.&lt;/p&gt;
+&lt;p&gt;Marmor, G. S. (1978). &lt;a href=&#34;papers/marmor1978.pdf&#34;&gt;Age at onset of blindness and the development of the semantics of color names&lt;/a&gt;. &lt;em&gt;Journal of Experimental Child Psychology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;, 267—278.&lt;/p&gt;
+&lt;p&gt;Roy, B. C., Frank, M. C., DeCamp, P., Miller, M., &amp;amp; Roy, D. (2015). &lt;a href=&#34;papers/roy2015.pdf&#34;&gt;Predicting the birth of a spoken word&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;112&lt;/em&gt;, 12663—12668.&lt;/p&gt;
+&lt;p&gt;Steyvers, M., &amp;amp; Griffiths, T. (2007). &lt;a href=&#34;papers/steyvers2007.pdf&#34;&gt;Probabilistic topic models&lt;/a&gt;. &lt;em&gt;Handbook of Latent Semantic Analysis&lt;/em&gt;, &lt;em&gt;427&lt;/em&gt;, 424—440.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
