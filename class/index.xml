@@ -5,7 +5,7 @@
     <link>https://dyurovsky.github.io/learning-humans-machines/class/</link>
       <atom:link href="https://dyurovsky.github.io/learning-humans-machines/class/index.xml" rel="self" type="application/rss+xml" />
     <description>Class details</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><lastBuildDate>Tue, 24 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dyurovsky.github.io/learning-humans-machines/media/social-image-f20.png</url>
       <title>Class details</title>
@@ -1050,6 +1050,60 @@
 &lt;p&gt;Marmor, G. S. (1978). &lt;a href=&#34;papers/marmor1978.pdf&#34;&gt;Age at onset of blindness and the development of the semantics of color names&lt;/a&gt;. &lt;em&gt;Journal of Experimental Child Psychology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;, 267—278.&lt;/p&gt;
 &lt;p&gt;Roy, B. C., Frank, M. C., DeCamp, P., Miller, M., &amp;amp; Roy, D. (2015). &lt;a href=&#34;papers/roy2015.pdf&#34;&gt;Predicting the birth of a spoken word&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;112&lt;/em&gt;, 12663—12668.&lt;/p&gt;
 &lt;p&gt;Steyvers, M., &amp;amp; Griffiths, T. (2007). &lt;a href=&#34;papers/steyvers2007.pdf&#34;&gt;Probabilistic topic models&lt;/a&gt;. &lt;em&gt;Handbook of Latent Semantic Analysis&lt;/em&gt;, &lt;em&gt;427&lt;/em&gt;, 424—440.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;http://bit.ly/lhm-feedback&#34;&gt;this form&lt;/a&gt; and answer these three questions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+    &lt;li&gt;What was the most confusing thing from class today? What are you still wondering about?&lt;/li&gt;
+    &lt;li&gt;What was the clearest thing from class today?&lt;/li&gt;
+    &lt;li&gt;What was the most exciting thing you learned?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ll compile the questions and send out answers after class.&lt;/p&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modern language models</title>
+      <link>https://dyurovsky.github.io/learning-humans-machines/class/25-class/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://dyurovsky.github.io/learning-humans-machines/class/25-class/</guid>
+      <description>
+&lt;link href=&#34;https://dyurovsky.github.io/learning-humans-machines/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://dyurovsky.github.io/learning-humans-machines/learning-humans-machines/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#slides&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recording&#34;&gt;Recording&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clearest-and-most-confusing-things&#34;&gt;Clearest and most confusing things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;slides&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;slides/modern_language_models.pdf&#34;&gt;Download the slides from today’s class&lt;/a&gt;.&lt;/p&gt;
+&lt;figure class=&#34;slide-thumb&#34; style=&#34;width:50%&#34;&gt;
+    &lt;a href=&#34;slides/modern_language_models.pdf&#34;&gt;&lt;img src=&#34;slides/modern_language_models.png&#34; alt=&#34;First slide&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+&lt;/div&gt;
+&lt;div id=&#34;recording&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recording&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cmu.box.com/s/wbzbflpnoiohlzk7ber7fw2wlv5bm61i&#34;&gt;Lecture recording&lt;/a&gt; on CMU box.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;p&gt;Devlin, J., Chang, M., Lee, K., &amp;amp; Toutanova, K. (2019). &lt;a href=&#34;papers/devlin2019.pdf&#34;&gt;BERT: Pre-training of deep bidirectional transformers for language understanding&lt;/a&gt;. &lt;em&gt;Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics&lt;/em&gt;, 4171—4186.&lt;/p&gt;
+&lt;p&gt;Lewis, M., Zettersten, M., &amp;amp; Lupyan, G. (2019). &lt;a href=&#34;papers/lewis2019.pdf&#34;&gt;Distributional semantics as a source of visual knowledge&lt;/a&gt;. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;116&lt;/em&gt;, 19237—19238.&lt;/p&gt;
+&lt;p&gt;Lund, K., &amp;amp; Burgess, C. (1996). &lt;a href=&#34;papers/lund1996.pdf&#34;&gt;Producing high-dimensional semantic spaces from lexical co-occurrence&lt;/a&gt;. &lt;em&gt;Behavior Research Methods, Instruments, &amp;amp; Computers&lt;/em&gt;, &lt;em&gt;28&lt;/em&gt;, 203—208.&lt;/p&gt;
+&lt;p&gt;Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., &amp;amp; Dean, J. (2013). &lt;a href=&#34;papers/mikolov2013.pdf&#34;&gt;Distributed representations of words and phrases and their compositionality&lt;/a&gt;. &lt;em&gt;Advances in neural information processing systems&lt;/em&gt;, 3111—3119.&lt;/p&gt;
+&lt;p&gt;Thompson, B., Roberts, S. G., &amp;amp; Lupyan, G. (2020). &lt;a href=&#34;papers/thompson2020.pdf&#34;&gt;Cultural influences on word meanings revealed through large-scale semantic alignment&lt;/a&gt;. &lt;em&gt;Nature Human Behaviour&lt;/em&gt;, &lt;em&gt;4&lt;/em&gt;, 1029—1038.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clearest-and-most-confusing-things&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clearest and most confusing things&lt;/h2&gt;
